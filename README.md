@@ -89,8 +89,16 @@ Or just open `index.html` directly.
 
 ## Deploying
 
-Fully static — GitHub Pages serves it from the repository root with no build
-step. Any static host (Netlify, Vercel, Cloudflare Pages) works the same way.
+Fully static — no build step. Hosted on **Netlify**, published from the
+repository root; `netlify.toml` holds the publish directory, the `/poetry`
+redirect and the security headers.
+
+```bash
+netlify deploy --prod          # deploy the current working tree
+```
+
+Once the repository is linked in the Netlify UI, every push to `main` deploys
+automatically and the command above is no longer needed.
 
 ## Notes on robustness
 
