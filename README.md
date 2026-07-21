@@ -11,7 +11,7 @@ the internet:
 | Door | Destination |
 |---|---|
 | **My corporate life** | [LinkedIn](https://www.linkedin.com/in/saiyedabdal) |
-| **My poetry** | [poeticcwhisperss.com](http://poeticcwhisperss.com/) |
+| **My poetry** | `poetry.html` — the full archive, hosted here |
 | **My UPSC preparation journey** | [upscvision.org](http://upscvision.org/) |
 
 No framework, no build step, no dependencies. Open `index.html` and it runs.
@@ -32,13 +32,48 @@ sidebar (wordmark, uppercase nav, social icons), and a main column whose hero
 fills the remaining viewport. On screens under 980px the sidebar collapses
 into a top bar with a hamburger menu.
 
+## The poetry archive
+
+`poetry.html` holds **अब्दाल की कलम से** — the complete collection, 119 pieces
+migrated out of Notion:
+
+| | |
+|---|---|
+| ग़ज़ल · Ghazal | 33 poems |
+| शेर · Sher | 63 couplets (1 / 2 / 3-couplet groups) |
+| सूफ़ी · Sufi | 13 couplets + 9 ghazals |
+| हिंदी · Hindi | 1 |
+
+Verse is set in [Tiro Devanagari Hindi](https://fonts.google.com/specimen/Tiro+Devanagari+Hindi),
+a literary Devanagari serif, at a line-height loose enough for the matras to
+breathe; headings use Noto Serif Devanagari. The black/white/yellow chrome
+carries over from the home page unchanged.
+
+Every poem is written into the HTML as static markup — the category filter and
+search are enhancement only, so the archive reads (and indexes) with JavaScript
+off. Search normalises away nuqta marks and danda, so `इश्क` finds `इश्क़`.
+
+### Rebuilding it
+
+`assets/data/poems.json` is the source of truth. Edit it (or re-export from
+Notion and re-run the parser), then:
+
+```bash
+python3 tools/build_poetry.py     # → poetry.html
+```
+
 ## Structure
 
 ```
-index.html            markup + metadata (Open Graph, JSON-LD Person schema)
+index.html            home page
+poetry.html           generated — do not hand-edit
 assets/css/style.css  design tokens, layout, responsive rules
+assets/css/poetry.css poetry archive styles
 assets/js/main.js     mobile menu, scroll reveal, video lightbox
+assets/js/poetry.js   category filter + search
+assets/data/          poems.json — the poetry source of truth
 assets/img/           photos
+tools/build_poetry.py generates poetry.html from poems.json
 dev-server.js         zero-dependency static server for local preview
 ```
 

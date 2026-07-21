@@ -1,0 +1,259 @@
+/* ═══════════════════════════════════════════════════════════════
+   abdal.in — अब्दाल की कलम से
+   Poetry archive. Continues the sidebar edition's language:
+   black / white / yellow, Oswald chrome — with a Devanagari
+   literary serif carrying the verse itself.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --f-deva:'Tiro Devanagari Hindi', 'Noto Serif Devanagari', Georgia, serif;
+  --f-deva-display:'Noto Serif Devanagari', 'Tiro Devanagari Hindi', Georgia, serif;
+  --stick:var(--bar);
+  --card:#F5F5F3;
+}
+@media (max-width:980px){:root{--stick:calc(var(--bar) + 58px)}}
+
+/* ── Masthead ───────────────────────────────────────────────── */
+.pm{
+  background:var(--black);color:var(--white);
+  padding:clamp(3.5rem,8vw,7rem) var(--pad) clamp(3rem,6vw,5rem);
+  position:relative;overflow:hidden;
+}
+.pm__kicker{
+  font-family:var(--f-display);
+  font-size:.8rem;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:1.6rem;
+}
+.pm__title{
+  font-family:var(--f-deva-display);
+  font-weight:600;
+  font-size:clamp(2.6rem,7.5vw,5.6rem);
+  line-height:1.28;letter-spacing:-.01em;
+  margin-bottom:1.4rem;
+}
+.pm__sub{
+  font-size:clamp(1rem,1.5vw,1.15rem);
+  color:#B9B9B9;max-width:52ch;line-height:1.7;
+}
+.pm__sig{
+  font-family:var(--f-script);
+  font-size:2rem;color:var(--yellow);
+  margin-top:1.8rem;transform:rotate(-4deg);
+  transform-origin:0 50%;display:inline-block;
+}
+.pm__stats{
+  display:flex;flex-wrap:wrap;gap:2.4rem;
+  margin-top:2.8rem;padding-top:2rem;
+  border-top:1px solid var(--line);
+}
+.pm__stat b{
+  display:block;font-family:var(--f-display);
+  font-size:2.1rem;font-weight:500;line-height:1;color:var(--white);
+}
+.pm__stat span{
+  display:block;margin-top:.4rem;
+  font-family:var(--f-display);
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+}
+
+/* ── Filter rail ────────────────────────────────────────────── */
+.pf{
+  position:sticky;top:var(--stick);z-index:60;
+  background:var(--white);
+  border-bottom:1px solid #E4E4E0;
+  padding:.9rem var(--pad);
+  display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;
+}
+.pf__btn{
+  font-family:var(--f-display);
+  font-size:.76rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.55rem 1.05rem;
+  border:1px solid #DCDCD8;border-radius:100px;
+  color:var(--grey-dark);
+  transition:background .22s,color .22s,border-color .22s;
+}
+.pf__btn:hover{border-color:var(--black);color:var(--black)}
+.pf__btn[aria-pressed="true"]{background:var(--black);border-color:var(--black);color:var(--white)}
+.pf__search{
+  margin-left:auto;position:relative;
+  display:flex;align-items:center;
+}
+.pf__search input{
+  font:inherit;font-size:.9rem;
+  padding:.55rem 2.2rem .55rem .9rem;
+  width:min(260px,42vw);
+  border:1px solid #DCDCD8;border-radius:100px;
+  background:var(--white);color:var(--black);
+}
+.pf__search input:focus{outline:2px solid var(--yellow);outline-offset:1px;border-color:var(--black)}
+.pf__search svg{
+  position:absolute;right:.8rem;width:15px;height:15px;
+  color:var(--grey);pointer-events:none;
+}
+
+/* ── Sections ───────────────────────────────────────────────── */
+.ps{padding:clamp(3rem,6vw,5.5rem) var(--pad);border-bottom:1px solid #ECECE8}
+.ps:last-of-type{border-bottom:0}
+
+.ps__head{margin-bottom:clamp(2rem,4vw,3rem);max-width:60ch}
+.ps__deva{
+  font-family:var(--f-deva-display);font-weight:600;
+  font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.3;
+  margin-bottom:.4rem;
+}
+.ps__en{
+  font-family:var(--f-display);
+  font-size:.78rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--grey);
+}
+.ps__en b{color:var(--black);font-weight:500}
+.ps__note{margin-top:.9rem;color:var(--grey-dark);font-size:.96rem;line-height:1.65}
+
+.ps__band{
+  font-family:var(--f-display);
+  font-size:.74rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--black);
+  margin:2.6rem 0 1.2rem;
+  display:flex;align-items:center;gap:.9rem;
+}
+.ps__band::after{content:'';flex:1;height:1px;background:#E4E4E0}
+.ps__band:first-of-type{margin-top:0}
+
+/* ── Verse typography ───────────────────────────────────────── */
+/* text-wrap:pretty keeps a lone danda (॥) from wrapping onto its own line */
+.v{font-family:var(--f-deva);font-size:1.06rem;line-height:2.05;color:var(--black);text-wrap:pretty}
+.v p{margin:0}
+.v p + p{margin-top:1.25rem}
+.v em{font-style:normal;font-weight:600;box-shadow:inset 0 -.55em 0 rgba(247,216,66,.42)}
+.v .l{display:block}
+
+/* ── Couplet grid (sher, sufi sher) ─────────────────────────── */
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.cp{
+  background:var(--card);
+  border:1px solid transparent;
+  border-left:3px solid #E0E0DA;
+  padding:1.6rem 1.7rem;
+  transition:border-left-color .25s,background .25s,transform .25s var(--ease);
+}
+.cp:hover{border-left-color:var(--yellow);background:#F0F0EC;transform:translateY(-2px)}
+.cp__n{
+  font-family:var(--f-display);
+  font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--grey);margin-bottom:.85rem;
+}
+
+/* ── Poem cards (ghazal, sufi ghazal) ───────────────────────── */
+.poems{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+.poem{
+  background:var(--white);
+  border:1px solid #E4E4E0;
+  transition:border-color .25s,box-shadow .3s var(--ease);
+}
+.poem:hover{border-color:#C9C9C2;box-shadow:0 10px 30px -18px rgba(0,0,0,.3)}
+.poem[open]{border-color:var(--black)}
+
+.poem summary{
+  list-style:none;cursor:pointer;
+  padding:1.6rem 1.7rem;
+  display:grid;grid-template-columns:auto 1fr auto;
+  gap:.5rem 1rem;align-items:start;
+}
+.poem summary::-webkit-details-marker{display:none}
+.poem__n{
+  font-family:var(--f-display);
+  font-size:.9rem;font-weight:500;color:var(--yellow);
+  background:var(--black);
+  min-width:2.1rem;height:2.1rem;
+  display:grid;place-items:center;
+}
+.poem__title{
+  font-family:var(--f-deva);font-size:1.16rem;line-height:1.65;
+  font-weight:600;
+}
+.poem__chev{
+  width:18px;height:18px;color:var(--grey);
+  transition:transform .3s var(--ease),color .25s;
+  margin-top:.35rem;
+}
+.poem[open] .poem__chev{transform:rotate(180deg);color:var(--black)}
+.poem summary:hover .poem__chev{color:var(--black)}
+.poem__matla{
+  grid-column:2/-1;
+  font-family:var(--f-deva);font-size:.98rem;line-height:1.95;
+  color:var(--grey-dark);
+}
+.poem__matla .l{display:block}
+.poem[open] .poem__matla{display:none}
+
+.poem__body{padding:0 1.7rem 1.8rem;border-top:1px solid #EFEFEB;margin:0 1.7rem;padding-left:0;padding-right:0}
+.poem__body .v{padding-top:1.5rem}
+
+.poem__reel{
+  display:inline-flex;align-items:center;gap:.5rem;
+  margin-top:1.6rem;
+  font-family:var(--f-display);
+  font-size:.72rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.6rem 1.1rem;background:var(--black);color:var(--white);
+  transition:background .25s;
+}
+.poem__reel:hover{background:var(--yellow);color:var(--black)}
+.poem__reel svg{width:14px;height:14px}
+
+/* ── Hindi feature ──────────────────────────────────────────── */
+.hindi{
+  background:var(--black);color:var(--white);
+  padding:clamp(2.6rem,5vw,4rem);
+  text-align:center;
+}
+.hindi .v{color:var(--white);font-size:clamp(1.1rem,2vw,1.4rem)}
+.hindi .v em{box-shadow:inset 0 -.55em 0 rgba(247,216,66,.3)}
+/* Caveat carries no Devanagari, so the signature uses the display serif */
+.hindi__sig{
+  font-family:var(--f-deva-display);font-weight:600;font-size:1.35rem;
+  color:var(--yellow);margin-top:1.4rem;display:block;
+}
+
+/* ── Empty state ────────────────────────────────────────────── */
+.empty{
+  display:none;padding:4rem var(--pad);text-align:center;
+  font-family:var(--f-display);
+  font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);
+}
+.is-empty .empty{display:block}
+.ps[hidden],.cp[hidden],.poem[hidden]{display:none}
+
+/* ── Back link ──────────────────────────────────────────────── */
+.pback{
+  padding:1.6rem var(--pad);border-top:1px solid #ECECE8;
+}
+.pback a{
+  font-family:var(--f-display);
+  font-size:.76rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.6rem;
+  border-bottom:2px solid var(--yellow);padding-bottom:.2rem;
+}
+.pback svg{width:15px;height:15px}
+
+@media (max-width:560px){
+  .poems{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .pf__search{margin-left:0;width:100%}
+  .pf__search input{width:100%}
+  .pm__stats{gap:1.6rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .cp,.poem,.poem__chev{transition:none}
+}
+
+@media print{
+  .pf,.pback,.poem__chev{display:none!important}
+  .poem__body{display:block!important}
+  .poem__matla{display:none}
+}
