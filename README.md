@@ -1,12 +1,18 @@
 # abdal.in
 
-Personal site of **Saiyed Mohammad Ahsan Abdal** — founder, poet, Toastmaster,
-computer science graduate.
+Personal site of **Saiyed Mohammad Ahsan Abdal** — founder of UPSC Vision,
+poet at Poetic Whispers, Toastmaster, computer science graduate.
 
-A rebuild of [abdal.in](https://abdal.in) as a hand-built static site, styled as an
-illuminated manuscript: **midnight lapis and gold leaf**, with a generative
-eight-fold Islamic *girih* lattice behind the masthead — a nod to a long-standing
-interest in Sufism.
+A single-page personal hub in the sidebar-portfolio style: fixed black rail
+with a handwritten wordmark, full-bleed hero photo with condensed uppercase
+title, a quote interlude, a two-persona split, and three doors to the rest of
+the internet:
+
+| Door | Destination |
+|---|---|
+| **My corporate life** | [LinkedIn](https://www.linkedin.com/in/saiyedabdal) |
+| **My poetry** | [poeticcwhisperss.com](http://poeticcwhisperss.com/) |
+| **My UPSC preparation journey** | [upscvision.org](http://upscvision.org/) |
 
 No framework, no build step, no dependencies. Open `index.html` and it runs.
 
@@ -16,32 +22,23 @@ No framework, no build step, no dependencies. Open `index.html` and it runs.
 
 | | |
 |---|---|
-| **Palette** | Midnight lapis `#080A0F` → gold leaf `#C9A75C` (dark) · parchment `#F3EDE0` → antique gold `#8A6A22` (light) |
-| **Display** | [Fraunces](https://fonts.google.com/specimen/Fraunces) — variable, using the `SOFT` and `WONK` axes for a warm, slightly irregular old-style voice |
-| **Body** | [Karla](https://fonts.google.com/specimen/Karla) |
-| **Labels** | [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) |
-| **Motif** | Regular octagons and `{8/3}` star polygons — the classic *khatam* star-and-cross tessellation |
+| **Palette** | Black `#0B0B0B` · white · yellow `#F7D842` |
+| **Display** | [Oswald](https://fonts.google.com/specimen/Oswald) — condensed uppercase |
+| **Body** | [Inter](https://fonts.google.com/specimen/Inter) |
+| **Wordmark** | [Caveat](https://fonts.google.com/specimen/Caveat) — handwritten "Abdal" |
 
-The octagon recurs deliberately: the portrait medallion, the section seals, the
-play button, and the favicon are all cut from the same eight-fold geometry.
-
-### The girih background
-
-`assets/js/main.js` draws the lattice once into a `<canvas>`, tiling `{8/3}` star
-polygons on a 128px square lattice with an interstitial star at each half-offset
-point. Because the pattern is periodic in exactly that period, the slow diagonal
-drift is a pure CSS `transform` that translates by one period and loops —
-compositor-only, with no per-frame JavaScript.
-
----
+The layout: a yellow announcement bar pinned to the top, a 300px fixed black
+sidebar (wordmark, uppercase nav, social icons), and a main column whose hero
+fills the remaining viewport. On screens under 980px the sidebar collapses
+into a top bar with a hamburger menu.
 
 ## Structure
 
 ```
 index.html            markup + metadata (Open Graph, JSON-LD Person schema)
-assets/css/style.css  design tokens, layout, motion
-assets/js/main.js     girih engine, theme, scroll reveal, lightbox
-assets/img/           portrait, cover, video thumbnail
+assets/css/style.css  design tokens, layout, responsive rules
+assets/js/main.js     mobile menu, scroll reveal, video lightbox
+assets/img/           photos
 dev-server.js         zero-dependency static server for local preview
 ```
 
@@ -57,27 +54,18 @@ Or just open `index.html` directly.
 
 ## Deploying
 
-The site is fully static, so GitHub Pages serves it from the repository root
-with no build step. Any static host (Netlify, Vercel, Cloudflare Pages) works
-the same way.
-
----
+Fully static — GitHub Pages serves it from the repository root with no build
+step. Any static host (Netlify, Vercel, Cloudflare Pages) works the same way.
 
 ## Notes on robustness
 
-A few things are deliberate rather than incidental:
-
-- **Theme is resolved before first paint** by a small inline script in `<head>`,
-  so there is no flash of the wrong theme. It honours a stored preference first,
-  then `prefers-color-scheme`, defaulting to dark.
-- **Scroll-reveal is gated on a `.js` class.** If the script never runs, the
-  content is simply visible — it is never left stranded at `opacity: 0`. A timer
-  and a `visibilitychange` handler cover the case where `IntersectionObserver`
-  callbacks are starved (background tabs, some embedded webviews).
-- **The canvas redraws from a `ResizeObserver`**, not a `resize` listener, so it
-  is correct even when it is first measured before layout settles.
-- `prefers-reduced-motion` stops the drift, the grain, the marquee and the
-  role rotator.
+- **Scroll-reveal is gated on a `.js` class** — if the script never runs, all
+  content is simply visible. A timer plus a `visibilitychange` handler cover
+  the case where `IntersectionObserver` callbacks are starved (background
+  tabs, some embedded webviews).
+- The hero video opens in an in-page lightbox via `youtube-nocookie.com`, so
+  no YouTube script loads until the visitor asks for it.
+- `prefers-reduced-motion` disables all animation.
 
 ## Credits
 

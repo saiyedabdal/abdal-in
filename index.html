@@ -1,46 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Saiyed Abdal — Founder, Poet, Toastmaster</title>
-<meta name="description" content="Portfolio of Saiyed Mohammad Ahsan Abdal — Founder at UPSC Vision, poet at Poetic Whispers, computer science graduate, Toastmaster and social innovator.">
+<meta name="description" content="Saiyed Mohammad Ahsan Abdal — founder of UPSC Vision, poet at Poetic Whispers, Toastmaster and computer science graduate.">
 <meta name="author" content="Saiyed Mohammad Ahsan Abdal">
-<meta name="theme-color" content="#080a0f" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0B0B">
 <link rel="canonical" href="https://abdal.in/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abdal.in/">
 <meta property="og:title" content="Saiyed Abdal — Founder, Poet, Toastmaster">
-<meta property="og:description" content="Founder at UPSC Vision. Poet at Poetic Whispers. Computer science graduate and humanities geek, drawn to Sufism and Stoicism.">
-<meta property="og:image" content="https://abdal.in/assets/img/cover.jpg">
+<meta property="og:description" content="Founder of UPSC Vision. Poet at Poetic Whispers. Toastmaster and computer science graduate.">
+<meta property="og:image" content="https://abdal.in/assets/img/talk-thumb.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@SaiyedAbdal2">
-<meta name="twitter:creator" content="@SaiyedAbdal2">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080a0f'/%3E%3Cg fill='none' stroke='%23c9a75c' stroke-width='5'%3E%3Crect x='24' y='24' width='52' height='52'/%3E%3Crect x='24' y='24' width='52' height='52' transform='rotate(45 50 50)'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23fff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="assets/img/avatar.jpg">
-
-<!-- Set the theme and the `js` gate before first paint: no theme flash, and
-     scroll-reveal styles only apply when JS can actually undo them. -->
-<script>
-(function () {
-  var r = document.documentElement;
-  r.classList.add('js');
-  try {
-    var t = localStorage.getItem('abdal-theme');
-    if (t !== 'light' && t !== 'dark') {
-      t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    }
-    r.setAttribute('data-theme', t);
-  } catch (e) {}
-})();
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Karla:ital,wght@0,300..700;1,300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 
 <script type="application/ld+json">
@@ -52,7 +34,7 @@
   "url": "https://abdal.in/",
   "image": "https://abdal.in/assets/img/avatar.jpg",
   "jobTitle": "Founder",
-  "description": "Founder at UPSC Vision, poet at Poetic Whispers, computer science graduate, Toastmaster and social innovator.",
+  "description": "Founder of UPSC Vision, poet at Poetic Whispers, Toastmaster and computer science graduate.",
   "sameAs": [
     "https://twitter.com/SaiyedAbdal2",
     "https://github.com/saiyedabdal",
@@ -66,364 +48,141 @@
 </head>
 <body>
 
-<a class="skip" href="#main">Skip to content</a>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to main content</a>
 
-<!-- ─────────────────────────────  NAV  ───────────────────────────── -->
-<header class="nav" id="nav">
-  <a class="nav__brand" href="#home" aria-label="Saiyed Abdal — home">
-    <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="1.4">
-        <rect x="9" y="9" width="22" height="22"/>
-        <rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/>
-        <circle cx="20" cy="20" r="4.2"/>
-      </g>
-    </svg>
-    <span class="nav__name">Saiyed&nbsp;Abdal</span>
-  </a>
+<!-- ── Announcement bar ─────────────────────────────────────── -->
+<a class="topbar" href="http://poeticcwhisperss.com/" target="_blank" rel="noopener">
+  Read the latest at Poetic Whispers!
+</a>
 
-  <nav class="nav__links" aria-label="Primary">
-    <a href="#about">Facets</a>
-    <a href="#ventures">Ventures</a>
-    <a href="#code">Index</a>
-    <a href="#speaking">Voice</a>
-    <a href="#connect">Connect</a>
+<!-- ── Fixed sidebar ────────────────────────────────────────── -->
+<header class="side" id="side">
+  <a class="side__logo" href="#top" aria-label="Saiyed Abdal — home">Abdal</a>
+
+  <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side__nav" id="sidenav" aria-label="Primary">
+    <a href="#story">Saiyed Abdal</a>
+    <a href="http://upscvision.org/" target="_blank" rel="noopener">UPSC Vision</a>
+    <a href="http://poeticcwhisperss.com/" target="_blank" rel="noopener">Poetic Whispers</a>
+    <a href="#connect">Contact</a>
   </nav>
 
-  <button class="theme" id="theme" type="button" aria-label="Toggle colour theme" aria-pressed="true">
-    <span class="theme__track"><span class="theme__dot"></span></span>
-  </button>
+  <ul class="side__social" aria-label="Social links">
+    <li><a href="https://twitter.com/SaiyedAbdal2" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+    </a></li>
+    <li><a href="https://github.com/saiyedabdal" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>
+    </a></li>
+    <li><a href="https://www.youtube.com/channel/UCnfM6C1BqkO7zyURP-xY1gw" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+  </ul>
 </header>
 
 <main id="main">
 
-<!-- ─────────────────────────────  HERO  ───────────────────────────── -->
-<section class="hero" id="home">
-  <canvas class="girih" id="girih" aria-hidden="true"></canvas>
-  <div class="hero__veil" aria-hidden="true"></div>
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <img class="hero__img" src="assets/img/talk-thumb.jpg"
+       alt="Saiyed Abdal at the Asia Pacific Youth Exchange in Bangkok" fetchpriority="high">
+  <div class="hero__shade" aria-hidden="true"></div>
 
-  <div class="hero__inner">
-    <div class="hero__text">
-      <p class="eyebrow rv" style="--d:0ms">
-        <span class="eyebrow__rule"></span>Portfolio&nbsp;&nbsp;·&nbsp;&nbsp;abdal.in
-      </p>
+  <h1 class="hero__title">
+    Founder of UPSC&nbsp;Vision, poet at Poetic&nbsp;Whispers, Toastmaster &amp; computer science graduate
+  </h1>
 
-      <h1 class="hero__name">
-        <span class="line rv" style="--d:90ms"><span class="foil">Saiyed</span></span>
-        <span class="line line--in rv" style="--d:190ms"><span class="foil">Abdal</span></span>
-      </h1>
-
-      <p class="hero__full rv" style="--d:290ms">Saiyed Mohammad Ahsan Abdal</p>
-
-      <p class="hero__roles rv" style="--d:370ms">
-        <span class="roles" id="roles" aria-live="polite"><span class="roles__word">Founder</span></span>
-        <span class="hero__roles-tail">— building things that outlast the building.</span>
-      </p>
-
-      <div class="hero__cta rv" style="--d:470ms">
-        <a class="btn btn--gold" href="#ventures">
-          See the work
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a class="btn btn--ghost" href="#connect">Let's connect</a>
-      </div>
-    </div>
-
-    <figure class="portrait rv" style="--d:340ms">
-      <svg class="portrait__ring" viewBox="0 0 400 400" aria-hidden="true">
-        <g fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="200" cy="200" r="196"/>
-          <circle cx="200" cy="200" r="176"/>
-        </g>
-        <g class="portrait__spin" fill="none" stroke="currentColor" stroke-width="1">
-          <g id="pet"><path d="M200 22 L214 46 L200 70 L186 46 Z"/></g>
-          <use href="#pet" transform="rotate(22.5 200 200)"/>
-          <use href="#pet" transform="rotate(45 200 200)"/>
-          <use href="#pet" transform="rotate(67.5 200 200)"/>
-          <use href="#pet" transform="rotate(90 200 200)"/>
-          <use href="#pet" transform="rotate(112.5 200 200)"/>
-          <use href="#pet" transform="rotate(135 200 200)"/>
-          <use href="#pet" transform="rotate(157.5 200 200)"/>
-          <use href="#pet" transform="rotate(180 200 200)"/>
-          <use href="#pet" transform="rotate(202.5 200 200)"/>
-          <use href="#pet" transform="rotate(225 200 200)"/>
-          <use href="#pet" transform="rotate(247.5 200 200)"/>
-          <use href="#pet" transform="rotate(270 200 200)"/>
-          <use href="#pet" transform="rotate(292.5 200 200)"/>
-          <use href="#pet" transform="rotate(315 200 200)"/>
-          <use href="#pet" transform="rotate(337.5 200 200)"/>
-        </g>
-      </svg>
-      <div class="portrait__oct">
-        <img src="assets/img/avatar.jpg" width="460" height="460" alt="Saiyed Abdal speaking at a podium" fetchpriority="high" decoding="async">
-      </div>
-      <figcaption class="portrait__cap">On stage · Toastmaster</figcaption>
-    </figure>
-  </div>
-
-  <a class="scrollcue" href="#about" aria-label="Scroll to content">
-    <span class="scrollcue__line"></span><span class="scrollcue__txt">scroll</span>
-  </a>
+  <button class="hero__play" id="playTalk" type="button" aria-label="Play video: Global Youth Summit application">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+    <span>Play video</span>
+  </button>
 </section>
 
-<!-- ─────────────────────────────  MARQUEE  ───────────────────────────── -->
-<div class="ribbon" aria-hidden="true">
-  <div class="ribbon__track">
-    <span class="ribbon__set">
-      <em>Sufism</em><i>✦</i><em>Stoicism</em><i>✦</i><em>Poetry</em><i>✦</i><em>Public Speaking</em><i>✦</i><em>Computer Science</em><i>✦</i><em>Humanities</em><i>✦</i><em>Social Innovation</em><i>✦</i>
-    </span>
-    <span class="ribbon__set">
-      <em>Sufism</em><i>✦</i><em>Stoicism</em><i>✦</i><em>Poetry</em><i>✦</i><em>Public Speaking</em><i>✦</i><em>Computer Science</em><i>✦</i><em>Humanities</em><i>✦</i><em>Social Innovation</em><i>✦</i>
-    </span>
+<!-- ── Quote ────────────────────────────────────────────────── -->
+<section class="quote">
+  <blockquote>
+    <p>&ldquo;Building things that outlast the&nbsp;building.&rdquo;</p>
+    <cite>Saiyed Abdal</cite>
+  </blockquote>
+</section>
+
+<!-- ── Personas ─────────────────────────────────────────────── -->
+<section class="story" id="story">
+  <div class="story__col">
+    <h2 class="story__name">Saiyed Abdal</h2>
+    <p class="story__does">builds platforms for aspirants</p>
+    <p class="story__does">speaks as a Toastmaster</p>
   </div>
-</div>
-
-<!-- ─────────────────────────────  FACETS  ───────────────────────────── -->
-<section class="sec" id="about">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">01</span>
-      <h2 class="sec__title">Facets</h2>
-      <p class="sec__lede">Six sides of one person — the way a star is still a star from every angle.</p>
-    </header>
-
-    <ul class="facets">
-      <li class="facet rv" style="--d:0ms">
-        <span class="facet__seal">💼</span>
-        <h3>Founder</h3>
-        <p>Building <a href="http://upscvision.org/" target="_blank" rel="noopener">upscvision.org</a> — a home for civil-services aspirants.</p>
-      </li>
-      <li class="facet rv" style="--d:70ms">
-        <span class="facet__seal">🖋️</span>
-        <h3>Poet</h3>
-        <p>Verses live at <a href="http://poeticcwhisperss.com/" target="_blank" rel="noopener">poeticcwhisperss.com</a>.</p>
-      </li>
-      <li class="facet rv" style="--d:140ms">
-        <span class="facet__seal">🎓</span>
-        <h3>Comp Sci Grad</h3>
-        <p>And an unrepentant humanities geek — both halves, all the time.</p>
-      </li>
-      <li class="facet rv" style="--d:210ms">
-        <span class="facet__seal">🤓</span>
-        <h3>Sufism &amp; Stoicism</h3>
-        <p>Two traditions, one question: how to hold the self lightly.</p>
-      </li>
-      <li class="facet rv" style="--d:280ms">
-        <span class="facet__seal">🗣️</span>
-        <h3>Toastmaster</h3>
-        <p>Public speaker — trained in the room, not just the notes.</p>
-      </li>
-      <li class="facet rv" style="--d:350ms">
-        <span class="facet__seal">🚀</span>
-        <h3>Social Innovator</h3>
-        <p>Entrepreneur working where impact and enterprise meet.</p>
-      </li>
-    </ul>
+  <div class="story__col">
+    <h2 class="story__name story__name--alt">The Poet</h2>
+    <p class="story__does">writes at Poetic Whispers</p>
+    <p class="story__does">reads Sufism &amp; Stoicism</p>
   </div>
 </section>
 
-<!-- ─────────────────────────────  VENTURES  ───────────────────────────── -->
-<section class="sec sec--alt" id="ventures">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">02</span>
-      <h2 class="sec__title">Ventures</h2>
-      <p class="sec__lede">Two long games — one for the mind, one for the heart.</p>
-    </header>
+<!-- ── The three doors ──────────────────────────────────────── -->
+<section class="doors" id="work">
+  <h2 class="doors__head">Where to next</h2>
 
-    <div class="ventures">
-      <a class="venture rv" href="http://upscvision.org/" target="_blank" rel="noopener" style="--d:0ms">
-        <span class="venture__tag">Founder</span>
-        <h3 class="venture__name">UPSC&nbsp;Vision</h3>
-        <p class="venture__desc">A platform for India's civil-services aspirants — structured, visual, and built around how people actually study.</p>
-        <span class="venture__link">upscvision.org<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="venture__glow" aria-hidden="true"></span>
-      </a>
+  <div class="doors__grid">
+    <a class="door" href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
+      <span class="door__media">
+        <img src="assets/img/avatar.jpg" alt="" loading="lazy">
+      </span>
+      <span class="door__label">My corporate life</span>
+      <span class="door__sub">LinkedIn ↗</span>
+    </a>
 
-      <a class="venture rv" href="http://poeticcwhisperss.com/" target="_blank" rel="noopener" style="--d:120ms">
-        <span class="venture__tag">Poet</span>
-        <h3 class="venture__name">Poetic&nbsp;Whispers</h3>
-        <p class="venture__desc">Where the writing lives. Quieter than the rest of the internet, and meant to be.</p>
-        <span class="venture__link">poeticcwhisperss.com<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="venture__glow" aria-hidden="true"></span>
-      </a>
-    </div>
+    <a class="door" href="http://poeticcwhisperss.com/" target="_blank" rel="noopener">
+      <span class="door__media door__media--type" aria-hidden="true">
+        <span class="door__glyph">&ldquo;</span>
+      </span>
+      <span class="door__label">My poetry</span>
+      <span class="door__sub">poeticcwhisperss.com ↗</span>
+    </a>
+
+    <a class="door" href="http://upscvision.org/" target="_blank" rel="noopener">
+      <span class="door__media">
+        <img src="assets/img/cover.jpg" alt="" loading="lazy">
+      </span>
+      <span class="door__label">My UPSC preparation journey</span>
+      <span class="door__sub">upscvision.org ↗</span>
+    </a>
   </div>
 </section>
 
-<!-- ─────────────────────────────  REPO INDEX  ───────────────────────────── -->
-<section class="sec" id="code">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">03</span>
-      <h2 class="sec__title">The Index</h2>
-      <p class="sec__lede">Public repositories — a working table of contents.</p>
-    </header>
+<!-- ── Connect / footer ─────────────────────────────────────── -->
+<footer class="foot" id="connect">
+  <h2 class="foot__head">Let's connect</h2>
+  <a class="foot__mail" href="mailto:smahsanabdal@gmail.com">smahsanabdal@gmail.com</a>
 
-    <ol class="index" role="list">
-      <li class="rv" style="--d:0ms"><a class="idx" href="https://github.com/saiyedabdal/mappointer" target="_blank" rel="noopener">
-        <span class="idx__n">i</span>
-        <span class="idx__body">
-          <span class="idx__name">mappointer</span>
-          <span class="idx__desc">Interactive world-map tool for UPSC aspirants — marks key historical sites with Python's Folium.</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="HTML">HTML</span><span class="star">★ 1</span></span>
-      </a></li>
+  <ul class="foot__social" aria-label="Social links">
+    <li><a href="https://twitter.com/SaiyedAbdal2" target="_blank" rel="noopener" aria-label="X / Twitter">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+    </a></li>
+    <li><a href="https://github.com/saiyedabdal" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>
+    </a></li>
+    <li><a href="https://www.youtube.com/channel/UCnfM6C1BqkO7zyURP-xY1gw" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+  </ul>
 
-      <li class="rv" style="--d:60ms"><a class="idx" href="https://github.com/saiyedabdal/pw-site" target="_blank" rel="noopener">
-        <span class="idx__n">ii</span>
-        <span class="idx__body">
-          <span class="idx__name">pw-site</span>
-          <span class="idx__desc">Personal poetry portfolio site of Saiyed Abdal.</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="TypeScript">TypeScript</span><span class="star">★ 1</span></span>
-      </a></li>
-
-      <li class="rv" style="--d:120ms"><a class="idx" href="https://github.com/saiyedabdal/Life-360" target="_blank" rel="noopener">
-        <span class="idx__n">iii</span>
-        <span class="idx__body">
-          <span class="idx__name">Life-360</span>
-          <span class="idx__desc">Life 360 — a web-first PWA.</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="HTML">HTML</span></span>
-      </a></li>
-
-      <li class="rv" style="--d:180ms"><a class="idx" href="https://github.com/saiyedabdal/upscvision-site" target="_blank" rel="noopener">
-        <span class="idx__n">iv</span>
-        <span class="idx__body">
-          <span class="idx__name">upscvision-site</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="TypeScript">TypeScript</span><span class="star">★ 1</span></span>
-      </a></li>
-
-      <li class="rv" style="--d:240ms"><a class="idx" href="https://github.com/saiyedabdal/astro-portfolio" target="_blank" rel="noopener">
-        <span class="idx__n">v</span>
-        <span class="idx__body">
-          <span class="idx__name">astro-portfolio</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="Astro">Astro</span><span class="star">★ 1</span></span>
-      </a></li>
-
-      <li class="rv" style="--d:300ms"><a class="idx" href="https://github.com/saiyedabdal/duroodcount" target="_blank" rel="noopener">
-        <span class="idx__n">vi</span>
-        <span class="idx__body">
-          <span class="idx__name">duroodcount</span>
-        </span>
-        <span class="idx__meta"><span class="lang" data-lang="HTML">HTML</span></span>
-      </a></li>
-    </ol>
-
-    <p class="index__more rv"><a href="https://github.com/saiyedabdal?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
-  </div>
-</section>
-
-<!-- ─────────────────────────────  SPEAKING  ───────────────────────────── -->
-<section class="sec sec--alt" id="speaking">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">04</span>
-      <h2 class="sec__title">Voice</h2>
-      <p class="sec__lede">Toastmaster, speaker, and occasional maker of application videos.</p>
-    </header>
-
-    <div class="talk rv">
-      <button class="talk__player" id="playTalk" type="button"
-              aria-label="Play: Saiyed Abdal — Global Changemakers, Global Youth Summit application video">
-        <img src="assets/img/talk-thumb.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async">
-        <span class="talk__scrim"></span>
-        <span class="talk__play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
-      </button>
-      <div class="talk__meta">
-        <span class="talk__kicker">YouTube · Global Changemakers</span>
-        <h3 class="talk__title">Global Youth Summit — Application Video</h3>
-        <p class="talk__desc">The application video submitted for the Global Changemakers Global Youth Summit.</p>
-        <a class="talk__chan" href="https://www.youtube.com/channel/UCnfM6C1BqkO7zyURP-xY1gw" target="_blank" rel="noopener">Visit the channel<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────────────────────────  SHELF  ───────────────────────────── -->
-<section class="sec" id="shelf">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">05</span>
-      <h2 class="sec__title">The Shelf</h2>
-      <p class="sec__lede">What's being read and watched, kept honest in public.</p>
-    </header>
-
-    <div class="shelf">
-      <a class="card rv" href="https://fable.co/saiyed-abdal-285911183260" target="_blank" rel="noopener" style="--d:0ms">
-        <span class="card__seal">📚</span>
-        <h3>Reading List</h3>
-        <p>Books in progress and books finished — tracked on Fable.</p>
-        <span class="card__go">fable.co<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a class="card rv" href="https://fable.co/saiyed-abdal-285911183260" target="_blank" rel="noopener" style="--d:110ms">
-        <span class="card__seal">📹</span>
-        <h3>Watch List</h3>
-        <p>Films and talks worth the two hours.</p>
-        <span class="card__go">fable.co<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────────────────────────  CONNECT  ───────────────────────────── -->
-<section class="sec sec--connect" id="connect">
-  <div class="wrap">
-    <header class="sec__head rv">
-      <span class="sec__num">06</span>
-      <h2 class="sec__title">Let's Connect</h2>
-      <p class="sec__lede">Open to conversations about education, poetry, and building for people.</p>
-    </header>
-
-    <ul class="social" role="list">
-      <li class="rv" style="--d:0ms"><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
-        <svg class="social__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
-        <span class="social__name">LinkedIn</span><span class="social__handle">Saiyed Mohammad Ahsan Abdal</span>
-        <svg class="social__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a></li>
-
-      <li class="rv" style="--d:70ms"><a href="https://github.com/saiyedabdal" target="_blank" rel="noopener">
-        <svg class="social__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>
-        <span class="social__name">GitHub</span><span class="social__handle">@saiyedabdal</span>
-        <svg class="social__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a></li>
-
-      <li class="rv" style="--d:140ms"><a href="https://twitter.com/SaiyedAbdal2" target="_blank" rel="noopener">
-        <svg class="social__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
-        <span class="social__name">X / Twitter</span><span class="social__handle">@SaiyedAbdal2</span>
-        <svg class="social__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a></li>
-
-      <li class="rv" style="--d:210ms"><a href="https://www.youtube.com/channel/UCnfM6C1BqkO7zyURP-xY1gw" target="_blank" rel="noopener">
-        <svg class="social__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
-        <span class="social__name">YouTube</span><span class="social__handle">Saiyed Mohammad Ahsan Abdal</span>
-        <svg class="social__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a></li>
-    </ul>
-  </div>
-</section>
+  <p class="foot__legal">© Saiyed Mohammad Ahsan Abdal <span id="year">2026</span></p>
+</footer>
 
 </main>
 
-<!-- ─────────────────────────────  FOOTER  ───────────────────────────── -->
-<footer class="foot">
-  <div class="wrap foot__in">
-    <svg class="foot__mark" viewBox="0 0 40 40" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="1">
-        <rect x="9" y="9" width="22" height="22"/>
-        <rect x="9" y="9" width="22" height="22" transform="rotate(45 20 20)"/>
-      </g>
-    </svg>
-    <p class="foot__copy">© <span id="year">2026</span> Saiyed Mohammad Ahsan Abdal</p>
-    <p class="foot__note">Built with geometry, gold, and a little patience.</p>
-  </div>
-</footer>
-
-<!-- ─────────────────────────────  LIGHTBOX  ───────────────────────────── -->
+<!-- ── Video lightbox ───────────────────────────────────────── -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player" hidden>
   <button class="lightbox__close" id="lbClose" type="button" aria-label="Close video">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
