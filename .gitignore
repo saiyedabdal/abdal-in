@@ -8,3 +8,4 @@ _import/
 .vscode/
 .idea/
 .claude/
+.netlify/

@@ -1,0 +1,30 @@
+# Static site — nothing to build, the repository root is the site.
+
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URLs for the poetry archive
+[[redirects]]
+  from = "/poetry"
+  to = "/poetry.html"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Fingerprint-free assets: revalidate, but allow the CDN to serve while stale.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
