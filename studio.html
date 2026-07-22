@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=99d1ba99">
-<link rel="stylesheet" href="/assets/css/upsc.css?v=a6611bfd">
+<link rel="stylesheet" href="/assets/css/upsc.css?v=723550ab">
 </head>
 <body>
 
@@ -79,22 +79,89 @@
 
 <section class="um">
   <p class="um__kicker">The Studio</p>
-  <h1 class="um__title">Something is being <em>built</em> here</h1>
-  <p class="um__lede">This page is in progress. Check back shortly &mdash; or write to me
-     in the meantime.</p>
+  <h1 class="um__title">Where the writing gets a <em>voice</em></h1>
+  <p class="um__lede">The poems on the other page sit still on a screen. Here they are
+     sung, scored and read aloud &mdash; the same lines, carried by music and a voice
+     instead of by type.</p>
 </section>
 
+<!-- ── The film ─────────────────────────────────────────────── -->
 <section class="us">
   <div class="us__in">
+    <p class="us__num">Film</p>
+    <h2 class="us__head">Aye Waqt Mujhe Is Qaid Se, Aazad&nbsp;Kar</h2>
     <div class="us__body">
-      <p>In the meantime, the rest of the site is here: the
-         <a href="/entrepreneurship.html">work at Frido</a>,
-         <a href="/beyond-work.html">what I chased outside it</a>,
-         <a href="/poetry.html">119 poems</a>, and
-         <a href="/upsc.html">the UPSC years</a>.</p>
+      <p>A poem of mine set to music and filmed &mdash; time asked, plainly, to let
+         its prisoner go.</p>
     </div>
-    <a class="ucta" href="/#connect">
-      Get in touch
+
+    <div class="vid">
+      <button class="vid__play" type="button" data-video="ACeorES3aHs"
+              aria-label="Play: Aye Waqt Mujhe Is Qaid Se, Aazad Kar">
+        <img src="/assets/img/studio/ACeorES3aHs.webp" alt="" loading="lazy" decoding="async" width="1280" height="720">
+        <span class="vid__scrim" aria-hidden="true"></span>
+        <span class="vid__btn" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+        </span>
+      </button>
+      <p class="vid__cap">On YouTube &middot; Saiyed Abdal</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── The reels ────────────────────────────────────────────── -->
+<section class="us us--tint">
+  <div class="us__in">
+    <p class="us__num">Reels</p>
+    <h2 class="us__head">Read aloud, set to picture</h2>
+    <div class="us__body">
+      <p>Three pieces from <a href="https://www.instagram.com/jurrat_aamoz/" target="_blank" rel="noopener">@jurrat_aamoz</a>
+         &mdash; a ghazal against a scene from <em>Rockstar</em>, a poem for mothers
+         voiced with friends, and one about the alleys love takes you down.</p>
+    </div>
+
+    <!-- Plain iframes rather than Instagram's embed.js: the script weighs
+         more than the three posts together and tracks whoever visits. The
+         wrapper sizes each box to the embed's real height (see upsc.css). -->
+    <div class="reels">
+      <figure class="reel">
+        <div class="reel__box">
+          <iframe src="https://www.instagram.com/p/CwxUXLMx6kf/embed/" loading="lazy"
+                scrolling="no" allowtransparency="true" allowfullscreen
+                title="Instagram: a ghazal set to a scene from Rockstar"></iframe>
+        </div>
+        <figcaption>Set to a scene from <em>Rockstar</em></figcaption>
+      </figure>
+
+      <figure class="reel">
+        <div class="reel__box">
+          <iframe src="https://www.instagram.com/p/Cw_80h8rXOa/embed/" loading="lazy"
+                scrolling="no" allowtransparency="true" allowfullscreen
+                title="Instagram: a poem for mothers"></iframe>
+        </div>
+        <figcaption>For mothers &mdash; voice by Rakesh, film by Ankit</figcaption>
+      </figure>
+
+      <figure class="reel">
+        <div class="reel__box">
+          <iframe src="https://www.instagram.com/p/CxQSVd_sNHo/embed/" loading="lazy"
+                scrolling="no" allowtransparency="true" allowfullscreen
+                title="Instagram: a ghazal on love"></iframe>
+        </div>
+        <figcaption>A ghazal on what love promises, and doesn&rsquo;t</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="us us--dark">
+  <div class="us__in">
+    <div class="us__body">
+      <p>The written versions of these &mdash; and a hundred and sixteen more &mdash;
+         are in <a href="/poetry.html">the poetry archive</a>.</p>
+    </div>
+    <a class="ucta" href="/poetry.html">
+      Read the poems
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>

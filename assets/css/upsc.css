@@ -343,3 +343,40 @@
   .um__stats{gap:1.6rem}
   .subs{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
 }
+
+/* ── The Studio: Instagram reels ────────────────────────────── */
+/* Instagram's embed is a fixed header (51px) and footer (155px) around a
+   media well that scales with the width — so its height is affine, not
+   proportional, and no aspect-ratio can express it. Percentage padding IS
+   resolved against the width, so this reproduces 1.247*W + 206 exactly:
+   the box fits the content at any column width, with nothing clipped off
+   the bottom and no dead white space under it. */
+.reels{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1rem,2vw,1.6rem);
+  margin-top:2.4rem;
+}
+.reel{margin:0}
+.reel__box{
+  position:relative;height:0;
+  padding-bottom:calc(124.7% + 206px);
+  border:1px solid #E4E4E0;background:#fff;
+}
+.reel__box iframe{
+  position:absolute;inset:0;
+  width:100%;height:100%;border:0;display:block;
+}
+.reel figcaption{
+  margin-top:.85rem;
+  font-size:.86rem;line-height:1.55;color:var(--grey-dark);
+}
+.reel figcaption em{font-style:italic}
+
+@media (max-width:900px){
+  .reels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reel:last-child{grid-column:1 / -1;max-width:calc(50% - .8rem)}
+}
+@media (max-width:600px){
+  .reels{grid-template-columns:minmax(0,1fr);gap:2rem}
+  .reel:last-child{grid-column:auto;max-width:none}
+}

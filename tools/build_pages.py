@@ -47,7 +47,6 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:url" content="https://abdal.in/{name}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://abdal.in/assets/img/talk-thumb.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@saiyedspeaks">
 

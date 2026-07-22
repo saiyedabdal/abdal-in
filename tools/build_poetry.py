@@ -149,7 +149,6 @@ page = f"""<!DOCTYPE html>
 <meta property="og:url" content="https://abdal.in/poetry.html">
 <meta property="og:title" content="अब्दाल की कलम से — Poetry of Saiyed Abdal">
 <meta property="og:description" content="{total} pieces — ghazal, sher, and Sufi verse by Saiyed Abdal.">
-<meta property="og:image" content="https://abdal.in/assets/img/talk-thumb.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@saiyedspeaks">
 
