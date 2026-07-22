@@ -26,7 +26,7 @@ $('#sidenav')?.addEventListener('click', (e) => {
 });
 
 /* ── Reveal on scroll ───────────────────────────────────────── */
-const items = [...document.querySelectorAll('.quote, .story__col, .door, .foot__head')];
+const items = [...document.querySelectorAll('.quote, .story__col, .foot__head')];
 items.forEach((el) => el.classList.add('rv'));
 
 if ('IntersectionObserver' in window) {
