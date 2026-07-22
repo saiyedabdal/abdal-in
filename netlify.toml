@@ -4,6 +4,10 @@
   publish = "."
   command = ""
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Pretty URLs for the poetry archive
 [[redirects]]
   from = "/pursuits"
@@ -40,3 +44,10 @@
   for = "/assets/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# The private workspace is never for search engines, gate or no gate.
+[[headers]]
+  for = "/private/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

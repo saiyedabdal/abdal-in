@@ -1,0 +1,9 @@
+{
+  "name": "abdal-in",
+  "private": true,
+  "type": "module",
+  "description": "abdal.in — static site, plus the private workspace behind /private",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

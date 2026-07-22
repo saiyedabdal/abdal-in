@@ -12,7 +12,11 @@
  */
 
 const COOKIE = "abdal_gate";
+const PRIVATE_COOKIE = "abdal_private";
 const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
+
+/** The private workspace and its data API, locked by a second password. */
+const isPrivate = (p) => p === "/private" || p.startsWith("/private/") || p.startsWith("/api/");
 
 // Let the share-card image through unauthenticated. Link previews are built
 // by WhatsApp/LinkedIn servers that cannot log in, and the image gives away
@@ -44,36 +48,82 @@ export default async (request, context) => {
   if (!password) return new Response(misconfigured(), { status: 503, headers: htmlHeaders() });
 
   const token = await sha256(password + "::abdal.in");
-
-  // Already through the gate?
   const jar = request.headers.get("cookie") || "";
-  const hit = jar.split(/;\s*/).find((c) => c.startsWith(COOKIE + "="));
-  if (hit && safeEqual(hit.slice(COOKIE.length + 1), token)) return;
+  const cookieIs = (name, want) => {
+    const hit = jar.split(/;\s*/).find((c) => c.startsWith(name + "="));
+    return !!hit && safeEqual(hit.slice(name.length + 1), want);
+  };
 
-  // A submission from the gate form.
-  if (request.method === "POST") {
-    const form = await request.formData();
-    if (safeEqual(String(form.get("password") || ""), password)) {
-      const to = String(form.get("next") || "/");
-      // Only ever return to a path on this site, never to a URL an attacker
-      // could put in the form.
-      const dest = to.startsWith("/") && !to.startsWith("//") ? to : "/";
-      return new Response(null, {
-        status: 303,
-        headers: {
-          location: dest,
-          "set-cookie":
-            `${COOKIE}=${token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${MAX_AGE}`,
-        },
-      });
+  // Only a form submission can be a gate answer. The workspace API posts
+  // JSON, and reading its body here would consume it before it ever
+  // reached the function.
+  const ct = request.headers.get("content-type") || "";
+  const isForm =
+    request.method === "POST" &&
+    (ct.includes("application/x-www-form-urlencoded") || ct.includes("multipart/form-data"));
+  const form = isForm ? await request.formData() : null;
+  const stage = form ? String(form.get("stage") || "") : "";
+
+  const redirect = (name, value, to) => {
+    const dest = to.startsWith("/") && !to.startsWith("//") ? to : "/";
+    return new Response(null, {
+      status: 303,
+      headers: {
+        location: dest,
+        "set-cookie":
+          `${name}=${value}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${MAX_AGE}`,
+      },
+    });
+  };
+
+  // ── First lock: the site itself ──────────────────────────────────────
+  if (!cookieIs(COOKIE, token)) {
+    if (stage === "site") {
+      if (safeEqual(String(form.get("password") || ""), password)) {
+        return redirect(COOKIE, token, String(form.get("next") || "/"));
+      }
+      return new Response(gate(url.pathname, true), { status: 401, headers: htmlHeaders() });
     }
-    return new Response(gate(url.pathname, true), { status: 401, headers: htmlHeaders() });
+    return new Response(gate(url.pathname + url.search, false), {
+      status: 401,
+      headers: htmlHeaders(),
+    });
   }
 
-  return new Response(gate(url.pathname + url.search, false), {
-    status: 401,
-    headers: htmlHeaders(),
-  });
+  // ── Second lock: the private workspace, a different password ─────────
+  if (isPrivate(url.pathname)) {
+    const secret = Netlify.env.get("PRIVATE_PASSWORD");
+    if (!secret) {
+      return new Response(misconfigured("PRIVATE_PASSWORD"), {
+        status: 503,
+        headers: htmlHeaders(),
+      });
+    }
+    const pToken = await sha256(secret + "::abdal.in/private");
+    if (cookieIs(PRIVATE_COOKIE, pToken)) return;
+
+    if (stage === "private") {
+      if (safeEqual(String(form.get("password") || ""), secret)) {
+        return redirect(PRIVATE_COOKIE, pToken, String(form.get("next") || "/private"));
+      }
+      return new Response(privateGate(url.pathname, true), {
+        status: 401,
+        headers: htmlHeaders(),
+      });
+    }
+    // An API call without the second cookie gets JSON, not a login page —
+    // the workspace's own fetch() would otherwise choke on HTML.
+    if (url.pathname.startsWith("/api/")) {
+      return new Response(JSON.stringify({ error: "not authorised" }), {
+        status: 401,
+        headers: { "content-type": "application/json", "cache-control": "no-store" },
+      });
+    }
+    return new Response(privateGate(url.pathname + url.search, false), {
+      status: 401,
+      headers: htmlHeaders(),
+    });
+  }
 };
 
 function htmlHeaders() {
@@ -184,6 +234,7 @@ function gate(next, wrong) {
       <input id="p" name="password" type="password" required autofocus
              autocomplete="current-password" spellcheck="false" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
       <input type="hidden" name="next" value="${esc(next)}">
+      <input type="hidden" name="stage" value="site">
       <button type="submit">Let me in</button>
     </form>
     <p class="foot">Think you should have this and don&rsquo;t?<br>
@@ -191,15 +242,38 @@ function gate(next, wrong) {
   );
 }
 
-function misconfigured() {
+/** The inner door. Deliberately unlike the outer one, so it is obvious at a
+ *  glance that this is the second lock and not the first one asking twice. */
+function privateGate(next, wrong) {
+  return shell(
+    "Private",
+    `<span class="mark">Abdal</span>
+    <div class="rule"></div>
+    <h1>The <em>private</em> room</h1>
+    <p class="lede">This part is not the website. It is the workspace behind it,
+       and it takes a different password.</p>
+    ${wrong ? '<p class="err">Not that one. This door takes the private password, not the site password.</p>' : ""}
+    <form method="POST" autocomplete="on">
+      <label for="p">Private password</label>
+      <input id="p" name="password" type="password" required autofocus
+             autocomplete="current-password" spellcheck="false" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;">
+      <input type="hidden" name="next" value="${esc(next)}">
+      <input type="hidden" name="stage" value="private">
+      <button type="submit">Open</button>
+    </form>
+    <p class="foot"><a href="/">&larr; Back to the site</a></p>`
+  );
+}
+
+function misconfigured(which = "SITE_PASSWORD") {
   return shell(
     "Saiyed Abdal",
     `<span class="mark">Abdal</span>
     <div class="rule"></div>
     <h1>Locked</h1>
-    <p class="lede">The access gate has no password configured, so it is holding the
+    <p class="lede">This gate has no password configured, so it is holding the
        door shut rather than letting everyone through.</p>
-    <p class="err">Set <strong>SITE_PASSWORD</strong> in the Netlify project
+    <p class="err">Set <strong>${esc(which)}</strong> in the Netlify project
        environment variables, then redeploy.</p>`
   );
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Private — Saiyed Abdal</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23F7D842' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/private.css">
+</head>
+<body>
+
+<header class="pv__top">
+  <a class="pv__mark" href="/private">Abdal</a>
+  <nav class="pv__tabs" role="tablist">
+    <button class="pv__tab is-on" data-view="calendar" role="tab">Calendar</button>
+    <button class="pv__tab" data-view="board" role="tab">Board</button>
+  </nav>
+  <a class="pv__out" href="/">Site &rarr;</a>
+</header>
+
+<main class="pv">
+  <div class="pv__head">
+    <div>
+      <p class="pv__kicker">Content calendar</p>
+      <h1 class="pv__title" id="headline">Loading&hellip;</h1>
+    </div>
+    <button class="pv__new" type="button" id="new">+ New entry</button>
+  </div>
+
+  <div class="pv__filters" id="filters">
+    <button class="chip is-on" data-status="all">All</button>
+    <button class="chip" data-status="idea">Idea</button>
+    <button class="chip" data-status="draft">Draft</button>
+    <button class="chip" data-status="ready">Ready</button>
+    <button class="chip" data-status="posted">Posted</button>
+  </div>
+
+  <p class="pv__msg" id="msg" hidden></p>
+
+  <!-- Calendar view: a flat list, soonest first -->
+  <section id="view-calendar">
+    <ol class="rows" id="rows"></ol>
+    <p class="pv__empty" id="empty" hidden>
+      Nothing here yet. <button type="button" class="linkish" id="empty-new">Add the first entry.</button>
+    </p>
+  </section>
+
+  <!-- Board view: the same entries grouped by status -->
+  <section id="view-board" hidden>
+    <div class="board" id="board"></div>
+  </section>
+</main>
+
+<!-- Editor -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__scrim" data-close></div>
+  <form class="sheet__panel" id="form">
+    <div class="sheet__bar">
+      <h2 id="sheet-title">New entry</h2>
+      <button class="sheet__x" type="button" data-close aria-label="Close">&times;</button>
+    </div>
+
+    <label for="f-title">Title</label>
+    <input id="f-title" name="title" required maxlength="200" placeholder="Reel: the 80/20 rule" autocomplete="off">
+
+    <div class="two">
+      <div>
+        <label for="f-date">Date</label>
+        <input id="f-date" name="date" type="date" required>
+      </div>
+      <div>
+        <label for="f-channel">Channel</label>
+        <select id="f-channel" name="channel">
+          <option value="linkedin">LinkedIn</option>
+          <option value="instagram">Instagram</option>
+          <option value="youtube">YouTube</option>
+          <option value="substack">Substack</option>
+          <option value="poetry">Poetry</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="f-status">Status</label>
+    <select id="f-status" name="status">
+      <option value="idea">Idea</option>
+      <option value="draft">Draft</option>
+      <option value="ready">Ready</option>
+      <option value="posted">Posted</option>
+    </select>
+
+    <label for="f-notes">Notes</label>
+    <textarea id="f-notes" name="notes" rows="6" maxlength="4000" placeholder="The hook, the script, whatever you want to remember."></textarea>
+
+    <div class="sheet__actions">
+      <button class="btn btn--go" type="submit" id="save">Save</button>
+      <button class="btn btn--del" type="button" id="delete" hidden>Delete</button>
+    </div>
+  </form>
+</div>
+
+<script src="/assets/js/private.js" defer></script>
+</body>
+</html>
