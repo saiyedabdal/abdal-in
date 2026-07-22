@@ -122,6 +122,9 @@ SOCIAL = """<li><a href="https://twitter.com/SaiyedAbdal2" target="_blank" rel="
     </a></li>
     <li><a href="https://www.youtube.com/channel/UCnfM6C1BqkO7zyURP-xY1gw" target="_blank" rel="noopener" aria-label="YouTube">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+    <li><a href="mailto:smahsanabdal@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
     </a></li>"""
 
 page = f"""<!DOCTYPE html>
@@ -276,13 +279,14 @@ page = f"""<!DOCTYPE html>
 
 <footer class="foot" id="connect">
   <h2 class="foot__head">Let's connect</h2>
-  <a class="foot__mail" href="mailto:smahsanabdal@gmail.com">smahsanabdal@gmail.com</a>
+  <p class="foot__line">Questions, invitations or a note about the poetry —
+     the form on the <a href="index.html#connect">home page</a> reaches me directly.</p>
 
   <ul class="foot__social" aria-label="Social links">
     {SOCIAL}
   </ul>
 
-  <p class="foot__legal">© Saiyed Mohammad Ahsan Abdal <span id="year">2026</span></p>
+  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>
 </footer>
 
 </main>

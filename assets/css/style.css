@@ -264,14 +264,16 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
   font-size:clamp(1.9rem,3.6vw,3.2rem);
   font-weight:600;letter-spacing:.03em;text-transform:uppercase;
 }
-.foot__mail{
-  display:inline-block;margin-top:1.2rem;
-  font-size:clamp(1rem,1.6vw,1.25rem);font-weight:500;
+.foot__line{
+  margin:1.2rem auto 0;max-width:46ch;
+  font-size:1rem;line-height:1.7;color:var(--grey);
+}
+.foot__line a{
   color:var(--yellow);
-  border-bottom:2px solid transparent;
+  border-bottom:1px solid transparent;
   transition:border-color .3s var(--ease);
 }
-.foot__mail:hover{border-bottom-color:var(--yellow)}
+.foot__line a:hover{border-bottom-color:var(--yellow)}
 
 /* ── Contact form ───────────────────────────────────────────── */
 .cform{
