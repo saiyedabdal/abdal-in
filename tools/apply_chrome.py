@@ -18,7 +18,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NAV = [
     ("Saiyed Abdal",     "/",                    ("index.html",)),
     ("Entrepreneurship", "/entrepreneurship.html", ("entrepreneurship.html",)),
-    ("Pursuits",         "/pursuits.html",       ("pursuits.html",)),
+    ("Beyond Work",      "/beyond-work.html",    ("beyond-work.html",)),
+    ("The Studio",       "/studio.html",         ("studio.html",)),
     ("Poetry",           "/poetry.html",         ("poetry.html",)),
     ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),
     ("Contact",          "/#connect",            ()),
@@ -153,7 +154,7 @@ def apply(path):
     # normalise root-relative asset URLs, then version them
     s = re.sub(r'(href|src)="assets/(css|js)/', r'\1="/assets/\2/', s)
     s = version_assets(s)
-    active = rel if rel in ("index.html", "entrepreneurship.html", "pursuits.html",
+    active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                             "poetry.html", "upsc.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
     # announcement bar: replace it where present, insert it where it is not
@@ -174,7 +175,7 @@ def apply(path):
 
 def main():
     files = ([os.path.join(ROOT, f) for f in
-              ("index.html", "entrepreneurship.html", "pursuits.html",
+              ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                "poetry.html", "upsc.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))

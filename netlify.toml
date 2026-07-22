@@ -6,6 +6,18 @@
 
 # Pretty URLs for the poetry archive
 [[redirects]]
+  from = "/pursuits"
+  to = "/beyond-work.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pursuits.html"
+  to = "/beyond-work.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/poetry"
   to = "/poetry.html"
   status = 301

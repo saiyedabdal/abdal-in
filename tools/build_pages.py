@@ -16,10 +16,14 @@ PAGES = {
         desc="AVP in Frido's Founder's Office — inside sales, retail operations, ORM, "
              "affiliate marketing, P&L ownership and zero-to-one GTM.",
         css="upsc.css", topbar=None),
-    "pursuits.html": dict(
-        title="Pursuits — Saiyed Abdal",
+    "beyond-work.html": dict(
+        title="Beyond Work — Saiyed Abdal",
         desc="UNDP Asia-Pacific and the ADB, the Smart India Hackathon, a public speaking "
              "championship in London, and building from zero to one.",
+        css="upsc.css", topbar=None),
+    "studio.html": dict(
+        title="The Studio — Saiyed Abdal",
+        desc="The Studio.",
         css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
