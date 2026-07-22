@@ -1,0 +1,172 @@
+/* ═══════════════════════════════════════════════════════════════
+   abdal.in — the UPSC years
+   Same black / white / yellow language as the rest of the site.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{--stick:var(--bar)}
+@media (max-width:980px){:root{--stick:calc(var(--bar) + 58px)}}
+
+/* ── Masthead ───────────────────────────────────────────────── */
+.um{
+  background:var(--black);color:var(--white);
+  padding:clamp(3.5rem,8vw,7rem) var(--pad) clamp(3rem,6vw,5rem);
+}
+.um__kicker{
+  display:flex;align-items:center;gap:.85rem;
+  font-family:var(--f-display);
+  font-size:.74rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:1.6rem;
+}
+.um__kicker::before{content:'';width:30px;height:3px;background:var(--yellow);flex:none}
+.um__title{
+  font-family:var(--f-display);font-weight:600;
+  font-size:clamp(2.3rem,6.5vw,5rem);line-height:1.02;
+  letter-spacing:.01em;text-transform:uppercase;
+  max-width:18ch;margin-bottom:1.6rem;
+}
+.um__title em{font-style:normal;color:var(--yellow)}
+.um__lede{
+  font-size:clamp(1.05rem,1.7vw,1.3rem);
+  line-height:1.7;color:#B4B4B4;max-width:56ch;
+}
+
+.um__stats{
+  display:flex;flex-wrap:wrap;gap:2.6rem;
+  margin-top:3rem;padding-top:2rem;border-top:1px solid #1E1E1E;
+}
+.um__stat b{
+  display:block;font-family:var(--f-display);
+  font-size:2.2rem;font-weight:500;line-height:1;color:var(--white);
+}
+.um__stat span{
+  display:block;margin-top:.45rem;
+  font-family:var(--f-display);font-size:.7rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+}
+
+/* ── Sections ───────────────────────────────────────────────── */
+.us{padding:clamp(3.5rem,7vw,6rem) var(--pad);border-bottom:1px solid #ECECE8}
+.us--dark{background:var(--black);color:var(--white);border-bottom-color:#1C1C1C}
+.us--tint{background:var(--off)}
+.us__in{max-width:960px;margin-inline:auto}
+
+.us__num{
+  font-family:var(--f-display);font-size:.72rem;
+  letter-spacing:.24em;color:var(--grey);margin-bottom:.9rem;
+}
+.us--dark .us__num{color:var(--yellow)}
+.us__head{
+  font-family:var(--f-display);font-weight:600;
+  font-size:clamp(1.8rem,4.2vw,3rem);line-height:1.08;
+  letter-spacing:.01em;text-transform:uppercase;margin-bottom:1.2rem;
+}
+.us__body{max-width:62ch}
+.us__body p{
+  font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.8;color:var(--grey-dark);
+}
+.us--dark .us__body p{color:#B4B4B4}
+.us__body p + p{margin-top:1.2rem}
+.us__body strong{color:var(--black);font-weight:600}
+.us--dark .us__body strong{color:var(--white)}
+
+/* ── Pull quote ─────────────────────────────────────────────── */
+.pull{
+  margin:2.6rem 0 0;padding-left:1.6rem;
+  border-left:3px solid var(--yellow);
+}
+.pull p{
+  font-family:var(--f-display);font-weight:400;
+  font-size:clamp(1.2rem,2.4vw,1.75rem);line-height:1.35;
+  letter-spacing:.01em;text-transform:uppercase;color:var(--black)!important;
+}
+.us--dark .pull p{color:var(--white)!important}
+
+/* ── Subject grid ───────────────────────────────────────────── */
+.subs{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));
+  gap:1px;background:#E4E4E0;border:1px solid #E4E4E0;margin-top:2.4rem;
+}
+.us--dark .subs{background:#1E1E1E;border-color:#1E1E1E}
+.sub{
+  background:var(--white);padding:1.35rem 1.4rem;
+  transition:background .25s var(--ease);
+}
+.us--tint .sub{background:var(--off)}
+.us--dark .sub{background:var(--black)}
+.sub:hover{background:var(--yellow)}
+.us--dark .sub:hover{background:#141414}
+.sub__n{
+  font-family:var(--f-display);font-size:.66rem;
+  letter-spacing:.16em;color:var(--grey);
+}
+.sub__name{
+  display:block;margin-top:.4rem;
+  font-family:var(--f-display);font-weight:500;
+  font-size:1.02rem;letter-spacing:.02em;text-transform:uppercase;
+}
+.us--dark .sub__name{color:var(--white)}
+.sub__note{
+  display:block;margin-top:.3rem;
+  font-size:.82rem;color:var(--grey);line-height:1.5;
+}
+
+/* ── Quote strip ────────────────────────────────────────────── */
+.mantras{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1rem;margin-top:2.4rem;
+}
+.mantra{
+  padding:1.5rem 1.6rem;background:var(--white);
+  border-left:3px solid #E4E4E0;
+  font-size:1rem;line-height:1.6;color:var(--grey-dark);
+  transition:border-color .25s var(--ease);
+}
+.us--tint .mantra{background:var(--white)}
+.mantra:hover{border-left-color:var(--yellow)}
+
+/* ── Method / prompt cards ──────────────────────────────────── */
+.method{display:grid;gap:1rem;margin-top:2.4rem}
+.mcard{
+  background:var(--white);border:1px solid #E4E4E0;
+  padding:1.6rem 1.7rem;
+}
+.us--dark .mcard{background:#111;border-color:#1E1E1E}
+.mcard h3{
+  font-family:var(--f-display);font-weight:500;
+  font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;
+  margin-bottom:.6rem;
+}
+.us--dark .mcard h3{color:var(--white)}
+.mcard p{font-size:.96rem;line-height:1.7;color:var(--grey-dark)}
+.us--dark .mcard p{color:var(--grey)}
+
+/* ── CTA ────────────────────────────────────────────────────── */
+.ucta{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:2rem;
+  font-family:var(--f-display);
+  font-size:.8rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:1rem 2rem;background:var(--black);color:var(--white);
+  transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease);
+}
+.us--dark .ucta{background:var(--yellow);color:var(--black)}
+.ucta:hover{background:var(--yellow);color:var(--black);transform:translateY(-2px)}
+.us--dark .ucta:hover{background:var(--white)}
+.ucta svg{width:15px;height:15px}
+
+/* ── Back link ──────────────────────────────────────────────── */
+.uback{padding:1.6rem var(--pad)}
+.uback a{
+  font-family:var(--f-display);
+  font-size:.76rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:.6rem;
+  border-bottom:2px solid var(--yellow);padding-bottom:.2rem;
+}
+.uback svg{width:15px;height:15px}
+
+@media (max-width:620px){
+  .um__stats{gap:1.6rem}
+  .subs{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+}
