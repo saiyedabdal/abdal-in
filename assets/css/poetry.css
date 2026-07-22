@@ -57,6 +57,68 @@
   font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
 }
 
+/* ── The book ───────────────────────────────────────────────── */
+/* The cover art is a 3-D mockup on a near-white ground with its own
+   shadow baked in, so this band is light — on black it would read as a
+   glaring white rectangle. No extra rotation or shadow for the same reason. */
+.book{
+  background:var(--off);color:var(--black);
+  padding:clamp(3rem,6vw,5rem) var(--pad);
+  border-bottom:1px solid #E4E4E0;
+}
+.book__wrap{
+  display:grid;grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(1.5rem,5vw,4rem);align-items:center;
+  max-width:960px;margin-inline:auto;
+}
+.book__cover{width:clamp(160px,24vw,260px);flex:none}
+.book__cover img{
+  width:100%;height:auto;display:block;
+  transition:transform .5s var(--ease);
+}
+.book:hover .book__cover img{transform:translateY(-5px)}
+
+.book__kicker{
+  display:flex;align-items:center;gap:.8rem;
+  font-family:var(--f-display);
+  font-size:.72rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grey-dark);margin-bottom:1.1rem;
+}
+.book__kicker::before{
+  content:'';width:28px;height:3px;background:var(--yellow);flex:none;
+}
+.book__title{
+  font-family:var(--f-deva-display);font-weight:600;
+  font-size:clamp(2rem,5vw,3.2rem);line-height:1.25;
+  margin-bottom:.35rem;
+}
+.book__sub{
+  font-family:var(--f-deva);
+  font-size:clamp(1rem,2vw,1.25rem);color:#5A5A5A;
+  margin-bottom:1.1rem;
+}
+.book__desc{
+  color:#5C5C5C;font-size:.98rem;line-height:1.7;
+  max-width:46ch;margin-bottom:1.8rem;
+}
+.book__buy{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:var(--f-display);
+  font-size:.82rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:1rem 2rem;
+  background:var(--black);color:var(--white);
+  transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease);
+}
+.book__buy:hover{background:var(--yellow);color:var(--black);transform:translateY(-2px)}
+.book__buy svg{width:16px;height:16px}
+
+@media (max-width:720px){
+  .book__wrap{grid-template-columns:minmax(0,1fr);justify-items:start}
+  .book__cover{width:min(52vw,190px)}
+}
+
 /* ── Filter rail ────────────────────────────────────────────── */
 .pf{
   position:sticky;top:var(--stick);z-index:60;

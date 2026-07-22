@@ -260,6 +260,26 @@ page = f"""<!DOCTYPE html>
   </div>
 </section>
 
+<section class="book">
+  <div class="book__wrap">
+    <div class="book__cover">
+      <img src="assets/img/book-cover.jpg"
+           alt="Cover of जुर्रत आमोज़ by Saiyed Abdal" loading="eager" decoding="async">
+    </div>
+    <div class="book__body">
+      <p class="book__kicker">The book</p>
+      <h2 class="book__title">जुर्रत आमोज़</h2>
+      <p class="book__sub">क़ल्ब ता दस्तो कलम</p>
+      <p class="book__desc">Much of what you can read on this page is gathered
+         here in print — the ghazals and sher, collected as a book.</p>
+      <a class="book__buy" href="https://www.amazon.in/dp/B0GRNGYH8X" target="_blank" rel="noopener">
+        Buy on Amazon
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <div class="pf" id="filters">
   <button class="pf__btn" type="button" data-f="all" aria-pressed="true">All</button>
   <button class="pf__btn" type="button" data-f="ghazal" aria-pressed="false">ग़ज़ल Ghazal</button>
