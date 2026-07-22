@@ -464,9 +464,9 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
    Three of these are Instagram, so bare icons would be unreadable —
    each row carries a platform name and the handle. */
 .accounts{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(1.6rem,4vw,3rem);
-  max-width:680px;margin:3.4rem auto 0;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1.4rem,3vw,2.6rem);
+  max-width:860px;margin:3.4rem auto 0;
   text-align:left;
 }
 .accounts__label{
@@ -502,9 +502,8 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 }
 .accounts a:hover .accounts__handle{color:#B4B4B4}
 
-@media (max-width:620px){
-  .accounts{grid-template-columns:minmax(0,1fr);gap:2.2rem}
-}
+@media (max-width:900px){.accounts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.accounts{grid-template-columns:minmax(0,1fr);gap:2rem}}
 
 .foot__legal{
   margin-top:3rem;

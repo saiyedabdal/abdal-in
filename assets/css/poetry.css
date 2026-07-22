@@ -102,6 +102,19 @@
   color:#5C5C5C;font-size:.98rem;line-height:1.7;
   max-width:46ch;margin-bottom:1.8rem;
 }
+.book__cta{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.book__ig{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--f-display);
+  font-size:.8rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:1rem 1.6rem;
+  border:1px solid #D8D8D2;color:var(--black);
+  transition:border-color .25s var(--ease),background .25s var(--ease),transform .25s var(--ease);
+}
+.book__ig svg{width:16px;height:16px}
+.book__ig:hover{border-color:var(--black);background:var(--white);transform:translateY(-2px)}
+
 .book__buy{
   display:inline-flex;align-items:center;gap:.7rem;
   font-family:var(--f-display);

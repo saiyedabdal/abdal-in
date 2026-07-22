@@ -53,11 +53,11 @@ RAIL = [("li", "https://www.linkedin.com/in/saiyedabdal", "LinkedIn", 1),
 GROUPS = [
     ("Instagram", [
         ("ig", "https://www.instagram.com/saiyedabdal/", "Personal", "@saiyedabdal", 1),
-        ("ig", "https://www.instagram.com/practicalplaybook/", "Practical Playbook", "@practicalplaybook", 1),
-        ("ig", "https://www.instagram.com/poeticc_whisperss/", "Poetic Whispers", "@poeticc_whisperss", 1)]),
-    ("Elsewhere", [
+        ("ig", "https://www.instagram.com/practicalplaybook/", "Practical Playbook", "@practicalplaybook", 1)]),
+    ("Professional", [
         ("li", "https://www.linkedin.com/in/saiyedabdal", "LinkedIn", "/in/saiyedabdal", 1),
-        ("x", "https://x.com/saiyedspeaks", "X", "@saiyedspeaks", 1),
+        ("x", "https://x.com/saiyedspeaks", "X", "@saiyedspeaks", 1)]),
+    ("Elsewhere", [
         ("yt", "https://www.youtube.com/@SaiyedAbdal", "YouTube", "@SaiyedAbdal", 1),
         ("mail", "mailto:smahsanabdal@gmail.com", "Email", "smahsanabdal@gmail.com", 0)]),
 ]
