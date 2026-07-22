@@ -19,6 +19,7 @@ NAV = [
     ("Saiyed Abdal",     "/",                    ("index.html",)),
     ("Entrepreneurship", "/entrepreneurship.html", ("entrepreneurship.html",)),
     ("Pursuits",         "/pursuits.html",       ("pursuits.html",)),
+    ("Gallery",          "/gallery.html",        ("gallery.html",)),
     ("Poetry",           "/poetry.html",         ("poetry.html",)),
     ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),
     ("Contact",          "/#connect",            ()),
@@ -144,7 +145,7 @@ def apply(path):
     s = re.sub(r'(href|src)="assets/(css|js)/', r'\1="/assets/\2/', s)
     s = version_assets(s)
     active = rel if rel in ("index.html", "entrepreneurship.html", "pursuits.html",
-                            "poetry.html", "upsc.html") else \
+                            "gallery.html", "poetry.html", "upsc.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
     s2 = re.sub(r'<header class="side".*?</header>', lambda _: sidebar(active), s, count=1, flags=re.S)
     s2 = re.sub(r'<footer class="foot".*?</footer>',
@@ -157,7 +158,8 @@ def apply(path):
 
 def main():
     files = ([os.path.join(ROOT, f) for f in
-              ("index.html", "entrepreneurship.html", "pursuits.html", "poetry.html", "upsc.html")
+              ("index.html", "entrepreneurship.html", "pursuits.html", "gallery.html",
+               "poetry.html", "upsc.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))
     n = sum(1 for f in files if apply(f))

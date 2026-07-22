@@ -105,6 +105,35 @@ $$('[data-video]').forEach((el) => el.addEventListener('click', () => {
   openLb(el.getAttribute('data-video'), el.getAttribute('aria-label'));
 }));
 
+/* Photos reuse the same shell, with arrow-key paging through the set. */
+const shots = $$('[data-photo]');
+let shotIdx = -1;
+
+function openPhoto(i) {
+  const el = shots[(i + shots.length) % shots.length];
+  if (!el) return;
+  shotIdx = (i + shots.length) % shots.length;
+  buildLb();
+  if (!lb || !lbFrame) return;
+  lastFocus = lastFocus || document.activeElement;
+  const img = document.createElement('img');
+  img.className = 'lightbox__photo';
+  img.src = el.getAttribute('data-photo');
+  img.alt = el.querySelector('img')?.alt || '';
+  lbFrame.replaceChildren(img);
+  lb.hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('#lbClose', lb)?.focus();
+}
+
+shots.forEach((el, i) => el.addEventListener('click', () => openPhoto(i)));
+
+addEventListener('keydown', (e) => {
+  if (!lb || lb.hidden || shotIdx < 0) return;
+  if (e.key === 'ArrowRight') openPhoto(shotIdx + 1);
+  if (e.key === 'ArrowLeft') openPhoto(shotIdx - 1);
+});
+
 document.addEventListener('click', (e) => {
   if (e.target === lb) closeLb();
   if (e.target.closest?.('#lbClose')) closeLb();
