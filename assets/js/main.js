@@ -2,7 +2,8 @@
 (() => {
 'use strict';
 
-const $ = (s, c = document) => c.querySelector(s);
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
 document.documentElement.classList.add('js');
 
@@ -50,35 +51,64 @@ if ('IntersectionObserver' in window) {
   items.forEach((el) => el.classList.add('in'));
 }
 
-/* ── Video lightbox ─────────────────────────────────────────── */
-const lb      = $('#lightbox');
-const lbFrame = $('#lbFrame');
-const VIDEO   = 'OgKw0qpt930';
-let lastFocus = null;
+/* ── Video lightbox ─────────────────────────────────────────────
+   Any element with data-video="<youtube id>" opens the player. The
+   overlay is built on demand so pages don't have to carry the markup,
+   and nothing is requested from YouTube until someone actually clicks. */
+let lb = null, lbFrame = null, lastFocus = null;
 
-function openLb() {
+function buildLb() {
+  if (lb) return;
+  lb = $('#lightbox');
+  if (lb) { lbFrame = $('#lbFrame'); return; }
+
+  lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.id = 'lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Video player');
+  lb.hidden = true;
+  lb.innerHTML =
+    '<button class="lightbox__close" id="lbClose" type="button" aria-label="Close video">' +
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" ' +
+    'stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>' +
+    '<div class="lightbox__frame" id="lbFrame"></div>';
+  document.body.appendChild(lb);
+  lbFrame = $('#lbFrame', lb);
+}
+
+function openLb(id, title) {
+  buildLb();
+  if (!lb || !lbFrame) return;
   lastFocus = document.activeElement;
   const f = document.createElement('iframe');
-  f.src = `https://www.youtube-nocookie.com/embed/${VIDEO}?autoplay=1&rel=0&modestbranding=1`;
-  f.title = 'Saiyed Abdal — Global Youth Summit application video';
+  f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+  f.title = title || 'Video';
   f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
   f.allowFullscreen = true;
   lbFrame.replaceChildren(f);
   lb.hidden = false;
   document.body.style.overflow = 'hidden';
-  $('#lbClose')?.focus();
+  $('#lbClose', lb)?.focus();
 }
 
 function closeLb() {
+  if (!lb) return;
   lb.hidden = true;
-  lbFrame.replaceChildren();
+  lbFrame.replaceChildren();          // stops playback
   document.body.style.overflow = '';
   lastFocus?.focus();
 }
 
-$('#playTalk')?.addEventListener('click', openLb);
-$('#lbClose')?.addEventListener('click', closeLb);
-lb?.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
+$$('[data-video]').forEach((el) => el.addEventListener('click', () => {
+  openLb(el.getAttribute('data-video'), el.getAttribute('aria-label'));
+}));
+
+document.addEventListener('click', (e) => {
+  if (e.target === lb) closeLb();
+  if (e.target.closest?.('#lbClose')) closeLb();
+});
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb && !lb.hidden) closeLb(); });
 
 /* ── Contact form ───────────────────────────────────────────────

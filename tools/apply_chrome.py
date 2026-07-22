@@ -111,18 +111,45 @@ def footer(with_form):
             '</footer>')
 
 
+_HASH = {}
+
+
+def asset_v(rel_url):
+    """Short content hash so a deploy can't leave a stale CSS/JS cached."""
+    key = rel_url.split("?")[0]
+    if key not in _HASH:
+        p = os.path.join(ROOT, key.lstrip("/"))
+        try:
+            import hashlib
+            _HASH[key] = hashlib.sha1(open(p, "rb").read()).hexdigest()[:8]
+        except OSError:
+            _HASH[key] = ""
+    return _HASH[key]
+
+
+def version_assets(s):
+    def sub(m):
+        attr, url = m.group(1), m.group(2)
+        v = asset_v(url)
+        return f'{attr}="{url.split("?")[0]}?v={v}"' if v else m.group(0)
+    return re.sub(r'(href|src)="(/assets/(?:css|js)/[^"]+)"', sub, s)
+
+
 def apply(path):
     rel = os.path.relpath(path, ROOT)
-    s = open(path, encoding="utf-8").read()
+    s = orig = open(path, encoding="utf-8").read()
     if '<header class="side"' not in s:
         return False
+    # normalise root-relative asset URLs, then version them
+    s = re.sub(r'(href|src)="assets/(css|js)/', r'\1="/assets/\2/', s)
+    s = version_assets(s)
     active = rel if rel in ("index.html", "entrepreneurship.html", "pursuits.html",
                             "poetry.html", "upsc.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
     s2 = re.sub(r'<header class="side".*?</header>', lambda _: sidebar(active), s, count=1, flags=re.S)
     s2 = re.sub(r'<footer class="foot".*?</footer>',
                 lambda _: footer(rel == "index.html"), s2, count=1, flags=re.S)
-    if s2 != s:
+    if s2 != orig:
         open(path, "w", encoding="utf-8").write(s2)
         return True
     return False
