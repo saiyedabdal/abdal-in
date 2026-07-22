@@ -10,6 +10,7 @@ Run it last, after build_poetry.py / build_upsc.py:
 
     python3 tools/apply_chrome.py
 """
+import html
 import os, re, sys, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -61,6 +62,68 @@ GROUPS = [
         ("yt", "https://www.youtube.com/@SaiyedAbdal", "YouTube", "@SaiyedAbdal", 1),
         ("mail", "mailto:smahsanabdal@gmail.com", "Email", "smahsanabdal@gmail.com", 0)]),
 ]
+
+
+# ── Share cards ────────────────────────────────────────────────────────
+# Open Graph is what WhatsApp, LinkedIn, X, Slack and iMessage read when
+# someone pastes a link. None of it is visible on the site itself. Only six
+# pages used to carry any, and the image they pointed at had never existed,
+# so every share rendered a blank card. Deriving the text from each page's
+# own <title>/description keeps 399 pages correct without a second copy.
+OG_IMAGE = "https://abdal.in/assets/img/og.jpg"
+OG_ALT = "Saiyed Abdal at a Frido store opening"
+OG_SITE = "Saiyed Abdal"
+TWITTER = "@saiyedspeaks"
+
+# The home page's meta description is deliberately just the name, because
+# that one is the Google snippet. A share card needs a line that says
+# something, so it gets its own.
+OG_DESC = {
+    "index.html": "AVP, Founder\u2019s Office at Frido. Poet, Sufi, "
+                  "Toastmaster & car enthusiast.",
+}
+
+
+def og(s, rel):
+    """Rewrite the Open Graph / Twitter block from the page's own head."""
+    def grab(pat, default=""):
+        m = re.search(pat, s, re.S)
+        return m.group(1).strip() if m else default
+
+    title = grab(r"<title>(.*?)</title>", OG_SITE)
+    url = grab(r'<link rel="canonical" href="([^"]+)"', "https://abdal.in/")
+    desc = OG_DESC.get(rel) or grab(r'<meta name="description" content="([^"]*)"')
+
+    tags = [
+        ('meta', 'property="og:type"', "website"),
+        ('meta', 'property="og:site_name"', OG_SITE),
+        ('meta', 'property="og:url"', url),
+        ('meta', 'property="og:title"', title),
+        ('meta', 'property="og:description"', desc),
+        ('meta', 'property="og:image"', OG_IMAGE),
+        ('meta', 'property="og:image:width"', "1200"),
+        ('meta', 'property="og:image:height"', "630"),
+        ('meta', 'property="og:image:alt"', OG_ALT),
+        ('meta', 'name="twitter:card"', "summary_large_image"),
+        ('meta', 'name="twitter:site"', TWITTER),
+        ('meta', 'name="twitter:image"', OG_IMAGE),
+    ]
+    fresh = "\n".join('<%s %s content="%s">' % (t, k, html.escape(v, quote=True))
+                      for t, k, v in tags)
+
+    # Drop whatever was there before, then re-anchor on the canonical link.
+    s = re.sub(r'[ \t]*<meta (?:property="og:|name="twitter:)[^>]*>\n?', "", s)
+    anchor = (re.search(r'<link rel="canonical"[^>]*>\n', s)
+              or re.search(r'<meta name="theme-color"[^>]*>\n', s))
+    if anchor:
+        s = s[:anchor.end()] + "\n" + fresh + "\n" + s[anchor.end():]
+
+    # Stripping the old tags leaves the blank line that separated them, and
+    # the insert adds its own — without this the head would gain one blank
+    # line on every single run. Confined to the head so page bodies are
+    # never reformatted.
+    cut = s.find("</head>")
+    return re.sub(r"\n{3,}", "\n\n", s[:cut]) + s[cut:] if cut > -1 else s
 
 
 def svg(k, cls=""):
@@ -154,6 +217,7 @@ def apply(path):
     # normalise root-relative asset URLs, then version them
     s = re.sub(r'(href|src)="assets/(css|js)/', r'\1="/assets/\2/', s)
     s = version_assets(s)
+    s = og(s, rel)
     active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                             "poetry.html", "upsc.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
