@@ -273,6 +273,76 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 }
 .foot__mail:hover{border-bottom-color:var(--yellow)}
 
+/* ── Contact form ───────────────────────────────────────────── */
+.cform{
+  max-width:640px;margin:3.2rem auto 0;
+  text-align:left;
+}
+.cform__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.cform__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cform__field{margin-top:1rem}
+.cform__row .cform__field{margin-top:0}
+
+.cform label{
+  display:block;margin-bottom:.45rem;
+  font-family:var(--f-display);
+  font-size:.72rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--grey);
+}
+.cform input,
+.cform textarea{
+  width:100%;font:inherit;font-size:.95rem;
+  padding:.85rem 1rem;
+  color:var(--white);background:#161616;
+  border:1px solid #2E2E2E;border-radius:0;
+  transition:border-color .25s var(--ease),background .25s var(--ease);
+}
+.cform textarea{resize:vertical;min-height:120px;line-height:1.6}
+.cform input::placeholder,
+.cform textarea::placeholder{color:#5C5C5C}
+.cform input:hover,
+.cform textarea:hover{border-color:#454545}
+.cform input:focus,
+.cform textarea:focus{
+  outline:none;border-color:var(--yellow);background:#1B1B1B;
+}
+.cform input:user-invalid,
+.cform textarea:user-invalid{border-color:#B4453A}
+
+.cform__send{
+  margin-top:1.6rem;
+  font-family:var(--f-display);
+  font-size:.82rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:.95rem 2.2rem;
+  background:var(--yellow);color:var(--black);
+  transition:background .25s var(--ease),transform .25s var(--ease),opacity .25s;
+}
+.cform__send:hover{background:#FFE976;transform:translateY(-2px)}
+.cform__send[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+
+.cform__status{
+  margin-top:1rem;font-size:.9rem;min-height:1.4em;
+}
+.cform__status[data-state="ok"]{color:var(--yellow)}
+.cform__status[data-state="error"]{color:#E8837A}
+
+.cform.is-sent .cform__row,
+.cform.is-sent .cform__field,
+.cform.is-sent .cform__send{display:none}
+.cform.is-sent .cform__status{
+  font-family:var(--f-display);
+  font-size:1.05rem;letter-spacing:.04em;
+  text-align:center;padding:2rem 0;
+}
+
+@media (max-width:620px){
+  .cform__row{grid-template-columns:1fr;gap:0}
+  .cform__row .cform__field + .cform__field{margin-top:1rem}
+}
+
 .foot__social{
   display:flex;justify-content:center;gap:1.6rem;
   margin-top:2.6rem;

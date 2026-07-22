@@ -162,6 +162,42 @@
   <h2 class="foot__head">Let's connect</h2>
   <a class="foot__mail" href="mailto:smahsanabdal@gmail.com">smahsanabdal@gmail.com</a>
 
+  <!-- ── Contact form (Netlify Forms) ───────────────────────── -->
+  <form class="cform" id="cform" name="contact" method="POST"
+        action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="subject" id="cfSubject" value="Query from ABDAL.IN">
+
+    <p class="cform__hp" aria-hidden="true">
+      <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    </p>
+
+    <div class="cform__row">
+      <p class="cform__field">
+        <label for="cfName">Your name</label>
+        <input id="cfName" name="name" type="text" required autocomplete="name" placeholder="Saiyed Abdal">
+      </p>
+      <p class="cform__field">
+        <label for="cfEmail">Your email</label>
+        <input id="cfEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      </p>
+    </div>
+
+    <p class="cform__field">
+      <label for="cfTopic">What is this about?</label>
+      <input id="cfTopic" name="topic" type="text" required placeholder="Speaking invitation, collaboration, a question…">
+    </p>
+
+    <p class="cform__field">
+      <label for="cfMessage">Message</label>
+      <textarea id="cfMessage" name="message" rows="5" required placeholder="Tell me a little more."></textarea>
+    </p>
+
+    <button class="cform__send" type="submit">Send message</button>
+
+    <p class="cform__status" id="cfStatus" role="status" aria-live="polite"></p>
+  </form>
+
   <ul class="foot__social" aria-label="Social links">
     <li><a href="https://twitter.com/SaiyedAbdal2" target="_blank" rel="noopener" aria-label="X / Twitter">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>

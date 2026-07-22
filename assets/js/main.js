@@ -81,6 +81,47 @@ $('#lbClose')?.addEventListener('click', closeLb);
 lb?.addEventListener('click', (e) => { if (e.target === lb) closeLb(); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb && !lb.hidden) closeLb(); });
 
+/* ── Contact form ───────────────────────────────────────────────
+   Submits to Netlify Forms over fetch so the visitor stays on the page.
+   Without JS the form posts normally and lands on /thanks.html — the
+   `action` attribute handles that, so this is enhancement only. */
+const cform = $('#cform');
+if (cform) {
+  const status  = $('#cfStatus');
+  const subject = $('#cfSubject');
+  const send    = cform.querySelector('.cform__send');
+
+  cform.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!cform.reportValidity()) return;
+
+    // Give the notification email a useful subject line
+    const topic = cform.elements.topic?.value.trim();
+    subject.value = topic ? `Query from ABDAL.IN — ${topic}` : 'Query from ABDAL.IN';
+
+    send.disabled = true;
+    status.dataset.state = '';
+    status.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(cform)).toString(),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      cform.classList.add('is-sent');
+      status.dataset.state = 'ok';
+      status.textContent = 'Thank you — your message is on its way. I’ll reply to you by email.';
+    } catch (err) {
+      send.disabled = false;
+      status.dataset.state = 'error';
+      status.textContent = 'That didn’t send. Please email smahsanabdal@gmail.com directly.';
+    }
+  });
+}
+
 /* ── Year ───────────────────────────────────────────────────── */
 const yr = $('#year');
 if (yr) yr.textContent = String(new Date().getFullYear());
