@@ -264,6 +264,9 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 .gal{
   display:grid;grid-template-columns:repeat(4,1fr);
   grid-auto-rows:210px;gap:.7rem;
+  /* A wide photo cannot start in the last column, which would strand an
+     empty cell beside it; dense back-fills the hole with a later photo. */
+  grid-auto-flow:dense;
 }
 .gal__i{
   display:block;overflow:hidden;position:relative;
