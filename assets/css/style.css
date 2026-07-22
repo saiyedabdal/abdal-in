@@ -61,6 +61,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   transition:background .3s var(--ease);
 }
 .topbar:hover{background:#F2CE1B}
+/* the bar is a fixed 44px that other offsets depend on, so the copy has to
+   fit one line rather than the bar growing to fit the copy */
+.topbar{padding-inline:1rem;white-space:nowrap}
+.topbar__short{display:none}
+@media (max-width:760px){
+  .topbar{font-size:.78rem}
+  .topbar__long{display:none}
+  .topbar__short{display:inline}
+}
 
 /* ── Sidebar ────────────────────────────────────────────────── */
 .side{
