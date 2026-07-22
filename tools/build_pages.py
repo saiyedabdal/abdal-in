@@ -25,7 +25,7 @@ PAGES = {
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "
              "anthropology for the Civil Services — and how it changed the way he reads problems.",
-        css="upsc.css", topbar=('/upsc/notes/', 'UPSC Notes — the full archive')),
+        css="upsc.css", topbar=None),
 }
 
 HEAD = """<!DOCTYPE html>

@@ -24,6 +24,14 @@ NAV = [
     ("Contact",          "/#connect",            ()),
 ]
 
+# ── announcement bar ───────────────────────────────────────────────────
+# One message, site-wide. It was hardcoded three different ways and missing
+# from two pages before this moved here.
+TOPBAR = ('<a class="topbar" href="https://substack.com/@saiyedabdal" '
+          'target="_blank" rel="noopener">\n'
+          '  I write weekly on retail, sales and founder’s office life '
+          '&mdash; subscribe\n</a>')
+
 ICON = {
  "li": "M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z",
  "x": "M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z",
@@ -146,6 +154,13 @@ def apply(path):
     active = rel if rel in ("index.html", "entrepreneurship.html", "pursuits.html",
                             "poetry.html", "upsc.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
+    # announcement bar: replace it where present, insert it where it is not
+    if '<a class="topbar"' in s:
+        s = re.sub(r'<a class="topbar".*?</a>', lambda _: TOPBAR, s, count=1, flags=re.S)
+    else:
+        s = re.sub(r'(<a class="skip"[^<]*</a>\n)', r'\1\n' + TOPBAR.replace('\\', '\\\\') + '\n',
+                   s, count=1)
+
     s2 = re.sub(r'<header class="side".*?</header>', lambda _: sidebar(active), s, count=1, flags=re.S)
     s2 = re.sub(r'<footer class="foot".*?</footer>',
                 lambda _: footer(rel == "index.html"), s2, count=1, flags=re.S)

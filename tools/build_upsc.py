@@ -145,7 +145,7 @@ HEAD = """<!DOCTYPE html>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
-<a class="topbar" href="/upsc/notes/">UPSC Notes — the full archive</a>
+<a class="topbar"></a>
 {side}
 <main id="main">
 """

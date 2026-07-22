@@ -220,9 +220,7 @@ page = f"""<!DOCTYPE html>
 
 <a class="skip" href="#main">Skip to main content</a>
 
-<a class="topbar" href="https://www.instagram.com/poeticc_whisperss/" target="_blank" rel="noopener">
-  Hear these poems recited on Instagram!
-</a>
+<a class="topbar"></a>
 
 <header class="side" id="side">
   <a class="side__logo" href="index.html" aria-label="Saiyed Abdal — home">Abdal</a>
