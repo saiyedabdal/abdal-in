@@ -1,0 +1,1881 @@
+{
+ "General": [
+  {
+   "title": "Anthropology Optional",
+   "slug": "anthropology-optional",
+   "section": ""
+  },
+  {
+   "title": "CA Database",
+   "slug": "ca-database",
+   "section": ""
+  },
+  {
+   "title": "CSAT",
+   "slug": "csat",
+   "section": ""
+  },
+  {
+   "title": "Click Here for Faculty List",
+   "slug": "click-here-for-faculty-list",
+   "section": ""
+  },
+  {
+   "title": "Forum IAS CA Classes",
+   "slug": "forum-ias-ca-classes",
+   "section": ""
+  },
+  {
+   "title": "GPT Commands for UPSC",
+   "slug": "gpt-commands-for-upsc",
+   "section": ""
+  },
+  {
+   "title": "NCERT Notes",
+   "slug": "ncert-notes",
+   "section": ""
+  },
+  {
+   "title": "Quotes List",
+   "slug": "quotes-list",
+   "section": ""
+  },
+  {
+   "title": "Syllabus",
+   "slug": "syllabus",
+   "section": ""
+  },
+  {
+   "title": "UPSC Dictionary",
+   "slug": "upsc-dictionary",
+   "section": ""
+  },
+  {
+   "title": "Disaster Management",
+   "slug": "disaster-management",
+   "section": ""
+  },
+  {
+   "title": "Economy",
+   "slug": "economy",
+   "section": ""
+  },
+  {
+   "title": "Environment & Ecology",
+   "slug": "environment-ecology",
+   "section": ""
+  },
+  {
+   "title": "Ethics, Integrity & Aptitude",
+   "slug": "ethics-integrity-aptitude",
+   "section": ""
+  },
+  {
+   "title": "Geography",
+   "slug": "geography",
+   "section": ""
+  },
+  {
+   "title": "History",
+   "slug": "history",
+   "section": ""
+  },
+  {
+   "title": "IR",
+   "slug": "ir",
+   "section": ""
+  },
+  {
+   "title": "Internal Security",
+   "slug": "internal-security",
+   "section": ""
+  },
+  {
+   "title": "Polity & Gov.",
+   "slug": "polity-gov",
+   "section": ""
+  },
+  {
+   "title": "Science & Technology",
+   "slug": "science-technology",
+   "section": ""
+  },
+  {
+   "title": "Social Justice",
+   "slug": "social-justice",
+   "section": ""
+  },
+  {
+   "title": "Society",
+   "slug": "society",
+   "section": ""
+  }
+ ],
+ "Forum IAS CA Classes": [
+  {
+   "title": "ADITYA L1 Mission",
+   "slug": "aditya-l1-mission",
+   "section": ""
+  },
+  {
+   "title": "Artificial Intelligence",
+   "slug": "artificial-intelligence",
+   "section": ""
+  },
+  {
+   "title": "BRICS Final",
+   "slug": "brics-final",
+   "section": ""
+  },
+  {
+   "title": "Battery",
+   "slug": "battery",
+   "section": ""
+  },
+  {
+   "title": "Chandrayaan 3",
+   "slug": "chandrayaan-3",
+   "section": ""
+  },
+  {
+   "title": "Class 1.0 Media",
+   "slug": "class-10-media",
+   "section": ""
+  },
+  {
+   "title": "Class 2.0 Social Media",
+   "slug": "class-20-social-media",
+   "section": ""
+  },
+  {
+   "title": "Class 3.0 Internet Shutdown",
+   "slug": "class-30-internet-shutdown",
+   "section": ""
+  },
+  {
+   "title": "Class 4.0 Sedition",
+   "slug": "class-40-sedition",
+   "section": ""
+  },
+  {
+   "title": "DPI (Digital Public Infrastructure)",
+   "slug": "dpi-digital-public-infrastructure",
+   "section": ""
+  },
+  {
+   "title": "Environment (FCA Act)",
+   "slug": "environment-fca-act",
+   "section": ""
+  },
+  {
+   "title": "FLFP",
+   "slug": "flfp",
+   "section": ""
+  },
+  {
+   "title": "G20 Summit",
+   "slug": "g20-summit",
+   "section": ""
+  },
+  {
+   "title": "General Education",
+   "slug": "general-education",
+   "section": ""
+  },
+  {
+   "title": "Higher Education",
+   "slug": "higher-education",
+   "section": ""
+  },
+  {
+   "title": "Hydrogen Fuel Standards",
+   "slug": "hydrogen-fuel-standards",
+   "section": ""
+  },
+  {
+   "title": "IMEC-EC",
+   "slug": "imec-ec",
+   "section": ""
+  },
+  {
+   "title": "ISRW D (Inter State River Water Disputes)",
+   "slug": "isrw-d-inter-state-river-water-disputes",
+   "section": ""
+  },
+  {
+   "title": "Indian Foreign Policy",
+   "slug": "indian-foreign-policy",
+   "section": ""
+  },
+  {
+   "title": "MICROFINANCE",
+   "slug": "microfinance",
+   "section": ""
+  },
+  {
+   "title": "NEP - National Education Policy",
+   "slug": "nep-national-education-policy",
+   "section": ""
+  },
+  {
+   "title": "One Nation One Election",
+   "slug": "one-nation-one-election",
+   "section": ""
+  },
+  {
+   "title": "PSC Report on Education",
+   "slug": "psc-report-on-education",
+   "section": ""
+  },
+  {
+   "title": "Panch Pran or Five Pledges of Amrit Kaal",
+   "slug": "panch-pran-or-five-pledges-of-amrit-kaal",
+   "section": ""
+  },
+  {
+   "title": "Quantum Computing",
+   "slug": "quantum-computing",
+   "section": ""
+  },
+  {
+   "title": "RTI",
+   "slug": "rti",
+   "section": ""
+  },
+  {
+   "title": "Radicalisation",
+   "slug": "radicalisation",
+   "section": ""
+  },
+  {
+   "title": "SHG",
+   "slug": "shg",
+   "section": ""
+  },
+  {
+   "title": "Science Updates",
+   "slug": "science-updates",
+   "section": ""
+  },
+  {
+   "title": "Superconductors",
+   "slug": "superconductors",
+   "section": ""
+  },
+  {
+   "title": "Vocal for Local",
+   "slug": "vocal-for-local",
+   "section": ""
+  },
+  {
+   "title": "Women Reservation Bill",
+   "slug": "women-reservation-bill",
+   "section": ""
+  },
+  {
+   "title": "Conclusion for NEP in General",
+   "slug": "conclusion-for-nep-in-general",
+   "section": "NEP - National Education Policy"
+  },
+  {
+   "title": "Higher Education in National Education Policy (NEP)",
+   "slug": "higher-education-in-national-education-policy-nep",
+   "section": "NEP - National Education Policy"
+  },
+  {
+   "title": "School Education in NEP",
+   "slug": "school-education-in-nep",
+   "section": "NEP - National Education Policy"
+  }
+ ],
+ "Geography": [
+  {
+   "title": "Extra Details & Facts",
+   "slug": "extra-details-facts",
+   "section": ""
+  },
+  {
+   "title": "Indian Geography",
+   "slug": "indian-geography",
+   "section": ""
+  },
+  {
+   "title": "Maps Foundation",
+   "slug": "maps-foundation",
+   "section": ""
+  },
+  {
+   "title": "World Geography",
+   "slug": "world-geography",
+   "section": ""
+  },
+  {
+   "title": "1 Physiography - Study of Physical Features of India",
+   "slug": "1-physiography-study-of-physical-features-of-india",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "10 Industries",
+   "slug": "10-industries",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "11 Floods and Droughts",
+   "slug": "11-floods-and-droughts",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "2 Climatology - Study of Climate of India",
+   "slug": "2-climatology-study-of-climate-of-india",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "3 Forest - Study of Natural Vegetation of India",
+   "slug": "3-forest-study-of-natural-vegetation-of-india",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "4 Indian Soils - Study of Soil in India",
+   "slug": "4-indian-soils-study-of-soil-in-india",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "5 Indian Agriculture - Handwritten Notes",
+   "slug": "5-indian-agriculture-handwritten-notes",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "6 Drainage System - River System of India",
+   "slug": "6-drainage-system-river-system-of-india",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "7 Interlinking of Rivers - Very Important",
+   "slug": "7-interlinking-of-rivers-very-important",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "8 Resources & Energy****",
+   "slug": "8-resources-energy",
+   "section": "Indian Geography"
+  },
+  {
+   "title": "9 Infrastructures & Ports",
+   "slug": "9-infrastructures-ports",
+   "section": "Indian Geography"
+  }
+ ],
+ "UPSC Dictionary": [
+  {
+   "title": "Abundance Mindset",
+   "slug": "abundance-mindset",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Accidentally Trod",
+   "slug": "accidentally-trod",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Acquiesce",
+   "slug": "acquiesce",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Aggrandise",
+   "slug": "aggrandise",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Albeitx",
+   "slug": "albeitx",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "All over the place",
+   "slug": "all-over-the-place",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Altruism",
+   "slug": "altruism",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Amenable",
+   "slug": "amenable",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Amicus Curiae",
+   "slug": "amicus-curiae",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Annulment",
+   "slug": "annulment",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Apogee",
+   "slug": "apogee",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Arbitrary",
+   "slug": "arbitrary",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Arbitration",
+   "slug": "arbitration",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Arboreal",
+   "slug": "arboreal",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Art Connoisseur",
+   "slug": "art-connoisseur",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Ask me no secret and I will tell you no lies",
+   "slug": "ask-me-no-secret-and-i-will-tell-you-no-lies",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Attrition Rate",
+   "slug": "attrition-rate",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Banglar Meye",
+   "slug": "banglar-meye",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Beck & Call",
+   "slug": "beck-call",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Been a minute",
+   "slug": "been-a-minute",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Being in a state of flux",
+   "slug": "being-in-a-state-of-flux",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Being in a state of flux",
+   "slug": "being-in-a-state-of-flux-2",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Biennial",
+   "slug": "biennial",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Bovine",
+   "slug": "bovine",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Byzantine Changes",
+   "slug": "byzantine-changes",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Cajoling",
+   "slug": "cajoling",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Called out",
+   "slug": "called-out",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Cash For",
+   "slug": "cash-for",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Cauldron",
+   "slug": "cauldron",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Caveat",
+   "slug": "caveat",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Celluloid",
+   "slug": "celluloid",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Civil Society",
+   "slug": "civil-society",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Conducive",
+   "slug": "conducive",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Consecration",
+   "slug": "consecration",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Conspicuous",
+   "slug": "conspicuous",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Constitutional Monism",
+   "slug": "constitutional-monism",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Constitutional Obstinacy",
+   "slug": "constitutional-obstinacy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Contentious",
+   "slug": "contentious",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Contraband",
+   "slug": "contraband",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Course correction",
+   "slug": "course-correction",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Declaring a Diplomat Persona Non Grata",
+   "slug": "declaring-a-diplomat-persona-non-grata",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Deleterious",
+   "slug": "deleterious",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Democratic Deficit",
+   "slug": "democratic-deficit",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Dichotomy",
+   "slug": "dichotomy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Disengage",
+   "slug": "disengage",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Disparagingly",
+   "slug": "disparagingly",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Distant second",
+   "slug": "distant-second",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Electoral Autocracy",
+   "slug": "electoral-autocracy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "End of one's tether",
+   "slug": "end-of-ones-tether",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Enthu Cutlet",
+   "slug": "enthu-cutlet",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Exacerbating",
+   "slug": "exacerbating",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Exhibit A",
+   "slug": "exhibit-a",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Exigency",
+   "slug": "exigency",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Expunged",
+   "slug": "expunged",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "First Coram, Second Coram,",
+   "slug": "first-coram-second-coram",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Fiscal Health",
+   "slug": "fiscal-health",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Fluke",
+   "slug": "fluke",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Former & Latter",
+   "slug": "former-latter",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Frankenstein's Monster",
+   "slug": "frankensteins-monster",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Frittered",
+   "slug": "frittered",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Guise",
+   "slug": "guise",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Hire & fire",
+   "slug": "hire-fire",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Hit a Raw Nerve",
+   "slug": "hit-a-raw-nerve",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Hitherto",
+   "slug": "hitherto",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Holding the Frame",
+   "slug": "holding-the-frame",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Humbug",
+   "slug": "humbug",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "I am vain but I am not Narcissistic",
+   "slug": "i-am-vain-but-i-am-not-narcissistic",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "I don't wear my heart on my sleeve",
+   "slug": "i-dont-wear-my-heart-on-my-sleeve",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "I like to hold my gold",
+   "slug": "i-like-to-hold-my-gold",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "I will Get us square",
+   "slug": "i-will-get-us-square",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Impediment",
+   "slug": "impediment",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Impeding",
+   "slug": "impeding",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Imposter to conversation",
+   "slug": "imposter-to-conversation",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Incepted",
+   "slug": "incepted",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Indiscriminate",
+   "slug": "indiscriminate",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Injustice Meted Out",
+   "slug": "injustice-meted-out",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Interlocutor",
+   "slug": "interlocutor",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Judicial Deference",
+   "slug": "judicial-deference",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Judicial Evasion",
+   "slug": "judicial-evasion",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Kangaroo Court",
+   "slug": "kangaroo-court",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Kitchen Cabinet",
+   "slug": "kitchen-cabinet",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Knee Jerk Reaction",
+   "slug": "knee-jerk-reaction",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Law of Matsy Nyaya",
+   "slug": "law-of-matsy-nyaya",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Lo & Behold",
+   "slug": "lo-behold",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Makes a Pass at you",
+   "slug": "makes-a-pass-at-you",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Making a Martyr Out of Someone",
+   "slug": "making-a-martyr-out-of-someone",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Making an episode out of it",
+   "slug": "making-an-episode-out-of-it",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Metastasize",
+   "slug": "metastasize",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Militate",
+   "slug": "militate",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Mitigate",
+   "slug": "mitigate",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Modicum",
+   "slug": "modicum",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Modus Vivendi",
+   "slug": "modus-vivendi",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Monism",
+   "slug": "monism",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Muddle",
+   "slug": "muddle",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Nonplus",
+   "slug": "nonplus",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Onerous (ONERUS)",
+   "slug": "onerous-onerus",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Overt & Covert",
+   "slug": "overt-covert",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Pace Yourself",
+   "slug": "pace-yourself",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Palatable",
+   "slug": "palatable",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Parity",
+   "slug": "parity",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Pebbles Flintstone",
+   "slug": "pebbles-flintstone",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Peril",
+   "slug": "peril",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Pervasive",
+   "slug": "pervasive",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Pervy",
+   "slug": "pervy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Petrogard",
+   "slug": "petrogard",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Plaintiff",
+   "slug": "plaintiff",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Platonic",
+   "slug": "platonic",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Playing Whack-a-Mole",
+   "slug": "playing-whack-a-mole",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Poetic Justice",
+   "slug": "poetic-justice",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Political Capital",
+   "slug": "political-capital",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Prima Facie",
+   "slug": "prima-facie",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Princess in Dismal",
+   "slug": "princess-in-dismal",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Princess of Maison",
+   "slug": "princess-of-maison",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Profligacy",
+   "slug": "profligacy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Prudent",
+   "slug": "prudent",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Psephology",
+   "slug": "psephology",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Psephology",
+   "slug": "psephology-2",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Psephology",
+   "slug": "psephology-3",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Puisne Judge",
+   "slug": "puisne-judge",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Puisne Judge",
+   "slug": "puisne-judge-2",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Quintessential",
+   "slug": "quintessential",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Radio Silence",
+   "slug": "radio-silence",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Relevance is Irrelevant",
+   "slug": "relevance-is-irrelevant",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Repatriate",
+   "slug": "repatriate",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Replete with Risk",
+   "slug": "replete-with-risk",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Rhetoric",
+   "slug": "rhetoric",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Rude Shock",
+   "slug": "rude-shock",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Sanguine",
+   "slug": "sanguine",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Segway",
+   "slug": "segway",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Seminal",
+   "slug": "seminal",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Shadow Cabinet",
+   "slug": "shadow-cabinet",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Show the downhill",
+   "slug": "show-the-downhill",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Singe",
+   "slug": "singe",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Snowden Effect",
+   "slug": "snowden-effect",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Stray and Feral Cattle",
+   "slug": "stray-and-feral-cattle",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Struck a chord",
+   "slug": "struck-a-chord",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Sui Generis",
+   "slug": "sui-generis",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Sulking",
+   "slug": "sulking",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Tepid",
+   "slug": "tepid",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "This Fiscal",
+   "slug": "this-fiscal",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Thwart",
+   "slug": "thwart",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Torrential Rain",
+   "slug": "torrential-rain",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Tortuos (Tortuous)",
+   "slug": "tortuos-tortuous",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Touch base with parents",
+   "slug": "touch-base-with-parents",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Track 1 Diplomacy",
+   "slug": "track-1-diplomacy",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Ubiquitous",
+   "slug": "ubiquitous",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Veneers",
+   "slug": "veneers",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Verbal Diarrhoea",
+   "slug": "verbal-diarrhoea",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "What he says goes",
+   "slug": "what-he-says-goes",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Wreath Laying Ceremony",
+   "slug": "wreath-laying-ceremony",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "You are the prize",
+   "slug": "you-are-the-prize",
+   "section": "UPSC Dictionary"
+  },
+  {
+   "title": "Zoonotic disease",
+   "slug": "zoonotic-disease",
+   "section": "UPSC Dictionary"
+  }
+ ],
+ "Science & Technology": [
+  {
+   "title": "Bio-Tech",
+   "slug": "bio-tech",
+   "section": ""
+  },
+  {
+   "title": "Computer & Robotics",
+   "slug": "computer-robotics",
+   "section": ""
+  },
+  {
+   "title": "Defence Tech",
+   "slug": "defence-tech",
+   "section": ""
+  },
+  {
+   "title": "Extra / Core Concepts",
+   "slug": "extra-core-concepts",
+   "section": ""
+  },
+  {
+   "title": "IPR - Intellectual Property Right",
+   "slug": "ipr-intellectual-property-right",
+   "section": ""
+  },
+  {
+   "title": "NanoTech",
+   "slug": "nanotech",
+   "section": ""
+  },
+  {
+   "title": "Nuclear Tech",
+   "slug": "nuclear-tech",
+   "section": ""
+  },
+  {
+   "title": "Space Tech",
+   "slug": "space-tech",
+   "section": ""
+  },
+  {
+   "title": "Fission in Totality",
+   "slug": "fission-in-totality",
+   "section": "Nuclear Tech"
+  },
+  {
+   "title": "Fusion in Totality",
+   "slug": "fusion-in-totality",
+   "section": "Nuclear Tech"
+  },
+  {
+   "title": "Nuclear Tech in Daily Life",
+   "slug": "nuclear-tech-in-daily-life",
+   "section": "Nuclear Tech"
+  },
+  {
+   "title": "Story of Atom",
+   "slug": "story-of-atom",
+   "section": "Nuclear Tech"
+  },
+  {
+   "title": "Basic Biology",
+   "slug": "basic-biology",
+   "section": "Bio-Tech"
+  },
+  {
+   "title": "Bio-Technology",
+   "slug": "bio-technology",
+   "section": "Bio-Tech"
+  },
+  {
+   "title": "Public Health (From Handout)",
+   "slug": "public-health-from-handout",
+   "section": "Bio-Tech"
+  }
+ ],
+ "NCERT Notes": [
+  {
+   "title": "Contemporary World Politics",
+   "slug": "contemporary-world-politics",
+   "section": ""
+  },
+  {
+   "title": "An Introduction to Indian Art",
+   "slug": "an-introduction-to-indian-art",
+   "section": ""
+  },
+  {
+   "title": "Ancient History - Class 6: Our Past - I",
+   "slug": "ancient-history-class-6-our-past-i",
+   "section": ""
+  },
+  {
+   "title": "Ancient India - Class 12: Themes in Indian History - Part 1",
+   "slug": "ancient-india-class-12-themes-in-indian-history-part-1",
+   "section": ""
+  },
+  {
+   "title": "Class 10: Economics - Understanding Economic Development",
+   "slug": "class-10-economics-understanding-economic-development",
+   "section": ""
+  },
+  {
+   "title": "Class 10: Science: textbook for class X, 2006",
+   "slug": "class-10-science-textbook-for-class-x-2006",
+   "section": ""
+  },
+  {
+   "title": "Class 10: Social Science: Contemporary India-II: Textbook in Geography for class X, 2006",
+   "slug": "class-10-social-science-contemporary-india-ii-textbook-in-geography-fo",
+   "section": ""
+  },
+  {
+   "title": "Class 11: Biology",
+   "slug": "class-11-biology",
+   "section": ""
+  },
+  {
+   "title": "Class 11: Fundamentals of physical geography: textbook for class XI, 2006",
+   "slug": "class-11-fundamentals-of-physical-geography-textbook-for-class-xi-2006",
+   "section": ""
+  },
+  {
+   "title": "Class 11: India: physical environment: textbook in geography for class XI, 2006",
+   "slug": "class-11-india-physical-environment-textbook-in-geography-for-class-xi",
+   "section": ""
+  },
+  {
+   "title": "Class 11 : Indian Economic Development",
+   "slug": "class-11-indian-economic-development",
+   "section": ""
+  },
+  {
+   "title": "Class 12: Biology",
+   "slug": "class-12-biology",
+   "section": ""
+  },
+  {
+   "title": "Class 12: Fundamentals of human geography: textbook for class XII, 2007",
+   "slug": "class-12-fundamentals-of-human-geography-textbook-for-class-xii-2007",
+   "section": ""
+  },
+  {
+   "title": "Class 12: India people and economy: textbook in geography for class XII, 2007",
+   "slug": "class-12-india-people-and-economy-textbook-in-geography-for-class-xii-",
+   "section": ""
+  },
+  {
+   "title": "Class 12: Introductory Macroeconomics",
+   "slug": "class-12-introductory-macroeconomics",
+   "section": ""
+  },
+  {
+   "title": "Class 12: Introductory Microeconomics",
+   "slug": "class-12-introductory-microeconomics",
+   "section": ""
+  },
+  {
+   "title": "Class 6: Science: textbook for class VI, 2006",
+   "slug": "class-6-science-textbook-for-class-vi-2006",
+   "section": ""
+  },
+  {
+   "title": "Class 6: Social Science: The Earth Our Habitat: textbook in Geography for Class VI, 2006",
+   "slug": "class-6-social-science-the-earth-our-habitat-textbook-in-geography-for",
+   "section": ""
+  },
+  {
+   "title": "Class 7: Science: textbook for class VII, 2007",
+   "slug": "class-7-science-textbook-for-class-vii-2007",
+   "section": ""
+  },
+  {
+   "title": "Class 7: Social Science: Our Environment: Textbook in Geography for Class VII, 2007",
+   "slug": "class-7-social-science-our-environment-textbook-in-geography-for-class",
+   "section": ""
+  },
+  {
+   "title": "Class 8: Science: textbook for class VIII, 2008",
+   "slug": "class-8-science-textbook-for-class-viii-2008",
+   "section": ""
+  },
+  {
+   "title": "Class 8: Social Science: Resources and Development: Textbook in Geography for class VIII, 2008",
+   "slug": "class-8-social-science-resources-and-development-textbook-in-geography",
+   "section": ""
+  },
+  {
+   "title": "Class 9: Economics",
+   "slug": "class-9-economics",
+   "section": ""
+  },
+  {
+   "title": "Class 9: Science: textbook for class IX, 2006",
+   "slug": "class-9-science-textbook-for-class-ix-2006",
+   "section": ""
+  },
+  {
+   "title": "Class 9: Social science: contemporary India-I: textbook in geography for class IX, 2006",
+   "slug": "class-9-social-science-contemporary-india-i-textbook-in-geography-for-",
+   "section": ""
+  },
+  {
+   "title": "General Concepts in History - Class 10: India and the Contemporary World - II",
+   "slug": "general-concepts-in-history-class-10-india-and-the-contemporary-world-",
+   "section": ""
+  },
+  {
+   "title": "Living Craft Tradition of India",
+   "slug": "living-craft-tradition-of-india",
+   "section": ""
+  },
+  {
+   "title": "Medieval History - Class 7: Our Past - II",
+   "slug": "medieval-history-class-7-our-past-ii",
+   "section": ""
+  },
+  {
+   "title": "Medieval India - Class 12: Themes in Indian History - Part 2",
+   "slug": "medieval-india-class-12-themes-in-indian-history-part-2",
+   "section": ""
+  },
+  {
+   "title": "Modern History - Class 8: Our Past - III Part 1",
+   "slug": "modern-history-class-8-our-past-iii-part-1",
+   "section": ""
+  },
+  {
+   "title": "Modern India - Class 12: Themes in Indian History - Part 3",
+   "slug": "modern-india-class-12-themes-in-indian-history-part-3",
+   "section": ""
+  },
+  {
+   "title": "World History - Class 9: India and the Contemporary World - I",
+   "slug": "world-history-class-9-india-and-the-contemporary-world-i",
+   "section": ""
+  },
+  {
+   "title": "📝 Indian Constitution at Work",
+   "slug": "indian-constitution-at-work",
+   "section": ""
+  },
+  {
+   "title": "📝 Political Theory",
+   "slug": "political-theory",
+   "section": ""
+  },
+  {
+   "title": "📝 Politics In India Since Independence",
+   "slug": "politics-in-india-since-independence",
+   "section": ""
+  },
+  {
+   "title": "📝 Social Change & Development in India",
+   "slug": "social-change-development-in-india",
+   "section": ""
+  },
+  {
+   "title": "📝Indian Society",
+   "slug": "indian-society",
+   "section": ""
+  },
+  {
+   "title": "📝Introducing Sociology",
+   "slug": "introducing-sociology",
+   "section": ""
+  },
+  {
+   "title": "📝Understanding Society",
+   "slug": "understanding-society",
+   "section": ""
+  },
+  {
+   "title": "Chapter 4 - The Mughals: 16th to 17th Century",
+   "slug": "chapter-4-the-mughals-16th-to-17th-century",
+   "section": "Medieval History - Class 7 Our Past - II"
+  }
+ ],
+ "Polity & Gov": [
+  {
+   "title": "Governance",
+   "slug": "governance",
+   "section": ""
+  },
+  {
+   "title": "Polity by Babu Sir",
+   "slug": "polity-by-babu-sir",
+   "section": ""
+  }
+ ],
+ "CA Database": [
+  {
+   "title": "Anthropology Compilation",
+   "slug": "anthropology-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Art & Culture Compilation",
+   "slug": "art-culture-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Bills and Acts Compilation",
+   "slug": "bills-and-acts-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Bodies Compilation",
+   "slug": "bodies-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Chhattisgarh Compilation",
+   "slug": "chhattisgarh-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Commitee Compilaton",
+   "slug": "commitee-compilaton",
+   "section": "CA Database"
+  },
+  {
+   "title": "Data Compilation",
+   "slug": "data-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Ethics / Good Governance / Best Practises",
+   "slug": "ethics-good-governance-best-practises",
+   "section": "CA Database"
+  },
+  {
+   "title": "Legal (SC/Section/Art) Compilation",
+   "slug": "legal-scsectionart-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "PIN & National Parks & Rivers Compilation",
+   "slug": "pin-national-parks-rivers-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Reports Compilation",
+   "slug": "reports-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Scheme Compilation",
+   "slug": "scheme-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Economics Compilation",
+   "slug": "sub-economics-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Geo, Eco & Env Compilation",
+   "slug": "sub-geo-eco-env-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - History Compilation",
+   "slug": "sub-history-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Internal Security Compilation",
+   "slug": "sub-internal-security-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - International Relations Compilation",
+   "slug": "sub-international-relations-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Polity & Governance Compilation",
+   "slug": "sub-polity-governance-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Science & Technology Compilation",
+   "slug": "sub-science-technology-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Sub - Society & Social Justice Compilation",
+   "slug": "sub-society-social-justice-compilation",
+   "section": "CA Database"
+  },
+  {
+   "title": "Orissa Food Security",
+   "slug": "orissa-food-security",
+   "section": "CA Database"
+  },
+  {
+   "title": "Centre State - Governor CM Issue",
+   "slug": "centre-state-governor-cm-issue",
+   "section": "CA Database"
+  },
+  {
+   "title": "Reservation > 50%",
+   "slug": "reservation-50",
+   "section": "CA Database"
+  }
+ ],
+ "Economy": [
+  {
+   "title": "Mains Syllabus",
+   "slug": "mains-syllabus",
+   "section": ""
+  },
+  {
+   "title": "Prelims Syllabus",
+   "slug": "prelims-syllabus",
+   "section": ""
+  },
+  {
+   "title": "Chapter 01 - RBI",
+   "slug": "chapter-01-rbi",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 02 - Monetary Policy",
+   "slug": "chapter-02-monetary-policy",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 03 - Structure of Banking",
+   "slug": "chapter-03-structure-of-banking",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 04 - Terms Related to Banking",
+   "slug": "chapter-04-terms-related-to-banking",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 05 - Money Market / Capital Market",
+   "slug": "chapter-05-money-market-capital-market",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 06 - Payment & Settlement System",
+   "slug": "chapter-06-payment-settlement-system",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 07 - Inflation",
+   "slug": "chapter-07-inflation",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 08 - Public Finance",
+   "slug": "chapter-08-public-finance",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 09 - External Sector",
+   "slug": "chapter-09-external-sector",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 10 - International Institutions",
+   "slug": "chapter-10-international-institutions",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 11 - Core Concepts",
+   "slug": "chapter-11-core-concepts",
+   "section": "Prelims Syllabus"
+  },
+  {
+   "title": "Chapter 1 - Indian Economy & Issues",
+   "slug": "chapter-1-indian-economy-issues",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 10 - Investment Models",
+   "slug": "chapter-10-investment-models",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 2 - Inclusive Growth",
+   "slug": "chapter-2-inclusive-growth",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 3 - Budgeting",
+   "slug": "chapter-3-budgeting",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 4 - Agriculture",
+   "slug": "chapter-4-agriculture",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 5 - PDS",
+   "slug": "chapter-5-pds",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 6 - Food Processing & Related Industries in India",
+   "slug": "chapter-6-food-processing-related-industries-in-india",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 7 - Land Reforms",
+   "slug": "chapter-7-land-reforms",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 8 - Effect of Liberalisation",
+   "slug": "chapter-8-effect-of-liberalisation",
+   "section": "Mains Syllabus"
+  },
+  {
+   "title": "Chapter 9 - Infrastructure",
+   "slug": "chapter-9-infrastructure",
+   "section": "Mains Syllabus"
+  }
+ ],
+ "History": [
+  {
+   "title": "Ancient & Medieval of Vision IAS (To Be Sorted)",
+   "slug": "ancient-medieval-of-vision-ias-to-be-sorted",
+   "section": ""
+  },
+  {
+   "title": "Ancient History",
+   "slug": "ancient-history",
+   "section": ""
+  },
+  {
+   "title": "Art & Culture (2500 BC - 1991 AD)",
+   "slug": "art-culture-2500-bc-1991-ad",
+   "section": ""
+  },
+  {
+   "title": "Historic Periods",
+   "slug": "historic-periods",
+   "section": ""
+  },
+  {
+   "title": "Medieval History",
+   "slug": "medieval-history",
+   "section": ""
+  },
+  {
+   "title": "Modern History",
+   "slug": "modern-history",
+   "section": ""
+  },
+  {
+   "title": "Post Independence",
+   "slug": "post-independence",
+   "section": ""
+  },
+  {
+   "title": "Pre Historic Periods",
+   "slug": "pre-historic-periods",
+   "section": ""
+  },
+  {
+   "title": "Proto-Historic Periods",
+   "slug": "proto-historic-periods",
+   "section": ""
+  },
+  {
+   "title": "World History (1750 AD - 1991 AD)Class Notes",
+   "slug": "world-history-1750-ad-1991-adclass-notes",
+   "section": ""
+  },
+  {
+   "title": "China & Africa",
+   "slug": "china-africa",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "Cold War",
+   "slug": "cold-war",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "From Unification of Italy & Germany",
+   "slug": "from-unification-of-italy-germany",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "Interwar Period (Nazism, Fascism, Stalinism)",
+   "slug": "interwar-period-nazism-fascism-stalinism",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "The First World War (1914-18)",
+   "slug": "the-first-world-war-1914-18",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "The Second World War",
+   "slug": "the-second-world-war",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "World Before First World War",
+   "slug": "world-before-first-world-war",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "morocco.",
+   "slug": "morocco",
+   "section": "World History (1750 AD - 1991 AD)Class Notes"
+  },
+  {
+   "title": "Comparison Between 3 Forms",
+   "slug": "comparison-between-3-forms",
+   "section": "Art & Culture (2500 BC - 1991 AD)"
+  }
+ ],
+ "Ethics, Integrity & Aptitude": [
+  {
+   "title": "Pillar 4 - Case Studies - By Aditya Kalia Sir",
+   "slug": "pillar-4-case-studies-by-aditya-kalia-sir",
+   "section": ""
+  },
+  {
+   "title": "Meta Data",
+   "slug": "meta-data",
+   "section": ""
+  },
+  {
+   "title": "Pillar 1 - Theory - By Smriti Mam",
+   "slug": "pillar-1-theory-by-smriti-mam",
+   "section": ""
+  },
+  {
+   "title": "Pillar 2 - Application - By JG Sir & VK Sir",
+   "slug": "pillar-2-application-by-jg-sir-vk-sir",
+   "section": ""
+  },
+  {
+   "title": "Pillar 3 - Moral Thinkers - By PDF",
+   "slug": "pillar-3-moral-thinkers-by-pdf",
+   "section": ""
+  },
+  {
+   "title": "By Jatin Gupta Sir",
+   "slug": "by-jatin-gupta-sir",
+   "section": "Pillar 2 - Application - By JG Sir & VK Sir"
+  },
+  {
+   "title": "By Vivek Kaushik Sir",
+   "slug": "by-vivek-kaushik-sir",
+   "section": "Pillar 2 - Application - By JG Sir & VK Sir"
+  }
+ ],
+ "Anthropology Optional": [
+  {
+   "title": "Part 3 - Socio-Cultural Anthropology",
+   "slug": "part-3-socio-cultural-anthropology",
+   "section": ""
+  },
+  {
+   "title": "Part 4 - Core Indian Anthropology",
+   "slug": "part-4-core-indian-anthropology",
+   "section": ""
+  },
+  {
+   "title": "Part 5 - Tribal Anthropology",
+   "slug": "part-5-tribal-anthropology",
+   "section": ""
+  },
+  {
+   "title": "Part 6 - Archaeological Anthropology",
+   "slug": "part-6-archaeological-anthropology",
+   "section": ""
+  },
+  {
+   "title": "Part 7 - Primatology & Fossils",
+   "slug": "part-7-primatology-fossils",
+   "section": ""
+  },
+  {
+   "title": "Part 8 - Some Extra Topics",
+   "slug": "part-8-some-extra-topics",
+   "section": ""
+  },
+  {
+   "title": "Part 1 - Introduction + Methodology + Thinker",
+   "slug": "part-1-introduction-methodology-thinker",
+   "section": ""
+  },
+  {
+   "title": "Part 2 - Physical Anthropology",
+   "slug": "part-2-physical-anthropology",
+   "section": ""
+  },
+  {
+   "title": "Part 1.1 - Unit 1.1 / 1.2 / 1.3 : Introduction to Anthropology",
+   "slug": "part-11-unit-11-12-13-introduction-to-anthropology",
+   "section": "Part 1 - Introduction + Methodology + Thinker"
+  },
+  {
+   "title": "Part 1.2 - Unit 8.0 : Research Methodology",
+   "slug": "part-12-unit-80-research-methodology",
+   "section": "Part 1 - Introduction + Methodology + Thinker"
+  },
+  {
+   "title": "Part 1.3 - Unit 6.0 : Anthropological Thought (Thinkers & Theories)",
+   "slug": "part-13-unit-60-anthropological-thought-thinkers-theories",
+   "section": "Part 1 - Introduction + Methodology + Thinker"
+  },
+  {
+   "title": "2.1 Core Physical Anthropology",
+   "slug": "21-core-physical-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "2.2 Ecological Anthropology",
+   "slug": "22-ecological-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "2.3 Epidemiological Anthropology",
+   "slug": "23-epidemiological-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "2.4 Applications of Anthropology",
+   "slug": "24-applications-of-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "2.5 Human Growth & Development Anthropology",
+   "slug": "25-human-growth-development-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "2.6 Demographic Anthropology",
+   "slug": "26-demographic-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  },
+  {
+   "title": "Approach to Physical Anthropology",
+   "slug": "approach-to-physical-anthropology",
+   "section": "Part 2 - Physical Anthropology"
+  }
+ ]
+}

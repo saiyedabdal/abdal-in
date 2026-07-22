@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artificial Intelligence — UPSC Notes — Saiyed Abdal</title>
+<meta name="description" content="Science Should Very Importantly Have: What &amp;amp; How Introduction to AI Generative AI, Challenges and Way Forward Attributes of AI - That They Cannot Do but Qualifies as">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="canonical" href="https://abdal.in/upsc/notes/forum-ias-ca-classes/artificial-intelligence.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23fff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/upsc.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<a class="topbar" href="/upsc/notes/">UPSC Notes — the full archive</a>
+<header class="side" id="side">
+  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">Abdal</a>
+
+  <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side__nav" id="sidenav" aria-label="Primary">
+    <a href="/#story">Saiyed Abdal</a>
+    <a href="/upsc.html" aria-current="page">UPSC</a>
+    <a href="/poetry.html">Poetry</a>
+    <a href="/#connect">Contact</a>
+  </nav>
+
+  <ul class="side__social" aria-label="Social links">
+    <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+    </a></li>
+    <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener" aria-label="X">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+    </a></li>
+    <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+    <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+    </a></li>
+    <li><a href="mailto:smahsanabdal@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+    </a></li>
+  </ul>
+</header>
+<main id="main">
+<article class="note"><nav class="ncrumb" aria-label="Breadcrumb"><a href="/upsc.html">UPSC</a><span>/</span><a href="/upsc/notes/">Notes</a><span>/</span><a href="/upsc/notes/forum-ias-ca-classes/">Forum IAS CA Classes</a><span>/</span><b>Artificial Intelligence</b></nav><h1 class="note__title">Artificial Intelligence</h1><div class="ncontent"><p>Science Should Very Importantly Have: What &amp; How</p>
+<ul>
+<li><p>Introduction to AI</p>
+<ol>
+<li>Generative AI, Challenges and Way Forward</li>
+<li>Attributes of AI - That They Cannot Do but Qualifies as AI, this needs to be taught to them<ol>
+<li>Learning</li>
+<li>Decision / Reason</li>
+<li>Self-Correction &amp; Self-Awareness</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Difference between AI and generative AI</p>
+<ol>
+<li>AI has Intelligence but Generative AI is something that can Generate/Produce</li>
+<li>The output of AI will be generally a Number or a yes or no decision but generative AI with answers gives suggestions</li>
+</ol>
+</li>
+<li><p>Training in AI</p>
+<ol>
+<li><p>Data can be <strong>Structured</strong></p>
+<p>which is categorized and structured</p>
+</li>
+<li><p>Data can be <strong>Unstructured</strong></p>
+<p>which is NOT categorized and structured</p>
+</li>
+</ol>
+</li>
+<li><p>what is Generative AI</p>
+<p>Generative AI does it create something New → it does mix &amp; match but it is very useful</p>
+<p>AI →
+Machine Learning (Machine Learns without Human Interference)→ Deep Learning (Based on Artificial Neural Networks; Tries to Simulate the Human Brain)→
+Generative (Capacity to Create Something) &amp; Discriminative (Yes &amp; No)</p>
+<p>LLM → Large Language Models</p>
+<p>OCR → Optical Character Reading</p>
+<p>NLP → Natural Language Processing</p>
+<p>Super AI → Combine Quantum &amp; AI</p>
+<p>Strong AI → Can Emulate Whole Human Intelligence. There is No Example as of now.</p>
+<p>Weak AI → Can Handle only a part of Human Intelligence, All the AI we have right now, is weak AI</p>
+<p>The idea is to make AI that is Responsible</p>
+<p>Strength of AI → Pattern Recognition Capabilities</p>
+</li>
+<li><p>Question</p>
+<p>AI has the capacity to transform the digital ecosystem. in this context identify the applications of Artificial Intelligence</p>
+</li>
+<li><p>Applications of AI</p>
+<ol>
+<li><p>Health</p>
+<ol>
+<li><p>Google and Apollo have signed an agreement wherein they are using Deep Learning to interpret X-Ray</p>
+</li>
+<li><p>It can predict the spread of disease</p>
+</li>
+<li><p>Disease Diagnosis</p>
+</li>
+<li><p>Suggesting &amp; Creating Medicines &amp; Vaccines</p>
+</li>
+<li><p>Research &amp; Development</p>
+</li>
+<li><p>Examples</p>
+<p>3 Nethra (Microsoft &amp; Forus) → Opthalmology Practise Analysis by this App</p>
+</li>
+</ol>
+</li>
+<li><p>Agriculture from Handout Also</p>
+<ol>
+<li>Can take input from Soil and plants and can suggest plantation techniques</li>
+<li>Can identify and measure the spread of disease</li>
+<li>Credit Wohtiness of Farmers</li>
+<li>E NAM</li>
+<li>Cropping Patterns</li>
+<li>Disease Surveillance  &amp; Monitoring</li>
+<li>GM Crops</li>
+<li>AI-based sensors and drones for surveillance and management</li>
+<li>Sowing via Machines</li>
+<li>Dynamic Prices Suggestions, Predicting Demands</li>
+<li>Agriculture in AI on Marines and Fisheries</li>
+</ol>
+</li>
+<li><p>Education</p>
+<ol>
+<li>Translation</li>
+<li>Tele Education &amp; Getting People back on diction Ex: Duolingo</li>
+<li>we can provide customized teaching</li>
+<li>An example is X Prep (Customised Study Schedule)&amp; DIKSHA  Portal</li>
+</ol>
+</li>
+<li><p>Business</p>
+<ol>
+<li>Supply chain and Inventory Management</li>
+<li>Dynamic Pricing</li>
+<li>Targetted and Personalised Ads</li>
+<li>Managing Crises with real-time data for decision-making and suggestions</li>
+<li>Inventory Management</li>
+<li>Leakage Management</li>
+</ol>
+</li>
+<li><p>Security in General</p>
+<ol>
+<li>Image Processing</li>
+<li>Before Conflict Tracking Hate Speeches and Internet Heat</li>
+<li>communication calls</li>
+<li>can identify hate speech</li>
+<li>Example: Snowden Debate</li>
+</ol>
+</li>
+<li><p>Market</p>
+<ol>
+<li>Capital Market Prediction</li>
+<li>Analysing Market Trends</li>
+</ol>
+</li>
+<li><p>Facial Recognition</p>
+<ol>
+<li>Digi Yatra</li>
+</ol>
+</li>
+<li><p>Quantum Computing</p>
+</li>
+</ol>
+  <div class="ncall">
+  💡 Follow the Life Cycle Approach
+
+<ol>
+<li>Seed, Soil, Growth, Harvesting, Pos Harvesting, Marketing</li>
+<li>Always Follow Life Cycle Approach for Education</li>
+<li>Identify the Segments First  </div>
+
+</li>
+</ol>
+</li>
+<li><p>Home Work: Applications of Generative AI</p>
+</li>
+<li><p>Questions: What are the challenges surrounding AI</p>
+<p>Ethical Challenges</p>
+<ol>
+<li><p>Accountability &amp; Legality</p>
+<p>Technology Outpaces Regulation</p>
+</li>
+<li><p>Algorithm Bias - Both at the time of creation and learning</p>
+</li>
+<li><p>Data Bias</p>
+</li>
+<li><p>Explainability - ANN’s are very complex, Sometimes it cannot explain its process and output. Essence is that the Decision Making Process cannot be explained by AI</p>
+</li>
+<li><p>Informed Consent - The Dilemma is that AI cannot learn if you dont share data without learning</p>
+</li>
+<li><p>Threat for Privacy</p>
+<ol>
+<li>We also dont want privacy &amp; we accept terms and conditions without reading</li>
+<li>Deep Fakes</li>
+<li>It can profile us in both Individual Profiling and Societal Profiling to predict our needs wants and decisions</li>
+</ol>
+</li>
+<li><p>Prominent Threat of Job Loss</p>
+</li>
+<li><p>Malafide Misuse</p>
+</li>
+</ol>
+</li>
+<li><p>General Challenges (From Handout)</p>
+<ol>
+<li>Money →<ol>
+<li><p>Gross Expenditure on Research &amp; Development</p>
+<p>Graph on R&amp;D from Handout</p>
+<p>taken from NITI at 75</p>
+</li>
+<li><p>In Case of India Pvt Expenditure of R&amp;D is 36% of Total which is very low</p>
+<p>The total is Low, Pvt is Low but the Govt Contribution is also decreasing</p>
+<p>This Trend is not good</p>
+</li>
+<li><p>of the total govt spending only 7% of total goes to the higher institutions</p>
+</li>
+</ol>
+</li>
+<li>Infrastructure, Institution &amp; HRD→<ol>
+<li>As per QS World Rankings out of 200 Top Institutions only 3 are in India</li>
+<li>of the total patents filled, indian patent rank is at 10, israel outranks us</li>
+<li>UNESCO school of statistics Report 2019, Plots no of Researchers per million<ol>
+<li>For USA - 4200</li>
+<li>China - 1200</li>
+<li>India - 156</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>R&amp;D &amp; Innovation →<ol>
+<li>Section 3 D &amp; Section 56  → Deals with Evergreening and Compulsory Licensing</li>
+</ol>
+</li>
+<li>Commercialisation →</li>
+</ol>
+</li>
+<li><p>Governance Policies on AI</p>
+<ol>
+<li><p>Policy</p>
+<p>S&amp;T &amp; Innovation Policy STIP</p>
+<ol>
+<li>Open Science Policy - Democratise Science for All</li>
+<li>SIT Observatory</li>
+<li>TKS - Traditional Knowledge System</li>
+</ol>
+</li>
+<li><p>Institutions</p>
+<ol>
+<li>Under MoST<ol>
+<li>→ DoSP → All Definitions Roadmaps, FInance and Managements</li>
+<li>→ DSIR - CSIR → Research</li>
+<li>DBT</li>
+</ol>
+</li>
+<li>MeITY<ol>
+<li><p>CDAC - Hardware Maker - Manufacturing</p>
+<p>AIRAWAT - AI Super Computer Cloud has been built by CDAC</p>
+</li>
+<li><p>NIC - National Information Centre</p>
+</li>
+</ol>
+</li>
+<li>National Knowledge Network (NKN)<ol>
+<li>You create a network in India and then connect it to a Super Computer</li>
+</ol>
+</li>
+<li>HRD - Human Resources<ol>
+<li>Women - KIRAN (Handling Career Gaps), CURIE (Women Specific Institutes),</li>
+<li>Youth - INSPIRE &amp; MANAK Awards</li>
+<li>Disabled &amp; Elderly - TIDE - Technology Interventions for Disabled &amp; Elderly</li>
+</ol>
+</li>
+<li>R&amp;D &amp; Innovations<ol>
+<li>CoE - Centre of Excellence</li>
+<li>TIH - Technology Innovation Hubs</li>
+<li>NIDHI - National Initiative for Developing Harnessing Innovation</li>
+<li>AIM - Atal Innovation Mission</li>
+</ol>
+</li>
+<li>Other Works<ol>
+<li>PRISM by Samsung - Connects Industry and Academy</li>
+<li>Science &amp; Engineering Research Board (SERB) + Intel Deep Learning</li>
+<li>SIH by Govt of India</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Other Concepts</p>
+<p>GAN - Generative Adversary Network → DALL E</p>
+</li>
+<li><p>AI in Infrastructure</p>
+<ol>
+<li>Planning &amp; Design Suggestion</li>
+<li>Material Choice</li>
+<li>Structural Analysis</li>
+<li>Disaster Proof</li>
+</ol>
+</li>
+<li><p>GPT 4.0</p>
+<p>LLM - Large Language Model</p>
+</li>
+<li><p>Concept of Supervised and Non-Supervised Learning</p>
+</li>
+<li><p>Creation and Issue of Deep Fakes</p>
+</li>
+</ul>
+</div><nav class="npager"><a class="npager__prev" href="/upsc/notes/forum-ias-ca-classes/aditya-l1-mission.html"><span>Previous</span>ADITYA L1 Mission</a><a class="npager__next" href="/upsc/notes/forum-ias-ca-classes/brics-final.html"><span>Next</span>BRICS Final</a></nav></article><footer class="foot">
+  <h2 class="foot__head">Let's connect</h2>
+  <p class="foot__line">The form on the <a href="/#connect">home page</a> reaches me directly.</p>
+
+  <!-- ── Contact form (Netlify Forms) ───────────────────────── -->
+  <div class="accounts">
+    <section class="accounts__group">
+      <h3 class="accounts__label">Instagram</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Personal</span>
+          <span class="accounts__handle">@saiyedabdal</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/practicalplaybook/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Practical Playbook</span>
+          <span class="accounts__handle">@practicalplaybook</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/poeticc_whisperss/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Poetic Whispers</span>
+          <span class="accounts__handle">@poeticc_whisperss</span>
+        </a></li>
+      </ul>
+    </section>
+    <section class="accounts__group">
+      <h3 class="accounts__label">Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+          <span class="accounts__name">LinkedIn</span>
+          <span class="accounts__handle">/in/saiyedabdal</span>
+        </a></li>
+        <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+          <span class="accounts__name">X</span>
+          <span class="accounts__handle">@saiyedspeaks</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+          <span class="accounts__name">YouTube</span>
+          <span class="accounts__handle">@SaiyedAbdal</span>
+        </a></li>
+        <li><a href="mailto:smahsanabdal@gmail.com">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+          <span class="accounts__name">Email</span>
+          <span class="accounts__handle">smahsanabdal@gmail.com</span>
+        </a></li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>
+</footer>
+</main>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

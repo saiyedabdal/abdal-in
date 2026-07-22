@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Computer &amp; Robotics — UPSC Notes — Saiyed Abdal</title>
+<meta name="description" content="Chronology Web 1.0, 2.0, 3.0 Web 1.0 When internet Started, the Initial Websites were Static in Nature. They weren't Interactive in Nature Web 2.0 Website became Interac">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="canonical" href="https://abdal.in/upsc/notes/science-technology/computer-robotics.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23fff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/upsc.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<a class="topbar" href="/upsc/notes/">UPSC Notes — the full archive</a>
+<header class="side" id="side">
+  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">Abdal</a>
+
+  <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side__nav" id="sidenav" aria-label="Primary">
+    <a href="/#story">Saiyed Abdal</a>
+    <a href="/upsc.html" aria-current="page">UPSC</a>
+    <a href="/poetry.html">Poetry</a>
+    <a href="/#connect">Contact</a>
+  </nav>
+
+  <ul class="side__social" aria-label="Social links">
+    <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+    </a></li>
+    <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener" aria-label="X">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+    </a></li>
+    <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+    <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+    </a></li>
+    <li><a href="mailto:smahsanabdal@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+    </a></li>
+  </ul>
+</header>
+<main id="main">
+<article class="note"><nav class="ncrumb" aria-label="Breadcrumb"><a href="/upsc.html">UPSC</a><span>/</span><a href="/upsc/notes/">Notes</a><span>/</span><a href="/upsc/notes/science-technology/">Science &amp; Technology</a><span>/</span><b>Computer &amp; Robotics</b></nav><h1 class="note__title">Computer &amp; Robotics</h1><div class="ncontent"><ul>
+<li><p>Chronology Web 1.0, 2.0, 3.0</p>
+<figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/f78e061788d6.webp" alt="Screenshot 2023-03-08 at 11.44.00 PM.png" /></figure>
+<figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/c4b38e3f857a.webp" alt="Screenshot 2023-03-08 at 11.44.59 PM.png" /></figure>
+<ol>
+<li><p>Web 1.0</p>
+<p>When internet Started, the Initial Websites were Static in Nature. They weren't Interactive in Nature</p>
+</li>
+<li><p>Web 2.0</p>
+<p>Website became Interactive meaning 2 Ways communication became Possible. You can avail services, buy products, interact with people.</p>
+<p>Example : Facebook, Amazon, Car Dekho, Passport Seva</p>
+<p><strong>Challenges of Web 2.0</strong></p>
+<ol>
+<li><p>Here the issue is that of “Privacy is Actually a Myth”</p>
+</li>
+<li><p>Dominance of few companies like FAANG → Facebook, Alphabet, Amazon, Netflix, Google</p>
+<p>FAANG is now called MAANF → Facebook is now called Meta</p>
+<p>This is leading towards Centralisation, Either the Govt or Company has all the data.</p>
+</li>
+</ol>
+</li>
+<li><p>Web 3.0</p>
+<p>Idea is that every individual has complete control over his or her personal data and internet and its resources would be controlled by people or peer to peer network and not by big companies or Govt</p>
+<p>Here Privacy will be the Corner Stone or will be at the Centre Stage</p>
+<p>Decentralisation of Internet &amp; Resources</p>
+</li>
+</ol>
+</li>
+<li><p>Block Chain</p>
+<ul>
+<li><p>Schematic Diagram of Blockchain</p>
+<figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/c4c08f5818ad.webp" alt="Screenshot 2023-03-10 at 10.33.20 AM.png" /></figure>
+<figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/a897b2c7a5c9.webp" alt="Screenshot 2023-03-10 at 10.33.39 AM.png" /></figure>
+</li>
+<li><p>Block Chain is a Digital Ledger having the Following characteristics</p>
+<ol>
+<li>De Centralised &amp; Distributed</li>
+<li>Immutable or Unchangeable</li>
+<li>Mathematically Verified</li>
+</ol>
+</li>
+<li><p>Benefits of Block Chain are</p>
+<ol>
+<li><p>Because it is decentralised it is more transparent, so it helps in creating more trusts</p>
+</li>
+<li><p>Proper Record Keeping &amp; Tracking</p>
+</li>
+<li><p>Highly Secure due to use of Cryptography</p>
+<p>Cryptography is hiding of real data using complex mathematical puzzles</p>
+</li>
+<li><p>Direct Transaction will eliminate overhead cost</p>
+</li>
+<li><p>It can increase Time Effectiveness due to possibility of real time transactions</p>
+</li>
+</ol>
+</li>
+<li><p>Application of Blockchain</p>
+<p><strong>Finance</strong></p>
+<ol>
+<li>According to World Economic Forum 10% of Worlds GDP will be on Block Chain by as early as 2025</li>
+<li>It removes the Role of Brokers or Intermediaries</li>
+<li>It is the Technology Behind Cryptocurrency</li>
+<li>It can help in creating Platforms for Crowd Funding</li>
+</ol>
+<p><strong>Health</strong></p>
+<ol>
+<li><p>USA is a Pioneer in using Blockchain to develop patient health record system</p>
+</li>
+<li><p>In India we have started ABHA - Ayushman Bharat Health Account</p>
+<p>It will create Unique Health ID just like Aadhar or UPI where an Individuals Medical Data would be Stored</p>
+</li>
+<li><p>It addresses interoperability issues</p>
+<p>Departments in Hospitals act in Silos, even hospital to hospital communication is broken</p>
+</li>
+</ol>
+<p><strong>Governance</strong></p>
+<ol>
+<li>Election can be conducted using Block Chain. This can prevent voter Fraud. This demand increased after US 2020 presidential elections.</li>
+<li>It can help in resolving interoperability issues between different ministries</li>
+<li>Efficient record keeping and file tracking</li>
+<li>Will Increase Transparency in Governance</li>
+</ol>
+<p><strong>Other Area -</strong> Legal Services, Social Services, Storage</p>
+</li>
+<li><p>Challenges of Blockchain</p>
+<p><strong>Perform &amp; Efficiency</strong></p>
+<ol>
+<li>Sub Optimal Performance because of Consensus Algorithm</li>
+<li>Many Copies Created</li>
+<li>High Energy Consumption leading to Infrastructure Challenges</li>
+<li>Reliability and Security Concerns</li>
+<li>No Govt Control or Responsibility, So Individual Grievances might not be addressed</li>
+<li>The System is Still Hackable</li>
+<li>Lack of Established Standards</li>
+<li>Interoperability Issues between Different Blockchains</li>
+<li>Interoperability Issues between Blockchain &amp; Traditional Ledgers</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Cryptocurrency</p>
+<ul>
+<li><p>Introductions</p>
+<ol>
+<li>It is a Digital Currency that works on Peer to Peer basis (decentralised)</li>
+<li>It is Non Repudiable meaning that parties cannot deny that they have sent or received a cryptocurrency</li>
+<li>All of this is a part of Huge Ledger maintained on Block Chain</li>
+<li>It is a Fiduciary Currency (Just Like a Cheque)</li>
+</ol>
+</li>
+<li><p>Comparison Between Crypto &amp; Normal Currency</p>
+<p>| Normal Currency  | Cryptocurrency  |
+| --- | --- |
+| Tangible &amp; Physical  | Non Tangible &amp; Virtual |
+| Fiat  | Fiduciary |
+| Regulated by Central Bank  | Regulated by Peer to Peer Network |
+| Repudiable  | Non Repudiable  |
+| Unlimited Supply | Limited Supply
+Ex : For Bitcoin (21 Million) |
+| Intermediary Needed  | No Intermediary Needed |</p>
+</li>
+<li><p>Functioning of Bitcoin Generation</p>
+<p>Bitcoins are Generated when an Entity or a Person, Solves a complex Mathematical Puzzle which can make the system more secure.</p>
+<p>The complexity of the problem is high enough so that it requires lot of software power to solve it.</p>
+<p>This is Also known as Bitcoin Mining</p>
+</li>
+<li><p>Historical Background</p>
+<p>2008 Financial Crisis</p>
+<p>Housing Bubble Failed</p>
+<p>Santoshi Nakamoto blamed Central Banks and Normal People were facing Challenges</p>
+<p>It was designed as a Currency and being used as Asset Now</p>
+</li>
+<li><p>Challenges of Cryptocurrency or Bitcoin</p>
+<ol>
+<li>It can challenge the monetary authority of central banks</li>
+<li>Can lead to money laundering</li>
+<li>Can Lead to Terror Financing</li>
+<li>Can Lead to Anonymous Funding</li>
+<li>No Regulation, Possibility of Hacking, Environmental Concerns, Unsustainable</li>
+<li>Highly Volatile</li>
+<li>It is in development phase. It is not yet matured. It is beta phase</li>
+</ol>
+</li>
+<li><p>Cryptocurrency &amp; its Regulations</p>
+<ol>
+<li><p><strong>Countries Against Crypto</strong></p>
+<p>China has put a blanket ban on Crypto Mining and Crypto Trading</p>
+<p>Smaller Countries like Nepal, Indonesia, Bolivia, North Macedonia have also put ban on Bit Coin</p>
+</li>
+<li><p><strong>Countries Adopting Crypto</strong></p>
+<p>El Salvador, Ecuador, Cuba</p>
+<p>El Salvador has made it a legal tender</p>
+<p>Russia is exploring Ethereum as a cryptocurrency to bypass dollar dominance</p>
+<p>Iran is also exploring Cryptocurrency to bypass US Sanctions</p>
+</li>
+</ol>
+</li>
+<li><p>Countries like India</p>
+<ol>
+<li><p>Indian Rules - wrt Ad Hoc Mechanisms as of Now</p>
+<ol>
+<li>30% Tax on Cryptocurrency</li>
+<li>No Offsetting Provisions within Other Profits as well as two different bitcoins itself</li>
+</ol>
+</li>
+<li><p>In 2018 RBI had put a Ban on Banks from dealing in Crypto. However SC in 2020 struck down this ban of RBI, so crypto trading started in India.</p>
+</li>
+<li><p>However Govt has not passed Cryptocurrencies &amp; Official Digital Currency (Regulation Bill) of 2021 but Govt in Budget of 2022 declared 20% Tax on Crypto Gains with No Offsetting Provisions</p>
+</li>
+<li><p>Parliamentary Standing Committee on Finance’s Observation on Crypto</p>
+<p>It has met Major Stakeholders, related to Crypto Market. The Crypto Community has asked this Community to Not Consider Crypto Currency as Currency but as an Asset</p>
+<p>They fear that if it is considered as a Currency it could be banned.</p>
+</li>
+<li><p>Suggestions by this Committee</p>
+<p>This cmt is of the view to not put blanket ban on Crypto Currency but to develop regulatory mechanism</p>
+<p>Create Grievance Redressal Mechanism</p>
+<p>Create Investor Protection Mechanism</p>
+<p>Create Awareness Amongst People</p>
+</li>
+<li><p>Case of Money Supply in Official Digital Currency</p>
+<p>HW : While Making Digital Currency, Are we adding New Digital Currency or taking it our from the Physical One</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>NFT</p>
+<ol>
+<li><p>Non Fungible Token - Not Interchangeable, Non Fungibility is of Unique Importance</p>
+</li>
+<li><p>Rupee &amp; Bit Coin is Fungible i.e they can be exchanged</p>
+</li>
+<li><p>Non Fungible means that it is Unique and it cannot be replaced with something else</p>
+<p>Example : Unique Digital Art Pieces can be NFT’s</p>
+</li>
+<li><p>Token is a digital certificate and authenticity given for an asset</p>
+</li>
+<li><p>So NFT’s are blockchain based token that represent a unique asset like a piece of Art from a digital content or media</p>
+</li>
+<li><p>When one Buys NFT, one gets proof of ownership but others can copy it</p>
+</li>
+<li><p>Steps involved in creating NFT and Trading them</p>
+<ol>
+<li>Create a Digital Artwork</li>
+<li>Get it Registered on an NFT Platform by Paying some fee - Gas Fee</li>
+<li>It is then considered as Minted</li>
+<li>Others on the Network can buy NFT and further sell the NFT and these transactions are recorded on block chain</li>
+</ol>
+</li>
+<li><p>NFT Question from PYQP</p>
+</li>
+</ol>
+</li>
+<li><p>3D Printing</p>
+<ul>
+<li><p>Introduction</p>
+<ol>
+<li><p>3D Printing is also known as Additive Manufacturing in which objects are created by laying down layers of material until the object is created</p>
+</li>
+<li><p>It is different from subtractive manufacturing in which cutting or hollowing out is done by using tool.</p>
+</li>
+<li><p>The Process of 3D Printing</p>
+<figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/5cd5d1225b51.webp" alt="Screenshot 2023-03-11 at 11.08.22 AM.png" /></figure>
+<p>Slicing → Cutting Down a Digital Object into 100 &amp; 1000 of Layers</p>
+</li>
+</ol>
+</li>
+<li><p>Advantages</p>
+<ol>
+<li>Higher Efficiency</li>
+<li>Cost Effective</li>
+<li>Time Effective</li>
+<li>Precision Printing</li>
+<li>Labour Cost Reduced</li>
+<li>Cost of Houses Reduced</li>
+<li>It will reduce wastage</li>
+<li>Lower Down Cost</li>
+<li>High Precision</li>
+<li>Easily Customisable</li>
+<li>Quality Assurance</li>
+<li>Will Create High Skilled Jobs</li>
+</ol>
+</li>
+<li><p>Application of 3D Printing</p>
+<ol>
+<li>Medical<ol>
+<li>Creation of Complex Prosthetics &amp; Artificial Limbs and Stents in Medical Application</li>
+<li>In Dental Fillings and Dental Bridges</li>
+<li>Can Create Certain Types of Medical Equipment also</li>
+</ol>
+</li>
+<li>Consumables<ol>
+<li>Application in Consumer Products such as Eyewear, Footwear, Furniture</li>
+<li>Industrial Products such as Manufacturing Tools, Prototypes, Consumables (Cutter of Rods and Marbles)</li>
+</ol>
+</li>
+<li>Other<ol>
+<li>In Forensics to Reconstruct Evidences</li>
+<li>In Replicating Ancient Artefacts</li>
+<li>Reconstructing Fossil</li>
+<li>Creating Movie Props</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Challenges of 3D Printing</p>
+<ol>
+<li><strong>Technical Challenges</strong><ol>
+<li><p>Limited Material which can be used as Input in House Building Cement, Plastic, Ceramics, Resins, Metals, Sugar</p>
+</li>
+<li><p>Living Cells can be used in construction of Bio Material by means of 3D Bio Printing</p>
+<p>Creation of Xeno Robots</p>
+</li>
+<li><p>Limited Size of the Objects Created</p>
+</li>
+<li><p>Production of Dangerous Items</p>
+</li>
+<li><p>Copyright Issues by means of Easy Reverse Engineering</p>
+</li>
+<li><p>Cyber Security Issues</p>
+</li>
+</ol>
+</li>
+<li>Challenges in India<ol>
+<li>India does not have any 3D Printer Manufacturer. India Imports 3D printers and the custom duty is 30 to 40 percent and the 3D objects is also costly</li>
+<li>Lack of R&amp;D</li>
+<li>Lack of Expertise</li>
+<li>Lack of Awareness</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Govt of India has Started NSAM</p>
+<p>National Strategy for Additive Manufacturing</p>
+<p>The Obj is to reach 5% of Global Market Share of 3D Printing</p>
+<p>Next Strategy is to add 1 Billion Dollar to GDP by 2025</p>
+<p>To Build Domestic Capabilities which will reduce the cost and increase adoption</p>
+</li>
+</ul>
+</li>
+<li><p>AR &amp; VR (Augmented Reality &amp; Virtual Reality)</p>
+<p><strong>Introduction</strong></p>
+<p>Augmented Reality usually starts with a Real Life view of Something such as the Camera of Mobile and Projects or inserts images onto the screen of the Viewer</p>
+<p>In Virtual Reality, a Comp Generated Simulation of an Alternate World is created</p>
+<p><strong>Difference Between AR &amp; VR</strong></p>
+<p>| Virtual Reality | Augmented Reality |
+| --- | --- |
+| There is no Reality  | Presence of Some Element of Reality  |
+| Headset Needed  | Simple Mobile Phones can be used to create AR |
+| System Controls our Presence  | We can control our Presence  |
+| VR has no effect on real world, enhances only virtual world  | AR Enhances both Real World and Virtual World |</p>
+<p><strong>Application of VR &amp; AR</strong></p>
+<ol>
+<li><p>Training</p>
+<ol>
+<li>Pilot Simulation</li>
+<li>To Create Simulated Env of Surgery to Train Doctors and Nurses</li>
+<li>In Gaming to create 3D games to get 3D Experiences</li>
+</ol>
+</li>
+<li><p>in Construction</p>
+<p>AR &amp; VR are used to create sites or buildings even before real launch to give first hand experience to customers</p>
+<p>Example : Godrej Properties</p>
+</li>
+<li><p>in Sports like Golf and Cricket</p>
+</li>
+<li><p>in Art as Virtual Graphic Gallery</p>
+</li>
+<li><p>E Commerce Platform to Simulate Physical Store</p>
+</li>
+<li><p>in Movies</p>
+</li>
+<li><p>According to Deloitte, Almost 90% of the companies with annual revenue between 100 Million &amp; 1 Billion Dollar are now Leveraging AR &amp; VR</p>
+</li>
+</ol>
+</li>
+<li><p>Artificial Intelligence</p>
+<p>How is Intelligence different from Instinct → By Means of Rationale and Logic</p>
+<p>Artificial Intelligence are machines which will have cognitive abilities similar to that of Humans, in Artificial Intelligence, it is said there are 4 Stages of Artificial Intelligence acc to Professor Arend Hintze</p>
+<ol>
+<li>Reactive Machine</li>
+<li>Limited Memory</li>
+<li>Theory of Mind</li>
+<li>Self Consciousness</li>
+</ol>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Metaverse</li>
+<li>National Semi Conductor Mission</li>
+<li>IoT &amp; Big Data</li>
+<li>Computing<ul>
+<li>Quantum Computing</li>
+<li>Super Computing</li>
+<li>Cloud Computing</li>
+<li>Edge Computing</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>From Handouts</strong></p>
+</div><nav class="npager"><a class="npager__prev" href="/upsc/notes/science-technology/bio-tech.html"><span>Previous</span>Bio-Tech</a><a class="npager__next" href="/upsc/notes/science-technology/defence-tech.html"><span>Next</span>Defence Tech</a></nav></article><footer class="foot">
+  <h2 class="foot__head">Let's connect</h2>
+  <p class="foot__line">The form on the <a href="/#connect">home page</a> reaches me directly.</p>
+
+  <!-- ── Contact form (Netlify Forms) ───────────────────────── -->
+  <div class="accounts">
+    <section class="accounts__group">
+      <h3 class="accounts__label">Instagram</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Personal</span>
+          <span class="accounts__handle">@saiyedabdal</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/practicalplaybook/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Practical Playbook</span>
+          <span class="accounts__handle">@practicalplaybook</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/poeticc_whisperss/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Poetic Whispers</span>
+          <span class="accounts__handle">@poeticc_whisperss</span>
+        </a></li>
+      </ul>
+    </section>
+    <section class="accounts__group">
+      <h3 class="accounts__label">Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+          <span class="accounts__name">LinkedIn</span>
+          <span class="accounts__handle">/in/saiyedabdal</span>
+        </a></li>
+        <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+          <span class="accounts__name">X</span>
+          <span class="accounts__handle">@saiyedspeaks</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+          <span class="accounts__name">YouTube</span>
+          <span class="accounts__handle">@SaiyedAbdal</span>
+        </a></li>
+        <li><a href="mailto:smahsanabdal@gmail.com">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+          <span class="accounts__name">Email</span>
+          <span class="accounts__handle">smahsanabdal@gmail.com</span>
+        </a></li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>
+</footer>
+</main>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>

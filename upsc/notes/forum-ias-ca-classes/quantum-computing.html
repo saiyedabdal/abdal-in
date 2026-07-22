@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quantum Computing — UPSC Notes — Saiyed Abdal</title>
+<meta name="description" content="Quantum Concepts: Qubit A Qubit or Quantum Bit is the fundamental unit of quantum information. It is the quantum analogue to a classical bit. Unlike a classical bit, whi">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="canonical" href="https://abdal.in/upsc/notes/forum-ias-ca-classes/quantum-computing.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23fff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/upsc.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<a class="topbar" href="/upsc/notes/">UPSC Notes — the full archive</a>
+<header class="side" id="side">
+  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">Abdal</a>
+
+  <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="side__nav" id="sidenav" aria-label="Primary">
+    <a href="/#story">Saiyed Abdal</a>
+    <a href="/upsc.html" aria-current="page">UPSC</a>
+    <a href="/poetry.html">Poetry</a>
+    <a href="/#connect">Contact</a>
+  </nav>
+
+  <ul class="side__social" aria-label="Social links">
+    <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+    </a></li>
+    <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener" aria-label="X">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+    </a></li>
+    <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+    </a></li>
+    <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+    </a></li>
+    <li><a href="mailto:smahsanabdal@gmail.com" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+    </a></li>
+  </ul>
+</header>
+<main id="main">
+<article class="note"><nav class="ncrumb" aria-label="Breadcrumb"><a href="/upsc.html">UPSC</a><span>/</span><a href="/upsc/notes/">Notes</a><span>/</span><a href="/upsc/notes/forum-ias-ca-classes/">Forum IAS CA Classes</a><span>/</span><b>Quantum Computing</b></nav><h1 class="note__title">Quantum Computing</h1><div class="ncontent"><figure class="nfig"><img loading="lazy" decoding="async" src="/assets/upsc/d47ceeb61c47.webp" alt="Screenshot 2023-09-21 at 12.59.34 PM.png" /></figure>
+<p><strong>Quantum Concepts:</strong></p>
+<ul>
+<li><p>Qubit</p>
+<p>A Qubit or Quantum Bit is the fundamental unit of quantum information. It is the quantum analogue to a classical bit. Unlike a classical bit, which can be in a state of 0 or 1, a qubit can exist in a state of 0, 1, or both 0 and 1 simultaneously, thanks to the principle of superposition. Additionally, qubits can be entangled, a phenomenon allowing the state of one qubit to directly relate to the state of another, no matter how far apart they are.</p>
+</li>
+<li><p>Quantum Superposition</p>
+<p>Definition: The ability of a quantum system to be in multiple states at the same time until it is measured.</p>
+<p>Detail: Like waves in classical physics, any two quantum states can be superposed, and the result will be another valid quantum state</p>
+<p><strong>Spinning Coin Analogy:</strong></p>
+<p>Imagine a coin spinning on a table. While it is spinning, it is not in a state of 'heads' or 'tails', but a blend of both. You can't say it's definitively in one state or the other until it falls flat, and you observe whether the outcome is 'heads' or 'tails'.</p>
+<p><strong>Relation to Quantum Superposition:</strong></p>
+<p>In quantum superposition, a quantum particle, like a qubit, exists in a blend of all possible states until it is observed or measured. Once measured, similar to the coin falling flat, the superposition collapses, and the qubit assumes one of its possible states.</p>
+<p><strong>Key Points:</strong></p>
+<p>The spinning coin represents a system in superposition, a mix of 'heads' and 'tails'.</p>
+<p>The act of the coin landing and being observed is analogous to measuring a quantum system, causing the collapse of the superposition to a definite state.</p>
+</li>
+<li><p>Quantum Entanglement</p>
+<p>Definition: A phenomenon where the quantum state of each particle in a group cannot be described independently of the state of the others.</p>
+<p>Detail: Occurs when particles are generated, interact, or share spatial proximity in specific ways.</p>
+<p>Analogy: The concept can be visualized using a see-saw analogy.</p>
+<p>Note: This concept is against Einstein's concept of Locality.</p>
+<p><strong>Clarification:</strong></p>
+<p>If two particles are entangled in such a way that they are in opposite states, then if one is measured to be in state |0⟩, the other will be in state |1⟩, and vice versa. This would be analogous to the see-saw analogy you mentioned, where if one side is up, the other must be down.</p>
+<p>However, entanglement can also occur in such a way that if one particle is in a particular state, the other particle is in the same state. For example, if one is spin-up, the other is also spin-up.</p>
+<p><strong>Revised Analogy:</strong></p>
+<p>Consider you and a friend each have one shoe of a pair. If your shoe is the left one, you instantly know your friend has the right one, and if you have the right one, your friend has the left one (opposite states). This can represent one type of entanglement.</p>
+<p>Alternatively, suppose you and your friend each have one of a pair of identical twins. If you are with one twin, you instantly know your friend is with the other identical twin (same state). This can represent another type of entanglement.</p>
+<p><strong>Conclusion:</strong></p>
+<p>Quantum entanglement encompasses a variety of correlations, not just opposite ones. The key feature is the <strong>instantaneous</strong> and <strong>non-local correlation</strong> between the states of entangled particles, regardless of whether they are the same or opposite.</p>
+</li>
+<li><p>Quantum Tunneling</p>
+<p><strong>Definition:</strong></p>
+<p>Quantum Tunneling is a quantum mechanical phenomenon where particles move through a potential energy barrier that they classically shouldn’t be able to pass. This effect is a direct result of the wave-like properties of particles described by quantum mechanics and is not possible according to classical physics.</p>
+<p><strong>Explanation:</strong></p>
+<p>In classical physics, a particle of a certain energy can't pass through a barrier if the energy of the barrier is higher than the energy of the particle. However, in quantum mechanics, there is a non-zero probability that the particle can &quot;tunnel&quot; through the barrier and appear on the other side, even if the energy of the barrier is higher than the energy of the particle.</p>
+<p><strong>Analogy:</strong></p>
+<p>Imagine a ball rolling on a flat surface and encountering a hill. Classically, if the ball doesn’t have enough energy (speed) to climb the hill, it won’t be able to reach the other side of the hill. However, in quantum tunneling, it’s as if the ball magically appears on the other side of the hill occasionally, even though it didn’t have enough energy to climb the hill.</p>
+<p><strong>Applications:</strong></p>
+<p>Quantum tunneling has many applications in modern technology, including the operation of tunnel diodes in electronics, the scanning tunneling microscope used to image surfaces at the atomic level, and even in biological systems, where it is thought to play a role in enzyme catalysis and DNA mutations.</p>
+</li>
+<li><p>Quantum Decoherence</p>
+<p><strong>Definition:</strong></p>
+<p>Quantum Decoherence is the process by which a quantum system loses its quantum properties and behaves more classically due to interactions with its environment. This process is crucial in the transition of quantum states to classical states and is a significant obstacle in the development of quantum computers, as it leads to the loss of information from a quantum system.</p>
+<p><strong>Explanation:</strong></p>
+<p>In a coherent quantum system, the phases of the wave function are well-defined, and quantum superposition and entanglement can be maintained. However, when a quantum system interacts with its environment—such as through measurement or interaction with other particles—the delicate phase relationships within the system can be disturbed or lost, leading to decoherence. Once decoherence occurs, the system no longer exhibits purely quantum mechanical behavior, and quantum information is irretrievably lost to the environment.</p>
+<p><strong>Analogy:</strong></p>
+<p>Imagine a spinning top (quantum system) spinning perfectly on a surface, maintaining its balance (coherence). However, when this top interacts with external factors like wind or bumps on the surface (environment), it starts wobbling and eventually falls and stops (decoherence), losing its perfect spinning state (quantum information).</p>
+<p><strong>Implications:</strong></p>
+<p>Quantum decoherence is a significant challenge in quantum computing and quantum communication, as it limits the time during which quantum information can be reliably stored and processed. Overcoming or mitigating decoherence is essential for the practical implementation of quantum technologies.</p>
+</li>
+<li><p>Quantum Supremacy</p>
+<p><strong>Definition:</strong></p>
+<p>Quantum Supremacy refers to the milestone achieved when a quantum computer can perform a computation that is practically impossible for a classical computer to execute within a reasonable amount of time or with reasonable resources. It demonstrates the potential of quantum computers to solve certain types of problems much more efficiently than classical computers.</p>
+<p><strong>Explanation:</strong></p>
+<p>Quantum computers leverage the principles of superposition and entanglement to process information in ways that classical computers cannot. This allows them to perform many calculations simultaneously and solve certain problems much faster than classical computers. When a quantum computer can perform such a task that is infeasible for classical computers to replicate, it is said to have achieved quantum supremacy.</p>
+<p><strong>Implications:</strong></p>
+<p>Achieving quantum supremacy is a significant step in the field of quantum computing, showcasing the potential advantages of quantum computation. However, it does not imply that quantum computers are superior to classical computers in all aspects or that they are ready for widespread practical use. Many challenges, such as error rates and decoherence, still need to be addressed for the realization of practical and scalable quantum computing solutions.</p>
+<p><strong>Applications:</strong></p>
+<p>While the full range of applications is still being explored, potential areas where quantum computers could outperform classical ones include cryptography, optimization problems, simulation of quantum systems, and more.</p>
+<p><strong>Example:</strong></p>
+<p>In 2019, Google claimed to achieve quantum supremacy by performing a specific calculation on a 53-qubit quantum processor that would have taken the most powerful supercomputers thousands of years to complete.</p>
+</li>
+<li><p>Concept of Causality</p>
+<p><strong>Definition:</strong></p>
+<p>The Concept of Causality refers to the fundamental principle that every effect has a specific cause or set of causes. It is the relationship between an event (the cause) and a second event (the effect), where the second event is understood as a consequence of the first. In classical physics, causality is strictly maintained, meaning that the cause always precedes its effect in time.</p>
+<p><strong>Explanation:</strong></p>
+<p>Causality is a foundational concept in various disciplines, including physics, philosophy, and social sciences. It implies a sequence and a relationship between two events or states where one brings about the other. In classical physics, the laws governing the evolution of systems are deterministic and time-ordered, ensuring a clear, unambiguous distinction between cause and effect.</p>
+<p><strong>Implications in Quantum Mechanics:</strong></p>
+<p>In quantum mechanics, the concept of causality is more nuanced due to the inherent probabilistic nature of quantum events and the phenomenon of entanglement. While local causality is maintained (information cannot be transmitted faster than the speed of light), correlations between entangled particles can appear to violate causality, leading to ongoing discussions and investigations into the nature of causality in a quantum world.</p>
+<p><strong>Philosophical Considerations:</strong></p>
+<p>Philosophically, causality raises questions about determinism, free will, and the nature of time. Different philosophical viewpoints approach the concept of causality differently, exploring whether it is a fundamental aspect of reality or a construct of human perception and reasoning.</p>
+<p><strong>Applications:</strong></p>
+<p>Understanding causality is crucial in various fields such as science to establish relationships between variables, in philosophy to understand the nature of existence and reality, and in law and ethics to determine responsibility and accountability.</p>
+</li>
+<li><p>Concept of Locality</p>
+<p><strong>Definition:</strong></p>
+<p>Einstein's concept of locality is a principle in theoretical physics that states that an object can only be influenced by its immediate surroundings and not by objects at a distance instantaneously. In other words, changes to an object or a system can only be caused by interactions with other objects or fields that are in its immediate vicinity, and any influence from a distant object must be mediated by something traveling through space, such as a field or a particle, and cannot travel faster than the speed of light.</p>
+<p><strong>Explanation:</strong></p>
+<p>Albert Einstein, in formulating the theory of relativity, postulated that no information or influence can travel faster than the speed of light. This implies that instantaneous actions at a distance are not possible, and any interaction or influence between two separated objects must be carried by some entity or field traveling through the intervening space, taking a finite time to do so.</p>
+<p><strong>Implications in Quantum Mechanics:</strong></p>
+<p>The concept of locality is challenged by the phenomenon of quantum entanglement, where entangled particles exhibit correlations regardless of the distance separating them, seemingly violating locality. Einstein famously referred to this as &quot;spooky action at a distance&quot; and was initially uncomfortable with this aspect of quantum mechanics. However, subsequent experiments have confirmed the non-local correlations predicted by quantum mechanics, leading to ongoing discussions and explorations of the nature of locality and reality in the context of quantum theory.</p>
+<p><strong>Bell's Theorem:</strong></p>
+<p>John Bell formulated Bell's theorem to test the compatibility of quantum mechanics with locality. The theorem shows that if quantum mechanics is correct, then experiments with entangled particles should exhibit correlations that violate a set of inequalities derived from the assumption of locality (Bell inequalities). Experimental tests of Bell inequalities have consistently supported the predictions of quantum mechanics, suggesting that if locality holds, there must be some form of hidden variables determining the outcomes, or alternatively, locality is violated in the quantum realm.</p>
+<p><strong>Conclusion:</strong></p>
+<p>Einstein's concept of locality remains a fundamental and intriguing aspect of the philosophical and scientific inquiry into the nature of the universe, especially in light of the discoveries and principles of quantum mechanics. The exploration of locality, non-locality, and their implications continue to be a vibrant area of research in theoretical physics.</p>
+</li>
+</ul>
+<p><strong>Applications and Implications:</strong></p>
+<ul>
+<li><p>Advantages of Quantum Technology:</p>
+<p><strong>Enhanced Computing Power:</strong> Quantum computers can solve certain complex problems exponentially faster than classical computers.</p>
+<p><strong>Secure Communication:</strong> Quantum encryption enables ultra-secure communication channels that are theoretically immune to eavesdropping.</p>
+<p><strong>High Precision Measurements:</strong> Quantum sensors can achieve unprecedented levels of precision and sensitivity in measurements.</p>
+<p><strong>Advanced Material Design:</strong> Quantum simulations can model and analyze materials at the quantum level, enabling the design of new materials with desired properties.</p>
+<p><strong>Optimized Solutions:</strong> Quantum algorithms can provide optimized solutions for logistics and complex systems, improving efficiency and resource management.</p>
+</li>
+<li><p>Disadvantages of Quantum Technology:</p>
+<p><strong>High Sensitivity:</strong> Quantum systems are extremely sensitive to their environments, leading to high error rates.</p>
+<p><strong>Complexity and Cost:</strong> Developing and maintaining quantum technologies require significant expertise, infrastructure, and investment.</p>
+<p><strong>Limited Scalability:</strong> Building large-scale, reliable quantum systems is a substantial technical challenge.</p>
+<p><strong>Decoherence Issues:</strong> Quantum states are fragile and can easily decohere due to interactions with the environment.</p>
+<p><strong>Security Concerns:</strong> The advent of quantum computers poses risks to current cryptographic systems, necessitating the development of new cryptographic protocols.</p>
+<p><strong>Security Risks:</strong> Can break cryptographic certificates, making classical secure cryptography insecure.</p>
+<p><strong>Infrastructure and Operational Costs:</strong></p>
+<ul>
+<li>5.2 Liters of water wasted per prompt.</li>
+<li>High cooling costs due to the substantial infrastructure required.</li>
+<li>Requires a big talent pool and is a multidisciplinary field.</li>
+</ul>
+</li>
+<li><p>Applications of Quantum Technology:</p>
+<p><strong>Cryptography:</strong> Quantum key distribution enables secure communication resistant to quantum attacks.</p>
+<p><strong>Drug Discovery:</strong> Quantum computers can simulate molecular structures and interactions, accelerating drug discovery and development.</p>
+<p><strong>Supply Chain Optimization:</strong> Quantum algorithms can optimize complex logistics and supply chain problems, enhancing operational efficiency.</p>
+<p><strong>Climate Modeling:</strong> Quantum simulations can model complex environmental systems, aiding in climate research and prediction.</p>
+<p><strong>Artificial Intelligence:</strong> Quantum machine learning can process and analyze data more efficiently, advancing AI and data science.</p>
+</li>
+</ul>
+</div><nav class="npager"><a class="npager__prev" href="/upsc/notes/forum-ias-ca-classes/panch-pran-or-five-pledges-of-amrit-kaal.html"><span>Previous</span>Panch Pran or Five Pledges of Amrit Kaal</a><a class="npager__next" href="/upsc/notes/forum-ias-ca-classes/rti.html"><span>Next</span>RTI</a></nav></article><footer class="foot">
+  <h2 class="foot__head">Let's connect</h2>
+  <p class="foot__line">The form on the <a href="/#connect">home page</a> reaches me directly.</p>
+
+  <!-- ── Contact form (Netlify Forms) ───────────────────────── -->
+  <div class="accounts">
+    <section class="accounts__group">
+      <h3 class="accounts__label">Instagram</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/saiyedabdal/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Personal</span>
+          <span class="accounts__handle">@saiyedabdal</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/practicalplaybook/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Practical Playbook</span>
+          <span class="accounts__handle">@practicalplaybook</span>
+        </a></li>
+        <li><a href="https://www.instagram.com/poeticc_whisperss/" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.44 2.21 8.84 2.2 12 2.2m0 5.14a4.66 4.66 0 1 0 0 9.32 4.66 4.66 0 0 0 0-9.32m0 7.69a3.03 3.03 0 1 1 0-6.06 3.03 3.03 0 0 1 0 6.06m5.93-7.87a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0"/></svg>
+          <span class="accounts__name">Poetic Whispers</span>
+          <span class="accounts__handle">@poeticc_whisperss</span>
+        </a></li>
+      </ul>
+    </section>
+    <section class="accounts__group">
+      <h3 class="accounts__label">Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+          <span class="accounts__name">LinkedIn</span>
+          <span class="accounts__handle">/in/saiyedabdal</span>
+        </a></li>
+        <li><a href="https://x.com/saiyedspeaks" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 3h3.1l-6.8 7.78L21.8 21h-6.24l-4.89-6.39L4.28 21H1.17l7.27-8.31L1.5 3h6.4l4.42 5.84zm-1.09 16.14h1.72L7.67 4.77H5.83z"/></svg>
+          <span class="accounts__name">X</span>
+          <span class="accounts__handle">@saiyedspeaks</span>
+        </a></li>
+        <li><a href="https://www.youtube.com/@SaiyedAbdal" target="_blank" rel="noopener">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.5a3 3 0 0 0-2.11-2.13C19.5 3.85 12 3.85 12 3.85s-7.5 0-9.39.52A3 3 0 0 0 .5 6.5C0 8.4 0 12 0 12s0 3.6.5 5.5a3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13C24 15.6 24 12 24 12s0-3.6-.5-5.5M9.6 15.6V8.4l6.25 3.6z"/></svg>
+          <span class="accounts__name">YouTube</span>
+          <span class="accounts__handle">@SaiyedAbdal</span>
+        </a></li>
+        <li><a href="mailto:smahsanabdal@gmail.com">
+          <svg class="accounts__ic" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m1.6 2L12 11.7 19.4 6zM20 8.4l-7.4 5.7a1 1 0 0 1-1.2 0L4 8.4V18h16z"/></svg>
+          <span class="accounts__name">Email</span>
+          <span class="accounts__handle">smahsanabdal@gmail.com</span>
+        </a></li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>
+</footer>
+</main>
+<script src="/assets/js/main.js"></script>
+
+</body>
+</html>
