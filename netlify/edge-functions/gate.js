@@ -139,13 +139,17 @@ function shell(title, body) {
   form{margin-top:2.2rem;display:flex;flex-direction:column;gap:.7rem}
   label{
     font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:500;
-    letter-spacing:.2em;text-transform:uppercase;color:#7A7A7A;text-align:left;
+    letter-spacing:.2em;text-transform:uppercase;color:#7A7A7A;
   }
   input{
     font:inherit;font-size:1rem;padding:.95rem 1.1rem;width:100%;
     background:#151515;border:1px solid #2A2A2A;color:#fff;border-radius:0;
+    /* centred to match the rest of the column — the dots would otherwise
+       start hard left under centred type, which is what reads as crooked */
+    text-align:center;letter-spacing:.08em;
     transition:border-color .2s;
   }
+  input::placeholder{letter-spacing:.24em;color:#4A4A4A}
   input:focus{outline:2px solid #F7D842;outline-offset:1px;border-color:#F7D842}
   button{
     font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;
@@ -156,8 +160,8 @@ function shell(title, body) {
   }
   button:hover{background:#FFE976;transform:translateY(-2px)}
   .err{
-    margin-top:1.2rem;padding:.8rem 1rem;text-align:left;
-    border-left:3px solid #F7D842;background:rgba(247,216,66,.07);
+    margin-top:1.2rem;padding:.85rem 1rem;
+    border-top:3px solid #F7D842;background:rgba(247,216,66,.07);
     color:#E4E4E4;font-size:.9rem;line-height:1.6;
   }
   .foot{margin-top:2.6rem;color:#5E5E5E;font-size:.82rem;line-height:1.7}
