@@ -27,11 +27,11 @@ NAV = [
 # ── announcement bar ───────────────────────────────────────────────────
 # One message, site-wide. It was hardcoded three different ways and missing
 # from two pages before this moved here.
-TOPBAR = ('<a class="topbar" href="https://substack.com/@saiyedabdal" '
+TOPBAR = ('<a class="topbar" href="https://www.linkedin.com/in/saiyedabdal" '
           'target="_blank" rel="noopener">\n'
-          '  <span class="topbar__long">I write weekly on retail, sales and '
-          'founder\u2019s office life &mdash; subscribe</span>\n'
-          '  <span class="topbar__short">Subscribe to my weekly newsletter</span>\n'
+          '  <span class="topbar__long">I write about retail, sales and '
+          'founder\u2019s office life on LinkedIn &mdash; follow along</span>\n'
+          '  <span class="topbar__short">Follow along on LinkedIn</span>\n'
           '</a>')
 
 ICON = {
