@@ -1,0 +1,35 @@
+  <!-- ── Contact form (Netlify Forms) ───────────────────────── -->
+  <form class="cform" id="cform" name="contact" method="POST"
+        action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <input type="hidden" name="subject" id="cfSubject" value="Query from ABDAL.IN">
+
+    <p class="cform__hp" aria-hidden="true">
+      <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    </p>
+
+    <div class="cform__row">
+      <p class="cform__field">
+        <label for="cfName">Your name</label>
+        <input id="cfName" name="name" type="text" required autocomplete="name" placeholder="Saiyed Abdal">
+      </p>
+      <p class="cform__field">
+        <label for="cfEmail">Your email</label>
+        <input id="cfEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      </p>
+    </div>
+
+    <p class="cform__field">
+      <label for="cfTopic">What is this about?</label>
+      <input id="cfTopic" name="topic" type="text" required placeholder="Speaking invitation, collaboration, a question…">
+    </p>
+
+    <p class="cform__field">
+      <label for="cfMessage">Message</label>
+      <textarea id="cfMessage" name="message" rows="5" required placeholder="Tell me a little more."></textarea>
+    </p>
+
+    <button class="cform__send" type="submit">Send message</button>
+
+    <p class="cform__status" id="cfStatus" role="status" aria-live="polite"></p>
+  </form>

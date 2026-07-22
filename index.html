@@ -59,17 +59,19 @@
 
 <!-- ── Fixed sidebar ────────────────────────────────────────── -->
 <header class="side" id="side">
-  <a class="side__logo" href="#top" aria-label="Saiyed Abdal — home">Abdal</a>
+  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">Abdal</a>
 
   <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
     <span></span><span></span><span></span>
   </button>
 
   <nav class="side__nav" id="sidenav" aria-label="Primary">
-    <a href="#story">Saiyed Abdal</a>
-    <a href="upsc.html">UPSC</a>
-    <a href="poetry.html">Poetry</a>
-    <a href="#connect">Contact</a>
+    <a href="/" aria-current="page">Saiyed Abdal</a>
+    <a href="/entrepreneurship.html">Entrepreneurship</a>
+    <a href="/pursuits.html">Pursuits</a>
+    <a href="/poetry.html">Poetry</a>
+    <a href="/upsc.html">UPSC</a>
+    <a href="/#connect">Contact</a>
   </nav>
 
   <ul class="side__social" aria-label="Social links">
@@ -131,70 +133,41 @@
   </div>
 </section>
 
-<!-- ── Corporate ────────────────────────────────────────────── -->
-<section class="corp" id="corporate">
-  <div class="corp__in">
-    <p class="corp__kicker">The corporate life</p>
-    <h2 class="corp__head">AVP &mdash; Founder's Office<br><span>at Frido</span></h2>
-    <p class="corp__lede">I run inside sales, retail operations, ORM, affiliate marketing and
-       investor presentations &mdash; the unglamorous machinery that turns a brand into a
-       business. Strategy and scaling, P&amp;L ownership, zero to one, GTM, and the AI
-       enablement underneath all of it.</p>
-    <p class="corp__lede">I joined the Founder's Office as an Assistant Manager and was
-       promoted to AVP. Along the way I have led a team of more than a hundred people. The
-       best lessons did not come from a textbook &mdash; they came off the floor.</p>
-
-    <ul class="chips" aria-label="What I own">
-      <li>Inside Sales</li><li>Retail Operations</li><li>ORM</li>
-      <li>Affiliate Marketing</li><li>Investor Presentations</li>
-      <li>P&amp;L Ownership</li><li>0 &rarr; 1</li><li>GTM</li>
-      <li>AI Enablement</li><li>Funnels &amp; Systems</li>
-    </ul>
-
-    <h3 class="corp__sub">The journey so far</h3>
-    <ol class="miles">
-      <li><span class="miles__n">01</span><span class="miles__t">UNDP Asia-Pacific, the Office of the Vice President of the Philippines, and the Asian Development Bank in Manila</span></li>
-      <li><span class="miles__n">02</span><span class="miles__t">National second runner-up at the Smart India Hackathon</span></li>
-      <li><span class="miles__n">03</span><span class="miles__t">Represented India in London at a public speaking championship</span></li>
-      <li><span class="miles__n">04</span><span class="miles__t">Scaled a healthcare corporation from zero to one in operations and business development</span></li>
-      <li><span class="miles__n">05</span><span class="miles__t">Crossed &#8377;1 crore in revenue as an independent distributor</span></li>
-      <li><span class="miles__n">06</span><span class="miles__t">Led a team of 100+ at Frido</span></li>
-    </ol>
-
-    <a class="corp__cta" href="https://www.linkedin.com/in/saiyedabdal/" target="_blank" rel="noopener">
-      The full record on LinkedIn
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- ── The three doors ──────────────────────────────────────── -->
+<!-- ── The four doors ───────────────────────────────────────── -->
 <section class="doors" id="work">
-  <h2 class="doors__head">Where to next</h2>
+  <h2 class="doors__head">My life, in four parts</h2>
 
-  <div class="doors__grid">
-    <a class="door" href="https://www.linkedin.com/in/saiyedabdal" target="_blank" rel="noopener">
+  <div class="doors__grid doors__grid--four">
+    <a class="door" href="/entrepreneurship.html">
       <span class="door__media">
         <img src="assets/img/avatar.jpg" alt="" loading="lazy">
       </span>
-      <span class="door__label">My corporate life</span>
-      <span class="door__sub">LinkedIn ↗</span>
+      <span class="door__label">Entrepreneurship</span>
+      <span class="door__sub">AVP &middot; Founder's Office at Frido</span>
     </a>
 
-    <a class="door" href="poetry.html">
+    <a class="door" href="/pursuits.html">
+      <span class="door__media">
+        <img src="assets/img/talk-thumb.jpg" alt="" loading="lazy">
+      </span>
+      <span class="door__label">Pursuits</span>
+      <span class="door__sub">UNDP &middot; hackathons &middot; London</span>
+    </a>
+
+    <a class="door" href="/poetry.html">
       <span class="door__media door__media--type" aria-hidden="true">
         <span class="door__glyph">&ldquo;</span>
       </span>
-      <span class="door__label">My poetry</span>
+      <span class="door__label">Poetry</span>
       <span class="door__sub">119 poems &middot; अब्दाल की कलम से</span>
     </a>
 
-    <a class="door" href="upsc.html">
+    <a class="door" href="/upsc.html">
       <span class="door__media">
         <img src="assets/img/cover.jpg" alt="" loading="lazy">
       </span>
-      <span class="door__label">My UPSC preparation journey</span>
-      <span class="door__sub">14 subjects &middot; and what it changed</span>
+      <span class="door__label">UPSC</span>
+      <span class="door__sub">14 subjects &middot; 371 notes</span>
     </a>
   </div>
 </section>
@@ -239,7 +212,7 @@
     <p class="cform__status" id="cfStatus" role="status" aria-live="polite"></p>
   </form>
 
-  <div class="accounts">
+  <div class="accounts" aria-label="Social accounts">
     <section class="accounts__group">
       <h3 class="accounts__label">Instagram</h3>
       <ul>
