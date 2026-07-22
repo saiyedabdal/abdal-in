@@ -21,10 +21,6 @@ PAGES = {
         desc="UNDP Asia-Pacific and the ADB, the Smart India Hackathon, a public speaking "
              "championship in London, and building from zero to one.",
         css="upsc.css", topbar=None),
-    "gallery.html": dict(
-        title="Gallery — Saiyed Abdal",
-        desc="Photographs from the offices, store floors, conferences and roadsides behind the work.",
-        css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "
