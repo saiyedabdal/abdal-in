@@ -13,8 +13,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PAGES = {
     "entrepreneurship.html": dict(
         title="Entrepreneurship — Saiyed Abdal",
-        desc="AVP in Frido's Founder's Office — inside sales, retail operations, ORM, "
-             "affiliate marketing, P&L ownership and zero-to-one GTM.",
+        desc="AVP in Frido's Founder's Office — inside sales, retail revenue and "
+             "operations, online reputation management, P&L ownership and zero-to-one GTM.",
         css="upsc.css", topbar=None),
     "beyond-work.html": dict(
         title="Beyond Work — Saiyed Abdal",
