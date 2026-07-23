@@ -18,6 +18,14 @@ const MAX_AGE = 60 * 60 * 24 * 30; // 30 days
 /** The private workspace and its data API, locked by a second password. */
 const isPrivate = (p) => p === "/private" || p.startsWith("/private/") || p.startsWith("/api/");
 
+/** "Request access" opens the visitor's own mail app with a note already
+ *  written to Saiyed — no server, no third party, works on every device. */
+const REQUEST_MAILTO =
+  "mailto:smahsanabdal@gmail.com" +
+  "?subject=" + encodeURIComponent("Access request — abdal.in") +
+  "&body=" + encodeURIComponent(
+    "Hi Saiyed,\n\nI’d like access to abdal.in.\n\nWho I am: \nWhy I’m asking: \n");
+
 // Let the share-card image through unauthenticated. Link previews are built
 // by WhatsApp/LinkedIn servers that cannot log in, and the image gives away
 // nothing the gate page doesn't already say.
@@ -214,7 +222,19 @@ function shell(title, body) {
     border-top:3px solid #F7D842;background:rgba(247,216,66,.07);
     color:#E4E4E4;font-size:.9rem;line-height:1.6;
   }
-  .foot{margin-top:2.6rem;color:#5E5E5E;font-size:.82rem;line-height:1.7}
+  /* Secondary to the yellow submit: an outline that fills yellow on hover. */
+  .request{
+    display:flex;align-items:center;justify-content:center;gap:.55rem;
+    width:100%;margin-top:1rem;
+    font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:500;
+    letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+    padding:.95rem 2rem;
+    background:transparent;color:#fff;border:1px solid #2E2E2E;
+    transition:border-color .2s,color .2s,transform .2s;
+  }
+  .request:hover{border-color:#F7D842;color:#F7D842;transform:translateY(-2px)}
+  .request svg{width:15px;height:15px;flex:none}
+  .foot{margin-top:2.4rem;color:#5E5E5E;font-size:.82rem;line-height:1.7}
   .foot a{color:#9E9E9E}
 </style>
 </head><body><main>${body}</main></body></html>`;
@@ -237,8 +257,12 @@ function gate(next, wrong) {
       <input type="hidden" name="stage" value="site">
       <button type="submit">Let me in</button>
     </form>
-    <p class="foot">Think you should have this and don&rsquo;t?<br>
-       Write to <a href="mailto:smahsanabdal@gmail.com">smahsanabdal@gmail.com</a>.</p>`
+    <a class="request" href="${REQUEST_MAILTO}">
+      Request access
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="foot">The button opens your email with a note to me already written &mdash;
+       just add a line and send.</p>`
   );
 }
 
