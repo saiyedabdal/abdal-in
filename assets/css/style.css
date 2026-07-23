@@ -216,16 +216,25 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 }
 .corp__lede + .corp__lede{margin-top:1.1rem}
 
-.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.2rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.4rem}
 .chips li{
   font-family:var(--f-display);
   font-size:.72rem;font-weight:500;
-  letter-spacing:.12em;text-transform:uppercase;
-  color:#D8D8D8;padding:.5rem 1rem;
-  border:1px solid #2A2A2A;border-radius:100px;
-  transition:border-color .25s var(--ease),color .25s var(--ease);
+  letter-spacing:.13em;text-transform:uppercase;
+  color:var(--black);padding:.55rem 1rem;
+  background:var(--off);
+  border:1px solid #E7E7E3;
+  /* the whole point: yellow is a 3px accent, not a wash. Black text on a
+     near-white tag reads immediately; the faint grey pills did not. */
+  border-left:3px solid var(--yellow);
+  transition:background .22s var(--ease),color .22s var(--ease),
+             border-color .22s var(--ease),transform .22s var(--ease);
 }
-.chips li:hover{border-color:var(--yellow);color:var(--yellow)}
+.chips li:hover{
+  background:var(--black);color:var(--white);
+  border-color:var(--black);border-left-color:var(--yellow);
+  transform:translateY(-2px);
+}
 
 .corp__sub{
   font-family:var(--f-display);font-weight:500;
