@@ -474,3 +474,17 @@
 }
 .readpress:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
 .readpress svg{width:15px;height:15px;flex:none}
+
+/* ── Timeline: head row + sort toggle ───────────────────────── */
+.tlhead{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem;flex-wrap:wrap}
+.tlsort{display:none;gap:.35rem}
+.js .tlsort{display:inline-flex}
+.tlsort__btn{
+  font-family:var(--f-display);font-size:.68rem;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;padding:.5rem 1rem;color:var(--grey);
+  border:1px solid #E4E4E0;border-radius:100px;background:var(--white);cursor:pointer;
+  transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease);
+}
+.tlsort__btn:hover{border-color:var(--black);color:var(--black)}
+.tlsort__btn.is-on{background:var(--black);border-color:var(--black);color:var(--white)}
+@media (max-width:560px){.tlsort{margin-top:1rem}}

@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=3659991a">
-<link rel="stylesheet" href="/assets/css/upsc.css?v=becafbef">
+<link rel="stylesheet" href="/assets/css/upsc.css?v=c1e027a6">
 </head>
 <body>
 
@@ -100,8 +100,16 @@
 ─────────────────────────────────────────────────────────────── -->
 <section class="us tlwrap">
   <div class="us__in us__in--tl">
-    <p class="us__num">The journey</p>
-    <h2 class="us__head">How it actually went</h2>
+    <div class="tlhead">
+      <div>
+        <p class="us__num">The journey</p>
+        <h2 class="us__head">How it actually went</h2>
+      </div>
+      <div class="tlsort" role="group" aria-label="Sort the timeline">
+        <button class="tlsort__btn is-on" type="button" data-sort="asc" aria-pressed="true">Oldest first</button>
+        <button class="tlsort__btn" type="button" data-sort="desc" aria-pressed="false">Latest first</button>
+      </div>
+    </div>
 
     <div class="tl">
       <span class="tl__fill" aria-hidden="true"></span>
@@ -387,6 +395,6 @@
 
 </main>
 
-<script src="/assets/js/main.js?v=6d8c8cf9"></script>
+<script src="/assets/js/main.js?v=c9796c02"></script>
 </body>
 </html>

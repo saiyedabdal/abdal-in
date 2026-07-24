@@ -98,6 +98,29 @@ if (tl) {
     addEventListener('resize', onScroll);
     draw();
   }
+
+  /* Sort toggle. Reorder the actual list nodes rather than flip them with
+     CSS — that keeps the positioned alternating layout (which is keyed to
+     nth-child) coherent in either direction. Once someone sorts, reveal every
+     point: a card that moved up from below the fold would otherwise sit
+     invisible, never having crossed the reveal threshold. */
+  const sort = document.querySelector('.tlsort');
+  const list = tl.querySelector('.tl__list');
+  if (sort && list) {
+    const original = [...list.children];
+    sort.addEventListener('click', (e) => {
+      const btn = e.target.closest('.tlsort__btn');
+      if (!btn) return;
+      const desc = btn.dataset.sort === 'desc';
+      list.replaceChildren(...(desc ? [...original].reverse() : original));
+      sort.querySelectorAll('.tlsort__btn').forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('is-on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      tlItems.forEach((el) => el.classList.add('in'));
+    });
+  }
 }
 
 /* ── Video lightbox ─────────────────────────────────────────────
