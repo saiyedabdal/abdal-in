@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NAV = [
     ("Saiyed Abdal",     "/",                    ("index.html",)),
     ("Entrepreneurship", "/entrepreneurship.html", ("entrepreneurship.html",)),
-    ("Beyond Work",      "/beyond-work.html",    ("beyond-work.html",)),
+    ("Timeline",         "/beyond-work.html",    ("beyond-work.html",)),
     ("The Studio",       "/studio.html",         ("studio.html",)),
     ("Poetry",           "/poetry.html",         ("poetry.html",)),
     ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),

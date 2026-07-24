@@ -438,7 +438,7 @@
   background:var(--off);border:1px solid #E7E7E3;border-left:3px solid var(--yellow);
   transition:background .2s var(--ease),color .2s var(--ease)}
 .tl__play:hover,.tl__doc:hover,.tl__press:hover{background:var(--black);color:var(--white)}
-.tl__press svg{width:15px;height:15px;flex:none}
+.tl__play svg,.tl__doc svg,.tl__press svg{width:15px;height:15px;flex:none}
 
 /* Reveal. JS adds .js, so with no JS nothing is ever hidden. */
 .js .tl__item{opacity:0;transition:opacity .65s var(--ease),transform .65s var(--ease)}
