@@ -506,3 +506,14 @@
   font-size:.98rem;letter-spacing:.01em;color:var(--black)}
 .vcard__sub{display:block;margin-top:.2rem;font-size:.82rem;color:var(--grey);line-height:1.5}
 .us--dark .vcard__t{color:var(--white)}
+
+/* ── Entrepreneurship: certification strip (on the black masthead) ── */
+.um__certs{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;margin-top:1.9rem}
+.um__certs__t{font-family:var(--f-display);font-size:.66rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-right:.2rem}
+.um__cert{font-family:var(--f-display);font-size:.68rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;color:#EDEDED;
+  padding:.42rem .85rem;background:#141414;border:1px solid #262626;border-left:2px solid var(--yellow)}
+
+/* poetry → studio "hear it live" anchor clears the sticky bar */
+#live{scroll-margin-top:calc(var(--stick) + 1.2rem)}
