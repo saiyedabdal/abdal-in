@@ -432,12 +432,13 @@
 /* Optional media on a point — a pitch video or a document. */
 .tl__media{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}
 .tl__item:nth-child(odd) .tl__media{justify-content:flex-end}
-.tl__play,.tl__doc{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
+.tl__play,.tl__doc,.tl__press{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
   font-family:var(--f-display);font-size:.66rem;font-weight:500;letter-spacing:.14em;
   text-transform:uppercase;padding:.5rem .9rem;color:var(--black);text-decoration:none;
   background:var(--off);border:1px solid #E7E7E3;border-left:3px solid var(--yellow);
   transition:background .2s var(--ease),color .2s var(--ease)}
-.tl__play:hover,.tl__doc:hover{background:var(--black);color:var(--white)}
+.tl__play:hover,.tl__doc:hover,.tl__press:hover{background:var(--black);color:var(--white)}
+.tl__press svg{width:15px;height:15px;flex:none}
 
 /* Reveal. JS adds .js, so with no JS nothing is ever hidden. */
 .js .tl__item{opacity:0;transition:opacity .65s var(--ease),transform .65s var(--ease)}
@@ -462,3 +463,14 @@
 .tl__item--now::after{background:var(--yellow);border-color:var(--yellow);transform:scale(1.15)}
 .tl__doc--go{background:var(--black);color:var(--white);border-color:var(--black);border-left-color:var(--yellow)}
 .tl__doc--go:hover{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
+
+/* "Read the essay" / press button in a section body (e.g. The Studio) */
+.readpress{
+  display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;margin-top:1.9rem;
+  font-family:var(--f-display);font-size:.72rem;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:.75rem 1.3rem;color:var(--black);
+  background:var(--white);border:1px solid #E7E7E3;border-left:3px solid var(--yellow);
+  transition:background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease);
+}
+.readpress:hover{background:var(--black);color:var(--white);transform:translateY(-2px)}
+.readpress svg{width:15px;height:15px;flex:none}

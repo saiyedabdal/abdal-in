@@ -130,6 +130,7 @@ function buildLb() {
 function openLb(id, title) {
   buildLb();
   if (!lb || !lbFrame) return;
+  lb.classList.remove('lightbox--press');
   lastFocus = document.activeElement;
   const f = document.createElement('iframe');
   f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
@@ -164,6 +165,7 @@ function openPhoto(i) {
   shotIdx = (i + shots.length) % shots.length;
   buildLb();
   if (!lb || !lbFrame) return;
+  lb.classList.remove('lightbox--press');
   lastFocus = lastFocus || document.activeElement;
   const img = document.createElement('img');
   img.className = 'lightbox__photo';
@@ -182,6 +184,32 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') openPhoto(shotIdx + 1);
   if (e.key === 'ArrowLeft') openPhoto(shotIdx - 1);
 });
+
+/* Press: an event's clippings, stacked in one scrollable panel. */
+function openPress(urls, label) {
+  buildLb();
+  if (!lb || !lbFrame) return;
+  lb.classList.add('lightbox--press');
+  shotIdx = -1;                 // keep the photo arrow-keys out of this view
+  lastFocus = document.activeElement;
+  const wrap = document.createElement('div');
+  wrap.className = 'lightbox__press';
+  urls.map((u) => u.trim()).filter(Boolean).forEach((u) => {
+    const img = document.createElement('img');
+    img.src = u;
+    img.alt = label ? `${label} — press cutting` : 'Press cutting';
+    wrap.appendChild(img);
+  });
+  lbFrame.replaceChildren(wrap);
+  lb.hidden = false;
+  document.body.style.overflow = 'hidden';
+  $('#lbClose', lb)?.focus();
+}
+
+$$('[data-press]').forEach((el) => el.addEventListener('click', () => {
+  openPress((el.getAttribute('data-press') || '').split(','),
+            el.getAttribute('aria-label') || el.textContent.trim());
+}));
 
 document.addEventListener('click', (e) => {
   if (e.target === lb) closeLb();

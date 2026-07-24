@@ -331,6 +331,22 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
   box-shadow:0 30px 80px -30px rgba(0,0,0,.9);
 }
 
+/* press viewer: an event's clippings stacked in one scrollable panel.
+   The --press modifier drops the 16/9 video frame the shell assumes. */
+.lightbox--press .lightbox__frame{
+  aspect-ratio:auto;background:transparent;
+  width:min(100%,780px);max-height:88vh;
+}
+.lightbox__press{
+  display:flex;flex-direction:column;gap:.9rem;
+  max-height:88vh;overflow-y:auto;padding:2px;
+  scrollbar-width:thin;
+}
+.lightbox__press img{
+  width:100%;height:auto;display:block;background:#fff;
+  box-shadow:0 20px 60px -30px rgba(0,0,0,.9);
+}
+
 /* ── Embedded video ─────────────────────────────────────────── */
 .vid{margin-top:2.4rem;max-width:760px}
 .vid__play{
