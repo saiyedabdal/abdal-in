@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=3659991a">
-<link rel="stylesheet" href="/assets/css/upsc.css?v=6851c921">
+<link rel="stylesheet" href="/assets/css/upsc.css?v=484c5eca">
 </head>
 <body>
 
@@ -85,8 +85,18 @@
      and the verse. Everything here is meant to be watched or heard, not read.</p>
 </section>
 
+<div class="sfilter" role="group" aria-label="Filter the Studio">
+  <button class="sfilter__btn is-on" type="button" data-cat="all" aria-pressed="true">All</button>
+  <button class="sfilter__btn" type="button" data-cat="pitching" aria-pressed="false">Pitching</button>
+  <button class="sfilter__btn" type="button" data-cat="debates" aria-pressed="false">Debates &amp; speeches</button>
+  <button class="sfilter__btn" type="button" data-cat="anchoring" aria-pressed="false">Anchoring</button>
+  <button class="sfilter__btn" type="button" data-cat="singing" aria-pressed="false">Singing</button>
+  <button class="sfilter__btn" type="button" data-cat="poetry" aria-pressed="false">Poetry to life</button>
+</div>
+
+
 <!-- ── Featured ─────────────────────────────────────────────── -->
-<section class="us">
+<section class="us" data-cat="featured">
   <div class="us__in">
     <p class="us__num">Start here</p>
     <h2 class="us__head">Global Youth Summit</h2>
@@ -109,7 +119,7 @@
 </section>
 
 <!-- ── Corporate · Pitching ─────────────────────────────────── -->
-<section class="us us--tint">
+<section class="us us--tint" data-cat="pitching">
   <div class="us__in">
     <p class="us__num">Corporate</p>
     <h2 class="us__head">Pitching</h2>
@@ -148,7 +158,7 @@
 </section>
 
 <!-- ── Corporate · Debates & Speeches ───────────────────────── -->
-<section class="us">
+<section class="us" data-cat="debates">
   <div class="us__in">
     <p class="us__num">Corporate</p>
     <h2 class="us__head">Debates &amp; speeches</h2>
@@ -187,7 +197,7 @@
 </section>
 
 <!-- ── Corporate · Anchoring ────────────────────────────────── -->
-<section class="us us--tint">
+<section class="us us--tint" data-cat="anchoring">
   <div class="us__in">
     <p class="us__num">Corporate</p>
     <h2 class="us__head">Anchoring</h2>
@@ -210,7 +220,7 @@
 </section>
 
 <!-- ── Hobby · Me singing ───────────────────────────────────── -->
-<section class="us" id="live">
+<section class="us" id="live" data-cat="singing">
   <div class="us__in">
     <p class="us__num">Hobby</p>
     <h2 class="us__head">Me singing</h2>
@@ -233,7 +243,7 @@
 </section>
 
 <!-- ── Hobby · Poetry to life (reels) ───────────────────────── -->
-<section class="us us--tint">
+<section class="us us--tint" data-cat="poetry">
   <div class="us__in">
     <p class="us__num">Hobby</p>
     <h2 class="us__head">Poetry to life</h2>
@@ -276,7 +286,7 @@
 </section>
 
 <!-- ── A piece of childhood ─────────────────────────────────── -->
-<section class="us">
+<section class="us" data-cat="childhood">
   <div class="us__in">
     <p class="us__num">Where it started</p>
     <h2 class="us__head">Illiterate but&nbsp;experienced</h2>
@@ -372,6 +382,6 @@
 
 </main>
 
-<script src="/assets/js/main.js?v=c9796c02"></script>
+<script src="/assets/js/main.js?v=3756014d"></script>
 </body>
 </html>

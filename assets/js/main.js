@@ -123,6 +123,27 @@ if (tl) {
   }
 }
 
+/* ── Studio: category filter ────────────────────────────────────
+   The chips are enhancement-only (hidden without JS, so every section
+   stays reachable). Clicking one shows just the matching sections; the
+   #live deep-link from the poetry page lands on "All", so the singing
+   section it points at is always visible on arrival. */
+const sfilter = document.querySelector('.sfilter');
+if (sfilter) {
+  const cards = [...document.querySelectorAll('section[data-cat]')];
+  sfilter.addEventListener('click', (e) => {
+    const btn = e.target.closest('.sfilter__btn');
+    if (!btn) return;
+    const cat = btn.dataset.cat;
+    cards.forEach((s) => { s.hidden = !(cat === 'all' || s.dataset.cat === cat); });
+    sfilter.querySelectorAll('.sfilter__btn').forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  });
+}
+
 /* ── Video lightbox ─────────────────────────────────────────────
    Any element with data-video="<youtube id>" opens the player. The
    overlay is built on demand so pages don't have to carry the markup,

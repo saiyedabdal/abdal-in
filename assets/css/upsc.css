@@ -517,3 +517,48 @@
 
 /* poetry → studio "hear it live" anchor clears the sticky bar */
 #live{scroll-margin-top:calc(var(--stick) + 1.2rem)}
+
+/* ── Timeline: a spanning "phase" band (e.g. the B.Tech years) ──
+   Full width, centred over the spine, dashed to read as a stretch of
+   time rather than a single point. It carries no node.
+   Compound `.tl__item.tl__item--phase` so it outranks the alternating
+   `.tl__item:nth-child()` rules that would otherwise pin it left/right. */
+.tl__item.tl__item--phase{width:100%;left:0!important;text-align:center;padding:.4rem 0 2.6rem}
+.tl__item.tl__item--phase::after{display:none}
+.tl__phase{
+  display:inline-block;max-width:min(90%,440px);
+  padding:1rem 1.7rem;background:var(--off);
+  border:1px dashed #C4C4BE;
+}
+.tl__phase__yr{display:block;font-family:var(--f-display);font-weight:600;
+  font-size:1.15rem;letter-spacing:.06em;color:var(--black)}
+.tl__phase__t{display:block;margin-top:.35rem;font-family:var(--f-display);
+  font-size:.82rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-dark)}
+.tl__phase__sub{display:block;margin-top:.4rem;font-size:.8rem;color:var(--grey);line-height:1.5}
+/* reveal from below rather than the side (it isn't a left/right card);
+   compound + .js beats `.js .tl__item:nth-child()` translateX (0,3,0). */
+.js .tl__item.tl__item--phase{transform:translateY(16px)}
+.js .tl__item.tl__item--phase.in{transform:none}
+@media (max-width:760px){
+  /* keep the left padding so the band clears the single-rail spine */
+  .tl__item.tl__item--phase{padding:.4rem 0 2.2rem 2.4rem;text-align:left}
+  .tl__phase{max-width:100%}
+}
+
+/* ── Studio: category filter (sticky) ───────────────────────── */
+.sfilter{
+  position:sticky;top:var(--stick);z-index:40;
+  display:none;flex-wrap:wrap;gap:.4rem;align-items:center;
+  padding:.85rem var(--pad);
+  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid #E4E4E0;
+}
+.js .sfilter{display:flex}
+.sfilter__btn{
+  font-family:var(--f-display);font-size:.68rem;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;padding:.5rem 1rem;color:var(--grey);
+  border:1px solid #E4E4E0;border-radius:100px;background:var(--white);cursor:pointer;
+  transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease);
+}
+.sfilter__btn:hover{border-color:var(--black);color:var(--black)}
+.sfilter__btn.is-on{background:var(--black);border-color:var(--black);color:var(--white)}
