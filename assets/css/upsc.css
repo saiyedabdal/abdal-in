@@ -457,3 +457,8 @@
 @media (prefers-reduced-motion:reduce){
   .js .tl__item{opacity:1!important;transform:none!important}
 }
+
+/* the final, current point: a solid node, and a primary door to the work */
+.tl__item--now::after{background:var(--yellow);border-color:var(--yellow);transform:scale(1.15)}
+.tl__doc--go{background:var(--black);color:var(--white);border-color:var(--black);border-left-color:var(--yellow)}
+.tl__doc--go:hover{background:var(--yellow);color:var(--black);border-color:var(--yellow)}
