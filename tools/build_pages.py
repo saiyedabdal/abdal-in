@@ -25,6 +25,10 @@ PAGES = {
         title="The Studio — Saiyed Abdal",
         desc="The Studio.",
         css="upsc.css", topbar=None),
+    "resources.html": dict(
+        title="Resources — Saiyed Abdal",
+        desc="Resources.",
+        css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "

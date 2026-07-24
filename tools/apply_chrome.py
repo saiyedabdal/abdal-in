@@ -23,6 +23,7 @@ NAV = [
     ("The Studio",       "/studio.html",         ("studio.html",)),
     ("Poetry",           "/poetry.html",         ("poetry.html",)),
     ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),
+    ("Resources",        "/resources.html",      ("resources.html",)),
     ("Contact",          "/#connect",            ()),
 ]
 
@@ -240,7 +241,7 @@ def apply(path):
 def main():
     files = ([os.path.join(ROOT, f) for f in
               ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
-               "poetry.html", "upsc.html")
+               "poetry.html", "upsc.html", "resources.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))
     n = sum(1 for f in files if apply(f))
