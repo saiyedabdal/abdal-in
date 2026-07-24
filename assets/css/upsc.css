@@ -393,3 +393,67 @@
   .reels{grid-template-columns:minmax(0,1fr);gap:2rem}
   .reel:last-child{grid-column:auto;max-width:none}
 }
+
+/* ── Beyond Work: the timeline ──────────────────────────────── */
+.us__in--tl{max-width:1040px}
+.tl{position:relative;margin-top:clamp(2rem,5vw,3rem);padding-bottom:.5rem}
+/* A grey track with a yellow line that fills it as the page scrolls. */
+.tl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;
+  background:#E4E4E0;transform:translateX(-50%)}
+.tl__fill{position:absolute;left:50%;top:0;width:2px;height:100%;background:var(--yellow);
+  transform:translateX(-50%) scaleY(0);transform-origin:50% 0;will-change:transform}
+.tl__list{list-style:none;position:relative;margin:0;padding:0}
+
+.tl__item{position:relative;width:50%;padding:0 3rem 2.6rem;box-sizing:border-box}
+.tl__item:nth-child(odd){left:0;text-align:right}
+.tl__item:nth-child(even){left:50%;text-align:left}
+.tl__item::after{content:'';position:absolute;top:.5rem;width:14px;height:14px;border-radius:50%;
+  background:var(--white);border:2px solid #D8D8D2;
+  transition:background .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.tl__item:nth-child(odd)::after{right:-7px}
+.tl__item:nth-child(even)::after{left:-7px}
+.tl__item.in::after{background:var(--yellow);border-color:var(--yellow);transform:scale(1.15)}
+
+.tl__yr{display:block;font-family:var(--f-display);font-weight:600;font-size:1.65rem;
+  line-height:1;color:var(--black)}
+.tl__place{display:block;margin-top:.4rem;font-family:var(--f-display);font-size:.66rem;
+  font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.tl__title{font-family:var(--f-display);font-weight:500;font-size:1.1rem;letter-spacing:.01em;
+  text-transform:uppercase;margin:.6rem 0 .4rem}
+.tl__desc{display:inline-block;color:#5A5A5A;font-size:.94rem;line-height:1.65;max-width:44ch}
+/* the school years, folded into one point and set deliberately quieter */
+.tl__small{display:inline-block;color:#7A7A7A;font-size:.82rem;line-height:1.6;max-width:46ch}
+.tl__badge{display:inline-block;margin-top:.75rem;text-align:left;
+  font-family:var(--f-display);font-size:.63rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--black);
+  background:var(--white);border:1px solid #E7E7E3;border-left:3px solid var(--yellow);
+  padding:.4rem .75rem}
+
+/* Optional media on a point — a pitch video or a document. */
+.tl__media{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}
+.tl__item:nth-child(odd) .tl__media{justify-content:flex-end}
+.tl__play,.tl__doc{display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;
+  font-family:var(--f-display);font-size:.66rem;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:.5rem .9rem;color:var(--black);text-decoration:none;
+  background:var(--off);border:1px solid #E7E7E3;border-left:3px solid var(--yellow);
+  transition:background .2s var(--ease),color .2s var(--ease)}
+.tl__play:hover,.tl__doc:hover{background:var(--black);color:var(--white)}
+
+/* Reveal. JS adds .js, so with no JS nothing is ever hidden. */
+.js .tl__item{opacity:0;transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.js .tl__item:nth-child(odd){transform:translateX(-26px)}
+.js .tl__item:nth-child(even){transform:translateX(26px)}
+.js .tl__item.in{opacity:1;transform:none}
+
+@media (max-width:760px){
+  /* Alternating cannot survive a phone's width: it becomes one left rail. */
+  .tl::before,.tl__fill{left:7px}
+  .tl__item{width:100%;left:0!important;text-align:left!important;padding:0 0 2.2rem 2.4rem}
+  .tl__item::after{left:0!important;right:auto!important}
+  .tl__item:nth-child(odd) .tl__media{justify-content:flex-start}
+  .tl__desc,.tl__small{max-width:100%}
+  .js .tl__item:nth-child(odd),.js .tl__item:nth-child(even){transform:translateY(16px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .tl__item{opacity:1!important;transform:none!important}
+}

@@ -51,6 +51,55 @@ if ('IntersectionObserver' in window) {
   items.forEach((el) => el.classList.add('in'));
 }
 
+/* ── Beyond Work timeline ───────────────────────────────────────
+   Two scroll effects, both optional: each point reveals from its own
+   side, and the yellow line fills the spine as you go. The fill is a
+   single element and a single transform, so scrolling stays on the
+   compositor and never touches layout. */
+const tl = document.querySelector('.tl');
+if (tl) {
+  const tlItems = [...tl.querySelectorAll('.tl__item')];
+
+  if ('IntersectionObserver' in window) {
+    const tio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); tio.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    tlItems.forEach((el) => tio.observe(el));
+
+    /* same safety net as the rest of the site: never strand a point unseen */
+    const seeAll = () => tlItems.forEach((el) => {
+      if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight) {
+        el.classList.add('in'); tio.unobserve(el);
+      }
+    });
+    setTimeout(seeAll, 2000);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') setTimeout(seeAll, 200);
+    });
+  } else {
+    tlItems.forEach((el) => el.classList.add('in'));
+  }
+
+  const fill = tl.querySelector('.tl__fill');
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  if (fill && !still.matches) {
+    let queued = false;
+    const draw = () => {
+      queued = false;
+      const r = tl.getBoundingClientRect();
+      const p = (innerHeight * 0.55 - r.top) / r.height;
+      fill.style.transform =
+        `translateX(-50%) scaleY(${Math.max(0, Math.min(1, p)).toFixed(4)})`;
+    };
+    const onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(draw); } };
+    addEventListener('scroll', onScroll, { passive: true });
+    addEventListener('resize', onScroll);
+    draw();
+  }
+}
+
 /* ── Video lightbox ─────────────────────────────────────────────
    Any element with data-video="<youtube id>" opens the player. The
    overlay is built on demand so pages don't have to carry the markup,

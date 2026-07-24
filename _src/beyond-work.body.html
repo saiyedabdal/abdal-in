@@ -13,56 +13,159 @@
   </div>
 </section>
 
-<!-- 01 ─────────────────────────────────────────────────────── -->
-<section class="us">
-  <div class="us__in">
-    <p class="us__num">01</p>
-    <h2 class="us__head">Development &amp; diplomacy</h2>
-    <div class="us__body">
-      <p>Work with <strong>UNDP Asia-Pacific</strong>, the <strong>Office of the Vice
-         President of the Philippines</strong>, and the <strong>Asian Development Bank</strong>
-         in Manila &mdash; a stretch that put me in rooms where policy and delivery meet,
-         a long way from where I started.</p>
+<!-- ── The timeline ─────────────────────────────────────────────
+     Each entry can carry media. To attach some, drop this inside
+     the .tl__card, after the description:
+
+       <div class="tl__media">
+         <button class="tl__play" type="button" data-video="YOUTUBE_ID"
+                 aria-label="Play: the pitch at UNDP Bangkok">Watch the pitch</button>
+         <a class="tl__doc" href="URL" target="_blank" rel="noopener">Project document</a>
+       </div>
+
+     data-video reuses the site's existing lightbox, so nothing new
+     is needed to make it play.
+─────────────────────────────────────────────────────────────── -->
+<section class="us tlwrap">
+  <div class="us__in us__in--tl">
+    <p class="us__num">The journey</p>
+    <h2 class="us__head">How it actually went</h2>
+
+    <div class="tl">
+      <span class="tl__fill" aria-hidden="true"></span>
+      <ol class="tl__list">
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">2013&ndash;15</p>
+            <span class="tl__place">DPS Durg</span>
+            <h3 class="tl__title">School</h3>
+            <p class="tl__small">Head Boy &middot; Pro-Vice Chairman Cup for best all-rounder,
+               from the Chief Minister &middot; inter-school debates in Hindi and English
+               &middot; gold medal in the programming contest &middot; distinction in the
+               Australian National Chemistry Quiz</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">2017</p>
+            <span class="tl__place">Bhilai</span>
+            <h3 class="tl__title">Founded csvtuadda.com</h3>
+            <p class="tl__desc">A student portal built in my second year that reached 10,000
+               students. It won the Global Student Entrepreneurs Award &mdash; and it taught
+               me what an uncertain revenue stream does to a good idea.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">Jan 2018</p>
+            <span class="tl__place">UNDP &middot; Bangkok</span>
+            <h3 class="tl__title">Asia-Pacific Youth Exchange</h3>
+            <p class="tl__desc">Led Project SILI &mdash; social insight by local immersion &mdash;
+               for the community of Bangnampeung, and pitched it at the UN.</p>
+            <span class="tl__badge">UN Certificate of Honour &mdash; best project in Asia &amp; the Pacific</span>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">Feb 2018</p>
+            <span class="tl__place">Manila</span>
+            <h3 class="tl__title">Project Glasstic</h3>
+            <p class="tl__desc">Built during a local immersion in Bulacan, then pitched to the
+               Vice President of the Philippines and acknowledged at the Asian Development Bank.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">Feb 2018</p>
+            <span class="tl__place">Dhaka</span>
+            <h3 class="tl__title">EO GSEA, South Asia finals</h3>
+            <p class="tl__desc">Represented Central India at the Entrepreneurs&rsquo; Organization
+               finals, and was awarded by the Commerce Minister of Bangladesh.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">Mar 2018</p>
+            <span class="tl__place">Chennai</span>
+            <h3 class="tl__title">Smart India Hackathon</h3>
+            <p class="tl__desc">Led team ReformTech at the country&rsquo;s largest hackathon.
+               Our project was taken up by the Ministry of Housing &amp; Urban Affairs.</p>
+            <span class="tl__badge">National second runner-up</span>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">2018&ndash;19</p>
+            <span class="tl__place">Cameroon</span>
+            <h3 class="tl__title">Business Analyst, Quadrant2E</h3>
+            <p class="tl__desc">A year of consulting work a long way from home &mdash; and the
+               first time the job was not a classroom exercise.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">Jan 2019</p>
+            <span class="tl__place">London</span>
+            <h3 class="tl__title">International Public Speaking</h3>
+            <p class="tl__desc">Selected to represent India at the English-Speaking Union&rsquo;s
+               international competition in London.</p>
+            <span class="tl__badge">Represented India</span>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">May 2019</p>
+            <span class="tl__place">Bhilai</span>
+            <h3 class="tl__title">Founding President, Toastmasters</h3>
+            <p class="tl__desc">Chartered the state&rsquo;s first community Toastmasters club and
+               led it as founding president. Most of the speaking since traces back here.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">2020&ndash;22</p>
+            <span class="tl__place">Bhilai</span>
+            <h3 class="tl__title">Student of the Year, then a company</h3>
+            <p class="tl__desc">The Chairman&rsquo;s Trophy for best all-rounder &mdash; and the
+               years I built a healthcare business from nothing, licences upward, working the
+               floor through Covid.</p>
+          </div>
+        </li>
+
+        <li class="tl__item">
+          <div class="tl__card">
+            <p class="tl__yr">2022</p>
+            <span class="tl__place">Delhi</span>
+            <h3 class="tl__title">The UPSC years begin</h3>
+            <p class="tl__desc">Raus IAS &mdash; where a computer-science graduate went and learnt
+               history, polity and anthropology. <a href="/upsc.html">That chapter has its own
+               page</a>.</p>
+          </div>
+        </li>
+
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- 02 ─────────────────────────────────────────────────────── -->
+<!-- ── On film ──────────────────────────────────────────────────
+     Kept out of the timeline for now because I have no year for it.
+     Give me the date and it becomes a point like the rest.
+─────────────────────────────────────────────────────────────── -->
 <section class="us us--dark">
   <div class="us__in">
-    <p class="us__num">02</p>
-    <h2 class="us__head">Competing</h2>
-    <div class="us__body">
-      <p><strong>National second runner-up at the Smart India Hackathon</strong> &mdash; the
-         country's largest hackathon, and the first time engineering felt like a contact
-         sport rather than a syllabus.</p>
-      <p><strong>Represented India at a public speaking championship in London.</strong>
-         Toastmasters taught me the craft; that stage taught me what it holds up under.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 03 ─────────────────────────────────────────────────────── -->
-<section class="us us--tint">
-  <div class="us__in">
-    <p class="us__num">03</p>
-    <h2 class="us__head">Building on my own</h2>
-    <div class="us__body">
-      <p><strong>Scaled a healthcare corporation from zero to one</strong> across operations
-         and business development &mdash; the version of zero-to-one where there is no
-         playbook and no team yet.</p>
-      <p><strong>Crossed &#8377;1 crore in revenue as an independent distributor.</strong>
-         Built without a brand behind me, which is the only way to learn what selling
-         actually is.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 04 ─────────────────────────────────────────────────────── -->
-<section class="us us--dark">
-  <div class="us__in">
-    <p class="us__num">04</p>
-    <h2 class="us__head">On film</h2>
+    <p class="us__num">On film</p>
+    <h2 class="us__head">Global Youth Summit</h2>
     <div class="us__body">
       <p>The application film I made for the Global Changemakers Global Youth Summit &mdash;
          two minutes to say who I am and why it should be me.</p>
@@ -78,19 +181,6 @@
         </span>
       </button>
       <p class="vid__cap">Global Changemakers &middot; Global Youth Summit application</p>
-    </div>
-  </div>
-</section>
-
-<!-- 05 ─────────────────────────────────────────────────────── -->
-<section class="us us--tint">
-  <div class="us__in">
-    <p class="us__num">05</p>
-    <h2 class="us__head">Speaking</h2>
-    <div class="us__body">
-      <p>A Toastmaster, and the kind who kept going after the certificate. Public speaking
-         is the through-line across most of this &mdash; the hackathon pitch, the summit
-         application, the investor deck, the poetry read aloud.</p>
     </div>
   </div>
 </section>
