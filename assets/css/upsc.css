@@ -488,3 +488,21 @@
 .tlsort__btn:hover{border-color:var(--black);color:var(--black)}
 .tlsort__btn.is-on{background:var(--black);border-color:var(--black);color:var(--white)}
 @media (max-width:560px){.tlsort{margin-top:1rem}}
+
+/* ── Studio: categorised video grid ─────────────────────────── */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.3rem;margin-top:2rem}
+.vcard{display:block;width:100%;text-align:left;cursor:pointer;background:none;border:0;padding:0}
+.vcard__media{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:var(--black)}
+.vcard__media img{width:100%;height:100%;object-fit:cover;filter:grayscale(.18);
+  transition:transform .6s var(--ease),filter .4s var(--ease)}
+.vcard:hover .vcard__media img{transform:scale(1.05);filter:grayscale(0)}
+.vplay{position:absolute;inset:0;display:grid;place-items:center}
+.vplay i{width:54px;height:54px;border-radius:50%;background:rgba(11,11,11,.72);
+  display:grid;place-items:center;transition:background .3s var(--ease),transform .3s var(--ease)}
+.vcard:hover .vplay i{background:var(--yellow);transform:scale(1.08)}
+.vplay svg{width:22px;height:22px;color:#fff;translate:2px 0;transition:color .3s var(--ease)}
+.vcard:hover .vplay svg{color:var(--black)}
+.vcard__t{display:block;margin-top:.75rem;font-family:var(--f-display);font-weight:500;
+  font-size:.98rem;letter-spacing:.01em;color:var(--black)}
+.vcard__sub{display:block;margin-top:.2rem;font-size:.82rem;color:var(--grey);line-height:1.5}
+.us--dark .vcard__t{color:var(--white)}
