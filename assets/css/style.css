@@ -54,23 +54,38 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .topbar{
   position:fixed;top:0;left:0;right:0;z-index:120;
   height:var(--bar);
-  display:flex;align-items:center;justify-content:center;
   background:var(--yellow);color:var(--black);
   font-size:.86rem;font-weight:600;
   text-decoration:none;
   transition:background .3s var(--ease);
 }
 .topbar:hover{background:#F2CE1B}
-/* the bar is a fixed 44px that other offsets depend on, so the copy has to
-   fit one line rather than the bar growing to fit the copy */
-.topbar{padding-inline:1rem;white-space:nowrap}
-/* the positioning statement leads; the LinkedIn nudge is the underlined part */
+/* the bar is a fixed 44px that other offsets depend on, so each line has to
+   fit on one row rather than the bar growing to fit the copy */
+/* two announcements take turns: they stack and cross-fade in place */
+.topbar__slide{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  padding-inline:1rem;white-space:nowrap;
+  opacity:0;visibility:hidden;
+  /* outgoing clears first (fade out, then hide) … */
+  transition:opacity .4s var(--ease),visibility 0s linear .4s;
+}
+/* … and the incoming waits for it to go before fading in — so the two
+   lines, which sit in the same centred spot, never overlap mid-swap */
+.topbar__slide.is-on{
+  opacity:1;visibility:visible;
+  transition:opacity .5s var(--ease) .32s,visibility 0s;
+}
 .topbar__tag{font-weight:700;letter-spacing:.01em}
-.topbar__sep{margin-inline:.6rem;opacity:.4}
-.topbar__cta{text-decoration:underline;text-underline-offset:3px}
+.topbar__q1{opacity:.55}          /* the received cliché, muted on the yellow */
+.topbar__q2{font-weight:700;margin-left:.35rem} /* the reveal, solid and bold */
+.topbar__cta{text-decoration:underline;text-underline-offset:3px} /* the LinkedIn nudge */
 @media (max-width:760px){
-  .topbar{font-size:.75rem}
-  .topbar__sep,.topbar__cta{display:none}
+  .topbar__tag,.topbar__cta{font-size:.75rem}
+  /* the long quote is ~78 chars — size it down so it clears one row on a 360px phone */
+  .topbar__q1,.topbar__q2{font-size:.54rem;letter-spacing:-.01em}
+  .topbar__q2{margin-left:.25rem}
 }
 
 /* ── Sidebar ────────────────────────────────────────────────── */
@@ -572,9 +587,9 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
     padding:.8rem 1.2rem;
     gap:1rem;
   }
-  .side__logo{margin:0;gap:0}
-  .side__logo__name{font-size:2.1rem;transform:rotate(-4deg)}
-  .side__logo__creed{display:none}
+  .side__logo{margin:0;gap:.15rem;align-items:flex-start}
+  .side__logo__name{font-size:1.85rem;transform:rotate(-4deg)}
+  .side__logo__creed{display:block;font-size:.5rem;letter-spacing:.1em}
 
   .side__burger{
     display:flex;flex-direction:column;gap:5px;
@@ -586,7 +601,7 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
   .side.open .side__burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
   .side__nav{
-    position:fixed;top:calc(var(--bar) + 58px);left:0;right:0;
+    position:fixed;top:calc(var(--bar) + 72px);left:0;right:0;
     background:var(--black);
     padding:1.6rem 1.4rem 2rem;margin:0;
     gap:1.2rem;
@@ -598,8 +613,8 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 
   .side__social{display:none}
 
-  main{margin-left:0;margin-top:calc(var(--bar) + 58px)}
-  .hero{height:calc(100svh - var(--bar) - 58px);min-height:440px}
+  main{margin-left:0;margin-top:calc(var(--bar) + 72px)}
+  .hero{height:calc(100svh - var(--bar) - 72px);min-height:440px}
   .hero__title{right:var(--pad);max-width:none;
     font-size:clamp(1.2rem,4.4vw,1.9rem);bottom:2rem}
 

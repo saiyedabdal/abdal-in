@@ -31,10 +31,17 @@ NAV = [
 # One message, site-wide. It was hardcoded three different ways and missing
 # from two pages before this moved here.
 TOPBAR = ('<a class="topbar" href="https://www.linkedin.com/in/saiyedabdal" '
-          'target="_blank" rel="noopener">\n'
-          '  <span class="topbar__tag">Not a generalist &mdash; but a multi-specialist</span>\n'
-          '  <span class="topbar__sep" aria-hidden="true">&middot;</span>\n'
-          '  <span class="topbar__cta">Follow along on LinkedIn</span>\n'
+          'target="_blank" rel="noopener" aria-label="Saiyed Abdal on LinkedIn">\n'
+          '  <span class="topbar__slide is-on">'
+          '<span class="topbar__tag">Not a generalist &mdash; but a multi-specialist</span>'
+          '</span>\n'
+          '  <span class="topbar__slide">'
+          '<span class="topbar__q1">Jack of all trades, master of none&hellip;</span>'
+          '<span class="topbar__q2">but oftentimes better than a master of one.</span>'
+          '</span>\n'
+          '  <span class="topbar__slide">'
+          '<span class="topbar__cta">Follow along on LinkedIn &#8599;</span>'
+          '</span>\n'
           '</a>')
 
 ICON = {

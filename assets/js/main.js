@@ -25,6 +25,29 @@ $('#sidenav')?.addEventListener('click', (e) => {
   }
 });
 
+/* ── Top bar: two announcements take turns ──────────────────────
+   The positioning line and the jack-of-all-trades quote cross-fade
+   in place. Enhancement only — without JS the first slide stays put.
+   Auto-play pauses on hover and stands down for reduced-motion. */
+const bar = $('.topbar');
+const slides = $$('.topbar__slide', bar || document);
+if (bar && slides.length > 1 &&
+    !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let i = 0, timer = null;
+  const show = (n) => {
+    slides[i].classList.remove('is-on');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('is-on');
+  };
+  const play = () => { timer ??= setInterval(() => show(i + 1), 5000); };
+  const stop = () => { clearInterval(timer); timer = null; };
+  play();
+  bar.addEventListener('mouseenter', stop);
+  bar.addEventListener('mouseleave', play);
+  document.addEventListener('visibilitychange', () =>
+    document.visibilityState === 'visible' ? play() : stop());
+}
+
 /* ── Reveal on scroll ───────────────────────────────────────── */
 const items = [...document.querySelectorAll('.quote, .story__col, .foot__head')];
 items.forEach((el) => el.classList.add('rv'));
