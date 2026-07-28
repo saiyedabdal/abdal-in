@@ -508,8 +508,12 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 /* Sign-off quote: the cliché in print, the half nobody quotes in the
    handwritten voice — the reveal that flips the whole saying. */
 .foot__quote{
-  margin:3.6rem auto 0;max-width:34ch;
+  margin:3.6rem auto 0;max-width:34ch;   /* mobile: a narrow, stacked column */
   display:flex;flex-direction:column;align-items:center;gap:.4rem;
+}
+/* desktop: let the handwritten line run broad rather than cramming to 3 lines */
+@media (min-width:761px){
+  .foot__quote{max-width:min(92%,60rem);gap:.2rem}
 }
 .foot__quote__common{
   font-family:var(--f-display);
