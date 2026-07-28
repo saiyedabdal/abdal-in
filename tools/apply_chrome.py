@@ -32,9 +32,9 @@ NAV = [
 # from two pages before this moved here.
 TOPBAR = ('<a class="topbar" href="https://www.linkedin.com/in/saiyedabdal" '
           'target="_blank" rel="noopener">\n'
-          '  <span class="topbar__long">I write about retail, sales and '
-          'founder\u2019s office life on LinkedIn &mdash; follow along</span>\n'
-          '  <span class="topbar__short">Follow along on LinkedIn</span>\n'
+          '  <span class="topbar__tag">Not a generalist &mdash; but a multi-specialist</span>\n'
+          '  <span class="topbar__sep" aria-hidden="true">&middot;</span>\n'
+          '  <span class="topbar__cta">Follow along on LinkedIn</span>\n'
           '</a>')
 
 ICON = {
@@ -143,7 +143,10 @@ def sidebar(active):
         for k, h, lab, e in RAIL)
     return (
         '<header class="side" id="side">\n'
-        '  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">Abdal</a>\n\n'
+        '  <a class="side__logo" href="/" aria-label="Saiyed Abdal — home">\n'
+        '    <span class="side__logo__name">Abdal</span>\n'
+        '    <span class="side__logo__creed">Anonymity &middot; Ability &middot; Austerity</span>\n'
+        '  </a>\n\n'
         '  <button class="side__burger" id="burger" type="button" aria-label="Open menu" '
         'aria-expanded="false" aria-controls="sidenav">\n'
         '    <span></span><span></span><span></span>\n  </button>\n\n'
@@ -182,6 +185,10 @@ def footer(with_form):
             f'{body}\n'
             '  <div class="accounts" aria-label="Social accounts">\n'
             f'{accounts()}\n  </div>\n\n'
+            '  <p class="foot__quote">\n'
+            '    <span class="foot__quote__common">&ldquo;Jack of all trades, master of none&hellip;&rdquo;</span>\n'
+            '    <span class="foot__quote__twist">&hellip; but oftentimes better than a master of one.</span>\n'
+            '  </p>\n\n'
             '  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>\n'
             '</footer>')
 

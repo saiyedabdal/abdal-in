@@ -57,18 +57,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   display:flex;align-items:center;justify-content:center;
   background:var(--yellow);color:var(--black);
   font-size:.86rem;font-weight:600;
-  text-decoration:underline;text-underline-offset:3px;
+  text-decoration:none;
   transition:background .3s var(--ease);
 }
 .topbar:hover{background:#F2CE1B}
 /* the bar is a fixed 44px that other offsets depend on, so the copy has to
    fit one line rather than the bar growing to fit the copy */
 .topbar{padding-inline:1rem;white-space:nowrap}
-.topbar__short{display:none}
+/* the positioning statement leads; the LinkedIn nudge is the underlined part */
+.topbar__tag{font-weight:700;letter-spacing:.01em}
+.topbar__sep{margin-inline:.6rem;opacity:.4}
+.topbar__cta{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:760px){
-  .topbar{font-size:.78rem}
-  .topbar__long{display:none}
-  .topbar__short{display:inline}
+  .topbar{font-size:.75rem}
+  .topbar__sep,.topbar__cta{display:none}
 }
 
 /* ── Sidebar ────────────────────────────────────────────────── */
@@ -81,13 +83,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 
 .side__logo{
+  display:inline-flex;flex-direction:column;align-items:flex-start;gap:.6rem;
+  margin-bottom:auto;
+}
+.side__logo__name{
   font-family:var(--f-script);
   font-size:3.2rem;line-height:1;font-weight:600;
   transform:rotate(-6deg);transform-origin:0 50%;
-  margin-bottom:auto;
   transition:transform .4s var(--ease);
 }
-.side__logo:hover{transform:rotate(-2deg) scale(1.03)}
+.side__logo:hover .side__logo__name{transform:rotate(-2deg) scale(1.03)}
+/* a small three-word creed under the signature; upright against the tilt */
+.side__logo__creed{
+  font-family:var(--f-display);
+  font-size:.63rem;font-weight:500;
+  letter-spacing:.13em;text-transform:uppercase;
+  color:var(--grey);
+}
 
 .side__burger{display:none}
 
@@ -493,8 +505,28 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
 @media (max-width:900px){.accounts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.accounts{grid-template-columns:minmax(0,1fr);gap:2rem}}
 
+/* Sign-off quote: the cliché in print, the half nobody quotes in the
+   handwritten voice — the reveal that flips the whole saying. */
+.foot__quote{
+  margin:3.6rem auto 0;max-width:34ch;
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;
+}
+.foot__quote__common{
+  font-family:var(--f-display);
+  font-size:clamp(1rem,2.3vw,1.4rem);
+  font-weight:500;letter-spacing:.02em;line-height:1.3;
+  color:var(--grey);
+}
+.foot__quote__twist{
+  font-family:var(--f-script);
+  font-size:clamp(1.75rem,4.6vw,2.7rem);
+  font-weight:600;line-height:1.05;
+  color:var(--yellow);
+  transform:rotate(-2deg);
+}
+
 .foot__legal{
-  margin-top:3rem;
+  margin-top:2.4rem;
   font-size:.8rem;color:var(--grey);
 }
 
@@ -536,7 +568,9 @@ main{margin-left:var(--rail);margin-top:var(--bar)}
     padding:.8rem 1.2rem;
     gap:1rem;
   }
-  .side__logo{font-size:2.1rem;margin:0;transform:rotate(-4deg)}
+  .side__logo{margin:0;gap:0}
+  .side__logo__name{font-size:2.1rem;transform:rotate(-4deg)}
+  .side__logo__creed{display:none}
 
   .side__burger{
     display:flex;flex-direction:column;gap:5px;
