@@ -48,6 +48,46 @@ if (bar && slides.length > 1 &&
     document.visibilityState === 'visible' ? play() : stop());
 }
 
+/* ── A face that follows the cursor (Books & Quotes) ──────────────
+   The pupils track the pointer; the whole thing is inert on pages that
+   don't carry a .face. rAF-throttled so mousemove stays cheap, and it
+   blinks now and then for company (unless reduced-motion is asked). */
+const faceSvgs = $$('.face svg');
+if (faceSvgs.length) {
+  const MAX = 9;                       // pupil travel, in viewBox units
+  let mx = innerWidth / 2, my = innerHeight / 2, queued = false;
+  const paint = () => {
+    queued = false;
+    faceSvgs.forEach((svg) => {
+      const r = svg.getBoundingClientRect();
+      if (!r.width) return;
+      const vx = (mx - r.left) / r.width * 200;
+      const vy = (my - r.top) / r.height * 200;
+      svg.querySelectorAll('.face__pupil').forEach((p) => {
+        const dx = vx - (+p.dataset.cx), dy = vy - (+p.dataset.cy);
+        const d = Math.hypot(dx, dy) || 1;
+        const k = Math.min(d, MAX) / d;
+        p.setAttribute('transform', `translate(${(dx * k).toFixed(1)} ${(dy * k).toFixed(1)})`);
+      });
+    });
+  };
+  addEventListener('mousemove', (e) => {
+    mx = e.clientX; my = e.clientY;
+    if (!queued) { queued = true; requestAnimationFrame(paint); }
+  }, { passive: true });
+  paint();
+
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const faces = $$('.face');
+    const blink = () => {
+      faces.forEach((f) => f.classList.add('is-blinking'));
+      setTimeout(() => faces.forEach((f) => f.classList.remove('is-blinking')), 150);
+      setTimeout(blink, 2800 + Math.random() * 3400);
+    };
+    setTimeout(blink, 3000);
+  }
+}
+
 /* ── Reveal on scroll ───────────────────────────────────────── */
 const items = [...document.querySelectorAll('.quote, .story__col, .foot__head')];
 items.forEach((el) => el.classList.add('rv'));

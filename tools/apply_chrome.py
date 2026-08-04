@@ -22,6 +22,8 @@ NAV = [
     ("Timeline",         "/beyond-work.html",    ("beyond-work.html",)),
     ("The Studio",       "/studio.html",         ("studio.html",)),
     ("Poetry",           "/poetry.html",         ("poetry.html",)),
+    ("Books",            "/books.html",          ("books.html",)),
+    ("Quotes",           "/quotes.html",         ("quotes.html",)),
     ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),
     ("Resources",        "/resources.html",      ("resources.html",)),
     ("Contact",          "/#connect",            ()),
@@ -234,7 +236,8 @@ def apply(path):
     s = version_assets(s)
     s = og(s, rel)
     active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
-                            "poetry.html", "upsc.html") else \
+                            "poetry.html", "books.html", "quotes.html", "upsc.html",
+                            "resources.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
     # announcement bar: replace it where present, insert it where it is not
     if '<a class="topbar"' in s:
@@ -255,7 +258,7 @@ def apply(path):
 def main():
     files = ([os.path.join(ROOT, f) for f in
               ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
-               "poetry.html", "upsc.html", "resources.html")
+               "poetry.html", "books.html", "quotes.html", "upsc.html", "resources.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))
     n = sum(1 for f in files if apply(f))

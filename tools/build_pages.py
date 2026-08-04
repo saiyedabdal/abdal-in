@@ -29,6 +29,14 @@ PAGES = {
         title="Resources — Saiyed Abdal",
         desc="Resources.",
         css="upsc.css", topbar=None),
+    "books.html": dict(
+        title="Books — Saiyed Abdal",
+        desc="Books.",
+        css="upsc.css", topbar=None),
+    "quotes.html": dict(
+        title="Quotes — Saiyed Abdal",
+        desc="Quotes.",
+        css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "

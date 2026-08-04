@@ -4,7 +4,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 :root{--stick:var(--bar)}
-@media (max-width:980px){:root{--stick:calc(var(--bar) + 58px)}}
+@media (max-width:980px){:root{--stick:calc(var(--bar) + 72px)}}
 
 /* ── Masthead ───────────────────────────────────────────────── */
 .um{
@@ -56,6 +56,37 @@
   display:block;margin-top:.5rem;max-width:20ch;
   font-family:var(--f-display);font-size:.7rem;line-height:1.45;
   letter-spacing:.14em;text-transform:uppercase;color:var(--grey);
+}
+
+/* ── A little face that watches your cursor (Books & Quotes) ──── */
+.um--face{display:flex;align-items:center;gap:clamp(2rem,5vw,5rem);flex-wrap:wrap}
+.um--face .um__wrap{flex:1 1 340px;min-width:0}
+.face{flex:0 0 auto;width:clamp(150px,22vw,240px);margin-inline:auto}
+.face svg{width:100%;height:auto;display:block;overflow:visible}
+.face__head{fill:var(--yellow)}
+.face__white{fill:#fff;stroke:rgba(0,0,0,.85);stroke-width:2}
+.face__pupil{fill:var(--black);transition:transform .12s var(--ease)}
+.face__mouth{fill:none;stroke:var(--black);stroke-width:5;stroke-linecap:round}
+/* blink: squash each eye to a line for a beat */
+.face__eye{transform-box:fill-box;transform-origin:center;transition:transform .18s var(--ease)}
+.face.is-blinking .face__eye{transform:scaleY(.08)}
+@media (prefers-reduced-motion:reduce){
+  .face__pupil,.face__eye{transition:none}
+  .face.is-blinking .face__eye{transform:none}
+}
+@media (max-width:640px){.face{width:clamp(150px,44vw,210px)}}
+
+/* ── Quotes ─────────────────────────────────────────────────── */
+.qt{max-width:40ch}
+.qt p{
+  font-family:var(--f-display);font-weight:500;
+  font-size:clamp(1.5rem,3.4vw,2.4rem);line-height:1.2;
+  letter-spacing:.01em;color:var(--white);text-wrap:balance;
+}
+.qt cite{
+  display:block;margin-top:1.3rem;font-style:normal;
+  font-family:var(--f-display);font-size:.8rem;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);
 }
 
 /* ── Sections ───────────────────────────────────────────────── */
