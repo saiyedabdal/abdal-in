@@ -76,18 +76,18 @@
 }
 @media (max-width:640px){.face{width:clamp(150px,44vw,210px)}}
 
-/* ── Quotes ─────────────────────────────────────────────────── */
-.qt{max-width:40ch}
-.qt p{
-  font-family:var(--f-display);font-weight:500;
-  font-size:clamp(1.5rem,3.4vw,2.4rem);line-height:1.2;
-  letter-spacing:.01em;color:var(--white);text-wrap:balance;
-}
-.qt cite{
-  display:block;margin-top:1.3rem;font-style:normal;
-  font-family:var(--f-display);font-size:.8rem;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);
-}
+/* ── Quotes & Books: a numbered reading list ─────────────────── */
+.qlist{max-width:840px;margin:0 auto;list-style:none}
+.qlist li{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2.4rem);
+  padding:clamp(1.6rem,3.6vw,2.8rem) 0;border-top:1px solid #1E1E1E;align-items:start}
+.qlist li:first-child{border-top:0}
+.qlist__n{font-family:var(--f-display);font-weight:600;color:var(--yellow);
+  font-size:.95rem;letter-spacing:.08em;padding-top:.45rem}
+.qlist__q{font-family:var(--f-display);font-weight:500;color:var(--white);
+  font-size:clamp(1.4rem,3.2vw,2.35rem);line-height:1.16;letter-spacing:.005em;text-wrap:balance}
+.qlist__q .l2{display:block;color:var(--yellow)}
+.qlist__by{display:block;margin-top:.7rem;font-family:var(--f-display);font-size:.72rem;
+  font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
 
 /* ── Sections ───────────────────────────────────────────────── */
 .us{padding:clamp(3.5rem,7vw,6rem) var(--pad);border-bottom:1px solid #ECECE8}
