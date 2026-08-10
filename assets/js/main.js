@@ -129,7 +129,10 @@ document.documentElement.classList.add('js');
    functions, so it costs zero Netlify credits. Paste a free Supabase
    project's URL + anon (public) key below and the pill lights up;
    left blank it stays hidden. The anon key is safe to expose. */
-const PRESENCE = { url: '', key: '' };   // ← Supabase project URL + anon key
+const PRESENCE = {   // Supabase project "abdal.in" (ref rrdtnbyrwnxiqdawazmz) — anon key is public/safe
+  url: 'https://rrdtnbyrwnxiqdawazmz.supabase.co',
+  key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJyZHRuYnlyd254aXFkYXdhem16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNjg5ODQsImV4cCI6MjEwMTk0NDk4NH0.ZQVUepONZJ9sLKz24Vp2HiJ4CWUjSB3GTdQfYuaRhI8',
+};
 (() => {
   const pill = $('.side__online');
   if (!pill || !PRESENCE.url || !PRESENCE.key) return;
