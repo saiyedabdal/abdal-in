@@ -16,17 +16,23 @@ import os, re, sys, glob
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ── navigation ─────────────────────────────────────────────────────────
+# Grouped navigation: a bare string is a section heading; a tuple is a link.
+# A 4th tuple element is a small sub-label under the item (e.g. Day Job).
 NAV = [
-    ("Saiyed Abdal",     "/",                    ("index.html",)),
-    ("Entrepreneurship", "/entrepreneurship.html", ("entrepreneurship.html",)),
-    ("Timeline",         "/beyond-work.html",    ("beyond-work.html",)),
-    ("The Studio",       "/studio.html",         ("studio.html",)),
-    ("Poetry",           "/poetry.html",         ("poetry.html",)),
-    ("Books",            "/books.html",          ("books.html",)),
-    ("Quotes",           "/quotes.html",         ("quotes.html",)),
-    ("UPSC",             "/upsc.html",           ("upsc.html", "upsc/")),
-    ("Resources",        "/resources.html",      ("resources.html",)),
-    ("Contact",          "/#connect",            ()),
+    ("Saiyed Abdal",     "/",                      ("index.html",)),
+    ("My Story",         "/beyond-work.html",      ("beyond-work.html",)),
+    ("Day Job",          "/entrepreneurship.html", ("entrepreneurship.html",), "Entrepreneurship"),
+    "Anthology",
+    ("The Studio",       "/studio.html",           ("studio.html",)),
+    ("Poetry",           "/poetry.html",           ("poetry.html",)),
+    ("Books",            "/books.html",            ("books.html",)),
+    ("Quotes",           "/quotes.html",           ("quotes.html",)),
+    "Archives",
+    ("UPSC",             "/upsc.html",             ("upsc.html", "upsc/")),
+    ("Resources",        "/resources.html",        ("resources.html",)),
+    "Communiqué",
+    ("Contact",          "/#connect",              ()),
+    ("Dispatch",         "/dispatch.html",         ("dispatch.html",)),
 ]
 
 # ── announcement bar ───────────────────────────────────────────────────
@@ -144,9 +150,21 @@ def svg(k, cls=""):
 
 def sidebar(active):
     CUR = ' aria-current="page"'
-    links = "".join(
-        '    <a href="%s"%s>%s</a>\n' % (href, CUR if active in marks else "", label)
-        for label, href, marks in NAV)
+    parts = []
+    for item in NAV:
+        if isinstance(item, str):
+            parts.append('    <p class="side__grp">%s</p>\n' % item)
+        else:
+            label, href, marks = item[0], item[1], item[2]
+            sub = item[3] if len(item) > 3 else None
+            cur = CUR if active in marks else ""
+            if sub:
+                parts.append('    <a href="%s"%s class="side__link--sub">%s'
+                             '<span class="side__sub">%s</span></a>\n'
+                             % (href, cur, label, sub))
+            else:
+                parts.append('    <a href="%s"%s>%s</a>\n' % (href, cur, label))
+    links = "".join(parts)
     rail = "\n".join(
         f'    <li><a href="{h}"{EXT if e else ""} aria-label="{lab}">\n      {svg(k)}\n    </a></li>'
         for k, h, lab, e in RAIL)
@@ -156,6 +174,9 @@ def sidebar(active):
         '    <span class="side__logo__name">Abdal</span>\n'
         '    <span class="side__logo__creed">Anonymity &middot; Ability &middot; Austerity</span>\n'
         '  </a>\n\n'
+        '  <p class="side__online" hidden aria-live="polite">'
+        '<span class="side__online__dot" aria-hidden="true"></span>'
+        '<span class="side__online__n">0</span>&nbsp;online</p>\n\n'
         '  <button class="side__burger" id="burger" type="button" aria-label="Open menu" '
         'aria-expanded="false" aria-controls="sidenav">\n'
         '    <span></span><span></span><span></span>\n  </button>\n\n'
@@ -199,6 +220,11 @@ def footer(with_form):
             '    <span class="foot__quote__twist">&hellip; but oftentimes better than a master of one.</span>\n'
             '  </p>\n\n'
             '  <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>\n'
+            '  <!-- Static form so Netlify detects the greeting pop-up submissions -->\n'
+            '  <form name="greeting" data-netlify="true" netlify-honeypot="bot-field" hidden>\n'
+            '    <input type="text" name="name"><input type="text" name="reason">\n'
+            '    <input type="tel" name="phone"><input type="text" name="bot-field">\n'
+            '  </form>\n'
             '</footer>')
 
 
@@ -237,7 +263,7 @@ def apply(path):
     s = og(s, rel)
     active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                             "poetry.html", "books.html", "quotes.html", "upsc.html",
-                            "resources.html") else \
+                            "resources.html", "dispatch.html") else \
         ("upsc/" if rel.startswith("upsc/") else "")
     # announcement bar: replace it where present, insert it where it is not
     if '<a class="topbar"' in s:
@@ -258,7 +284,8 @@ def apply(path):
 def main():
     files = ([os.path.join(ROOT, f) for f in
               ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
-               "poetry.html", "books.html", "quotes.html", "upsc.html", "resources.html")
+               "poetry.html", "books.html", "quotes.html", "upsc.html", "resources.html",
+               "dispatch.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))
     n = sum(1 for f in files if apply(f))

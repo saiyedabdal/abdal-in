@@ -7,6 +7,147 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
 document.documentElement.classList.add('js');
 
+/* ── Greeting: a friendly, optional hello on the public site ─────────
+   Not a lock — the site is open. It asks (nicely, across up to three
+   visits) who dropped by and why, lets anyone carry on without a word,
+   and only asks for a number if they offer one. To Netlify Forms. */
+(() => {
+  if (location.pathname.startsWith('/private')) return;   // never in the workspace
+  let st; try { st = JSON.parse(localStorage.getItem('abdal_greet') || '{}'); } catch { return; }
+  if (st.done || (st.skips || 0) >= 3) return;
+  const save = () => { try { localStorage.setItem('abdal_greet', JSON.stringify(st)); } catch {} };
+  const esc = (s) => { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
+
+  const LINES = [
+    ['Well, hello there', 'Who do I have the pleasure of showing my corner of the internet to? Totally optional — I’m not the police.'],
+    ['Oh, it’s you again', 'No name last time — very mysterious. Care to introduce yourself, or shall I keep calling you “Anonymous Legend”?'],
+    ['Okay, last try, I promise', 'I only ask thrice. A name and a reason, and I’ll leave you in peace forever.'],
+  ];
+  const [gh, gp] = LINES[Math.min(st.skips || 0, 2)];
+  const lastFocus = document.activeElement;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'greet';
+  wrap.innerHTML = `
+    <div class="greet__box" role="dialog" aria-modal="true" aria-labelledby="greetH">
+      <button class="greet__x" type="button" aria-label="Close and keep browsing">&times;</button>
+      <div class="greet__step" data-step="1">
+        <p class="greet__k">A quick hello</p>
+        <h2 class="greet__h" id="greetH">${gh}</h2>
+        <p class="greet__p">${gp}</p>
+        <label class="greet__f"><span>Your name</span>
+          <input name="name" type="text" autocomplete="name" placeholder="Anonymous Legend"></label>
+        <label class="greet__f"><span>Why&rsquo;d you wander in?</span>
+          <input name="reason" type="text" placeholder="Just being nosy, honestly"></label>
+        <div class="greet__row">
+          <button class="greet__go" type="button">Say hi</button>
+          <button class="greet__skip" type="button">Just browsing &rarr;</button>
+        </div>
+      </div>
+      <div class="greet__step" data-step="2" hidden>
+        <p class="greet__k">One more, if you&rsquo;re game</p>
+        <h2 class="greet__h">Feeling bold?</h2>
+        <p class="greet__p greet__p2"></p>
+        <label class="greet__f greet__phone" hidden><span>Your number</span>
+          <input name="phone" type="tel" autocomplete="tel" placeholder="+91&hellip;"></label>
+        <div class="greet__row">
+          <button class="greet__yes" type="button">Sure, here&rsquo;s my number</button>
+          <button class="greet__no" type="button">I&rsquo;m good, thanks</button>
+        </div>
+      </div>
+      <div class="greet__step" data-step="3" hidden>
+        <p class="greet__k">&mdash;</p>
+        <h2 class="greet__h greet__thanks"></h2>
+        <p class="greet__p">Enjoy the site. The door&rsquo;s open.</p>
+        <div class="greet__row"><button class="greet__done" type="button">Let me in &rarr;</button></div>
+      </div>
+    </div>`;
+  document.body.appendChild(wrap);
+
+  const q = (s) => wrap.querySelector(s);
+  const steps = [...wrap.querySelectorAll('.greet__step')];
+  const show = (n) => steps.forEach((s) => (s.hidden = +s.dataset.step !== n));
+  const nameEl = q('input[name=name]'), reasonEl = q('input[name=reason]'), phoneEl = q('input[name=phone]');
+
+  const onKey = (e) => {
+    if (e.key === 'Escape') return skip();
+    if (e.key !== 'Tab') return;
+    const f = [...wrap.querySelectorAll('button,input')].filter((x) => x.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+    else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+  };
+  function close() {
+    wrap.remove();
+    document.removeEventListener('keydown', onKey);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function skip() { st.skips = (st.skips || 0) + 1; save(); close(); }
+  function send(extra) {
+    st.done = true; save();
+    const data = { 'form-name': 'greeting', 'bot-field': '',
+      name: nameEl.value.trim(), reason: reasonEl.value.trim(), ...extra };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString() }).catch(() => {});
+  }
+  function thanks() {
+    const who = nameEl.value.trim();
+    q('.greet__thanks').innerHTML = 'Lovely to meet you' + (who ? ', ' + esc(who) : '') + ' \u{1F44B}';
+    show(3); q('.greet__done').focus();
+  }
+
+  q('.greet__x').addEventListener('click', skip);
+  q('.greet__skip').addEventListener('click', skip);
+  wrap.addEventListener('mousedown', (e) => { if (e.target === wrap) skip(); });
+
+  q('.greet__go').addEventListener('click', () => {
+    if (!nameEl.value.trim() && !reasonEl.value.trim()) {
+      q('.greet__box').classList.add('greet--nudge');
+      setTimeout(() => q('.greet__box').classList.remove('greet--nudge'), 420);
+      nameEl.focus(); return;
+    }
+    const who = nameEl.value.trim() || 'friend';
+    q('.greet__p2').innerHTML = 'Thanks, ' + esc(who) +
+      '! Leave a number and I might actually call to say thanks. Or don&rsquo;t &mdash; I&rsquo;ve got trust issues too.';
+    show(2); q('.greet__yes').focus();
+  });
+  let phoneOpen = false;
+  q('.greet__yes').addEventListener('click', () => {
+    if (!phoneOpen) { phoneOpen = true; q('.greet__phone').hidden = false; q('.greet__yes').textContent = 'Send it'; phoneEl.focus(); }
+    else { send({ phone: phoneEl.value.trim() }); thanks(); }
+  });
+  q('.greet__no').addEventListener('click', () => { send({ phone: '' }); thanks(); });
+  q('.greet__done').addEventListener('click', close);
+
+  document.addEventListener('keydown', onKey);
+  requestAnimationFrame(() => { wrap.classList.add('greet--in'); nameEl.focus({ preventScroll: true }); });
+})();
+
+/* ── Live presence: "● N online" ────────────────────────────────
+   A WebSocket to Supabase Realtime — it never touches Netlify's
+   functions, so it costs zero Netlify credits. Paste a free Supabase
+   project's URL + anon (public) key below and the pill lights up;
+   left blank it stays hidden. The anon key is safe to expose. */
+const PRESENCE = { url: '', key: '' };   // ← Supabase project URL + anon key
+(() => {
+  const pill = $('.side__online');
+  if (!pill || !PRESENCE.url || !PRESENCE.key) return;
+  const nEl = pill.querySelector('.side__online__n');
+  import('https://esm.sh/@supabase/supabase-js@2').then(({ createClient }) => {
+    const sb = createClient(PRESENCE.url, PRESENCE.key, { realtime: { params: { eventsPerSecond: 2 } } });
+    const id = (crypto.randomUUID && crypto.randomUUID()) || String(Math.random());
+    const ch = sb.channel('online', { config: { presence: { key: id } } });
+    const render = () => {
+      const n = Object.keys(ch.presenceState()).length;
+      nEl.textContent = n;
+      pill.hidden = n < 1;
+    };
+    ch.on('presence', { event: 'sync' }, render)
+      .subscribe((s) => { if (s === 'SUBSCRIBED') ch.track({ at: Date.now() }); });
+  }).catch(() => {});
+})();
+
 /* ── Mobile menu ────────────────────────────────────────────── */
 const side   = $('#side');
 const burger = $('#burger');
@@ -204,6 +345,64 @@ if (sfilter) {
       b.classList.toggle('is-on', on);
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
+  });
+}
+
+/* ── Books shelf: filter, and pull a book out to spin its cover ──── */
+const shelf = $('.shelf');
+if (shelf) {
+  const books = $$('.book', shelf);
+  const detail = $('.bdetail');
+  const dImg = $('.bdetail__cover img'), dTitle = $('.bdetail__title');
+  const dAuthor = $('.bdetail__author'), dCat = $('.bdetail__cat');
+  const dStars = $('.bdetail__stars'), dNote = $('.bdetail__note');
+  const hint = $('.shelf__hint');
+  if (hint) hint.hidden = false;
+  let openLi = null;
+
+  const close = () => {
+    if (openLi) openLi.classList.remove('is-open');
+    openLi = null;
+    detail.classList.remove('is-open');
+  };
+  const open = (li) => {
+    if (openLi === li) { close(); return; }
+    if (openLi) openLi.classList.remove('is-open');
+    openLi = li; li.classList.add('is-open');
+    const d = li.dataset, r = Math.max(0, Math.min(5, +d.rating || 0));
+    dImg.src = d.cover; dImg.alt = d.title + ' — cover';
+    dTitle.textContent = d.title;
+    dAuthor.textContent = d.author;
+    dCat.textContent = d.catLabel || '';
+    if (r) {
+      dStars.hidden = false;
+      dStars.innerHTML = '★'.repeat(r) + '<span class="off">' + '★'.repeat(5 - r) + '</span>';
+      dStars.setAttribute('aria-label', `Rated ${r} of 5`);
+    } else { dStars.hidden = true; }
+    dNote.textContent = d.note || '';
+    dNote.hidden = !d.note;
+    detail.classList.remove('is-open'); void detail.offsetWidth; detail.classList.add('is-open');
+    detail.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  };
+
+  shelf.addEventListener('click', (e) => {
+    const li = e.target.closest('.book');
+    if (li) open(li);
+  });
+  $('.bdetail__close')?.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  $('.bfilter')?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.bfilter__btn');
+    if (!btn) return;
+    const cat = btn.dataset.cat;
+    books.forEach((li) => { li.hidden = !(cat === 'all' || li.dataset.cat === cat); });
+    $$('.bfilter__btn').forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (openLi && openLi.hidden) close();
   });
 }
 

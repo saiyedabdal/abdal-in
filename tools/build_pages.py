@@ -37,6 +37,11 @@ PAGES = {
         title="Quotes — Saiyed Abdal",
         desc="Quotes.",
         css="upsc.css", topbar=None),
+    "dispatch.html": dict(
+        title="Dispatch — Saiyed Abdal",
+        desc="A letter now and then — on retail, founders'-office life, "
+             "systems, and the odd poem. No noise.",
+        css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "

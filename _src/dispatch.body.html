@@ -1,0 +1,28 @@
+<section class="um">
+  <p class="um__kicker">Communiqué</p>
+  <h1 class="um__title">Dispatch</h1>
+  <p class="um__lede">A letter now and then &mdash; what I&rsquo;m learning in the founder&rsquo;s
+     office, the systems behind the brands, a resource worth your time, and the odd poem.
+     No noise, no spam; leave whenever you like.</p>
+
+  <form class="cform cform--dispatch" name="dispatch" method="POST"
+        action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="dispatch">
+    <p class="cform__hp" aria-hidden="true">
+      <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    </p>
+    <p class="cform__field">
+      <label for="dEmail">Your email</label>
+      <input id="dEmail" name="email" type="email" required autocomplete="email"
+             placeholder="you@example.com">
+    </p>
+    <button class="cform__send" type="submit">Subscribe to Dispatch</button>
+  </form>
+</section>
+
+<div class="uback">
+  <a href="/">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Back to abdal.in
+  </a>
+</div>

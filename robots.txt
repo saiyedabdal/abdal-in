@@ -1,0 +1,5 @@
+# abdal.in — public site
+User-agent: *
+Allow: /
+Disallow: /private
+Disallow: /api

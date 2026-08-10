@@ -25,8 +25,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=7d27687b">
-<link rel="stylesheet" href="/assets/css/upsc.css?v=55ad971a">
+<link rel="stylesheet" href="/assets/css/style.css?v=96649040">
+<link rel="stylesheet" href="/assets/css/upsc.css?v=41866fb6">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -41,21 +41,27 @@
     <span class="side__logo__creed">Anonymity &middot; Ability &middot; Austerity</span>
   </a>
 
+  <p class="side__online" hidden aria-live="polite"><span class="side__online__dot" aria-hidden="true"></span><span class="side__online__n">0</span>&nbsp;online</p>
+
   <button class="side__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sidenav">
     <span></span><span></span><span></span>
   </button>
 
   <nav class="side__nav" id="sidenav" aria-label="Primary">
     <a href="/">Saiyed Abdal</a>
-    <a href="/entrepreneurship.html">Entrepreneurship</a>
-    <a href="/beyond-work.html">Timeline</a>
+    <a href="/beyond-work.html">My Story</a>
+    <a href="/entrepreneurship.html" class="side__link--sub">Day Job<span class="side__sub">Entrepreneurship</span></a>
+    <p class="side__grp">Anthology</p>
     <a href="/studio.html">The Studio</a>
     <a href="/poetry.html">Poetry</a>
     <a href="/books.html">Books</a>
     <a href="/quotes.html">Quotes</a>
+    <p class="side__grp">Archives</p>
     <a href="/upsc.html" aria-current="page">UPSC</a>
     <a href="/resources.html">Resources</a>
+    <p class="side__grp">Communiqué</p>
     <a href="/#connect">Contact</a>
+    <a href="/dispatch.html">Dispatch</a>
   </nav>
 
   <ul class="side__social" aria-label="Social links">
@@ -14096,9 +14102,14 @@ Draft Plan - Metropolitan Area</p>
   </p>
 
   <p class="foot__legal">© Saiyed Abdal <span id="year">2026</span></p>
+  <!-- Static form so Netlify detects the greeting pop-up submissions -->
+  <form name="greeting" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name"><input type="text" name="reason">
+    <input type="tel" name="phone"><input type="text" name="bot-field">
+  </form>
 </footer>
 </main>
-<script src="/assets/js/main.js?v=43925759"></script>
+<script src="/assets/js/main.js?v=64cce437"></script>
 
 </body>
 </html>

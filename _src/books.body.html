@@ -3,7 +3,7 @@
     <p class="um__kicker">The shelf</p>
     <h1 class="um__title">Books</h1>
     <p class="um__lede">The books that rewired how I read a problem &mdash; a shelf I&rsquo;m
-       still filling, one read at a time.</p>
+       still filling, one read at a time. Pull one off to see why.</p>
   </div>
 
   <div class="face" data-face aria-hidden="true">
@@ -24,20 +24,57 @@
 
 <section class="us us--dark">
   <div class="us__in">
-    <ol class="qlist">
-      <li><span class="qlist__n">01</span>
-        <div><p class="qlist__q">The Goal</p><span class="qlist__by">Eliyahu M. Goldratt</span></div></li>
-      <li><span class="qlist__n">02</span>
-        <div><p class="qlist__q">Only the Paranoid Survive</p><span class="qlist__by">Andrew S. Grove</span></div></li>
-      <li><span class="qlist__n">03</span>
-        <div><p class="qlist__q">Amp It Up</p><span class="qlist__by">Frank Slootman</span></div></li>
-      <li><span class="qlist__n">04</span>
-        <div><p class="qlist__q">Blitzscaling</p><span class="qlist__by">Reid Hoffman &amp; Chris Yeh</span></div></li>
-    </ol>
+    <!-- category filter (JS-gated; styled like the Studio's) -->
+    <div class="bfilter" aria-label="Filter books by category">
+      <button class="bfilter__btn is-on" type="button" data-cat="all" aria-pressed="true">All</button>
+      <button class="bfilter__btn" type="button" data-cat="operations" aria-pressed="false">Operations</button>
+      <button class="bfilter__btn" type="button" data-cat="leadership" aria-pressed="false">Leadership</button>
+      <button class="bfilter__btn" type="button" data-cat="strategy" aria-pressed="false">Strategy</button>
+      <button class="bfilter__btn" type="button" data-cat="scaling" aria-pressed="false">Scaling</button>
+    </div>
+
+    <ul class="shelf">
+      <li class="book" data-cat="operations" style="--c:#15406a;--h:240px"
+          data-title="The Goal" data-author="Eliyahu M. Goldratt &amp; Jeff Cox"
+          data-cat-label="Operations" data-cover="/assets/img/books/the-goal.webp"
+          data-rating="" data-note="">
+        <button class="book__spine" type="button" aria-label="Open: The Goal">The Goal</button>
+      </li>
+      <li class="book" data-cat="leadership" style="--c:#12639e;--h:250px"
+          data-title="Amp It Up" data-author="Frank Slootman"
+          data-cat-label="Leadership" data-cover="/assets/img/books/amp-it-up.webp"
+          data-rating="" data-note="">
+        <button class="book__spine" type="button" aria-label="Open: Amp It Up">Amp It Up</button>
+      </li>
+      <li class="book" data-cat="strategy" style="--c:#7a1f1f;--h:226px"
+          data-title="Only the Paranoid Survive" data-author="Andrew S. Grove"
+          data-cat-label="Strategy" data-cover="/assets/img/books/paranoid.webp"
+          data-rating="" data-note="">
+        <button class="book__spine" type="button" aria-label="Open: Only the Paranoid Survive">Only the Paranoid Survive</button>
+      </li>
+      <li class="book" data-cat="scaling" style="--c:#b0261d;--h:234px"
+          data-title="Blitzscaling" data-author="Reid Hoffman &amp; Chris Yeh"
+          data-cat-label="Scaling" data-cover="/assets/img/books/blitzscaling.webp"
+          data-rating="" data-note="">
+        <button class="book__spine" type="button" aria-label="Open: Blitzscaling">Blitzscaling</button>
+      </li>
+    </ul>
+    <p class="shelf__hint" hidden>Tap a spine to pull it off the shelf.</p>
+
+    <!-- the pulled-out book (populated on click) -->
+    <div class="bdetail" aria-live="polite">
+      <div class="bdetail__cover"><img alt="" decoding="async"></div>
+      <div class="bdetail__meta">
+        <h3 class="bdetail__title"></h3>
+        <p class="bdetail__author"></p>
+        <span class="bdetail__cat"></span>
+        <p class="bdetail__stars"></p>
+        <p class="bdetail__note"></p>
+        <button class="bdetail__close" type="button">&larr; Back to the shelf</button>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- Add more books as they come: copy an <li> above and bump the number. -->
 
 <div class="uback">
   <a href="/">
