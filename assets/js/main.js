@@ -666,6 +666,23 @@ if (reader) {
   }
 }
 
+/* ── My Story: open the gallery disclosure from the hero / hash ──
+   The gallery is a <details> that sits below a long timeline. The hero
+   link (and any #gallery link) opens it and scrolls to it, so it never
+   feels buried. Without JS the link still jumps to it and the summary
+   toggles natively — this only smooths the open. */
+const galDetails = $('#gallery');
+if (galDetails && galDetails.tagName === 'DETAILS') {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const openGal = (smooth) => {
+    galDetails.open = true;
+    galDetails.scrollIntoView({ behavior: smooth && !reduce ? 'smooth' : 'auto', block: 'start' });
+  };
+  $$('a[href$="#gallery"]').forEach((a) =>
+    a.addEventListener('click', (e) => { e.preventDefault(); openGal(true); }));
+  if (location.hash === '#gallery') openGal(false);
+}
+
 /* ── Year ───────────────────────────────────────────────────── */
 const yr = $('#year');
 if (yr) yr.textContent = String(new Date().getFullYear());

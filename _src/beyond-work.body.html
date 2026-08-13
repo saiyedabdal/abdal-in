@@ -4,6 +4,7 @@
   <p class="um__lede">Rooms I talked my way into, competitions I entered, and work that had
      nothing to do with a salary. Some of it went well &mdash; and all of it taught me something
      the day job now runs on.</p>
+  <p class="um__jump"><a href="#gallery">See the photo gallery <span aria-hidden="true">&darr;</span></a></p>
 </section>
 
 <!-- ── The timeline ─────────────────────────────────────────────
@@ -287,16 +288,25 @@
   </div>
 </section>
 
-<!-- ── Gallery: wherever the work happens ────────────────────── -->
-<section class="us us--tint" id="gallery">
+<!-- ── Gallery: wherever the work happens (collapsible) ───────── -->
+<section class="us us--tint galsec">
   <div class="us__in us__in--wide">
-    <p class="us__num">Gallery</p>
-    <h2 class="us__head">Wherever the work happens</h2>
-    <div class="us__body">
-      <p>From boardrooms to warehouse floors, international stages to late-night setups &mdash; wherever the work happens, I show up.</p>
-    </div>
+    <details class="galwrap" id="gallery">
+      <summary class="galwrap__bar">
+        <span class="galwrap__head">
+          <span class="us__num">Gallery</span>
+          <span class="galwrap__title">Wherever the work happens</span>
+        </span>
+        <span class="galwrap__toggle">
+          <span class="galwrap__cta galwrap__cta--open">View 19 photos</span>
+          <span class="galwrap__cta galwrap__cta--close">Hide</span>
+          <svg class="galwrap__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </summary>
+      <div class="galwrap__in">
+        <p class="galwrap__lede">From boardrooms to warehouse floors, international stages to late-night setups &mdash; wherever the work happens, I show up.</p>
 
-    <div class="gal" id="gal">
+        <div class="gal" id="gal">
       <button class="gal__i gal__i--tall" data-photo="/assets/img/gallery/pp15.webp" aria-label="At the desk, Frido office">
         <img src="/assets/img/gallery/pp15.webp" alt="Saiyed Abdal at his desk in the Frido office" loading="lazy" decoding="async"></button>
       <button class="gal__i" data-photo="/assets/img/gallery/pp01.webp" aria-label="Frido store fit-out">
@@ -335,7 +345,9 @@
         <img src="/assets/img/gallery/pp08.webp" alt="Leaving with luggage" loading="lazy" decoding="async"></button>
       <button class="gal__i" data-photo="/assets/img/gallery/pp06.webp" aria-label="On the way">
         <img src="/assets/img/gallery/pp06.webp" alt="On the way" loading="lazy" decoding="async"></button>
-    </div>
+        </div>
+      </div>
+    </details>
   </div>
 </section>
 
