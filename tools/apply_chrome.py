@@ -24,6 +24,7 @@ NAV = [
     ("Day Job",          "/entrepreneurship.html", ("entrepreneurship.html",), "Entrepreneurship"),
     "Anthology",
     ("The Studio",       "/studio.html",           ("studio.html",)),
+    ("Writings",         "/writings.html",         ("writings.html", "writings/")),
     ("Poetry",           "/poetry.html",           ("poetry.html",)),
     ("Books",            "/books.html",            ("books.html",)),
     ("Values",           "/quotes.html",           ("quotes.html",)),
@@ -263,8 +264,9 @@ def apply(path):
     s = og(s, rel)
     active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                             "poetry.html", "books.html", "quotes.html", "upsc.html",
-                            "resources.html", "dispatch.html") else \
-        ("upsc/" if rel.startswith("upsc/") else "")
+                            "resources.html", "dispatch.html", "writings.html") else \
+        ("upsc/" if rel.startswith("upsc/") else
+         "writings/" if rel.startswith("writings/") else "")
     # announcement bar: replace it where present, insert it where it is not
     if '<a class="topbar"' in s:
         s = re.sub(r'<a class="topbar".*?</a>', lambda _: TOPBAR, s, count=1, flags=re.S)
@@ -285,9 +287,10 @@ def main():
     files = ([os.path.join(ROOT, f) for f in
               ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                "poetry.html", "books.html", "quotes.html", "upsc.html", "resources.html",
-               "dispatch.html")
+               "dispatch.html", "writings.html")
               if os.path.exists(os.path.join(ROOT, f))]
-             + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True))
+             + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True)
+             + glob.glob(os.path.join(ROOT, "writings", "**", "*.html"), recursive=True))
     n = sum(1 for f in files if apply(f))
     print(f"chrome applied to {n} of {len(files)} pages")
 

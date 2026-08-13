@@ -567,6 +567,105 @@ if (cform) {
   });
 }
 
+/* ── Writings index: theme filter ───────────────────────────── */
+const wfilter = $('.wfilter');
+if (wfilter) {
+  const rows = $$('.wlist > li');
+  const empty = $('.wempty');
+  wfilter.addEventListener('click', (e) => {
+    const btn = e.target.closest('.wfilter__btn');
+    if (!btn) return;
+    const cat = btn.dataset.cat;
+    let shown = 0;
+    rows.forEach((li) => {
+      const on = cat === 'all' || li.dataset.cat === cat;
+      li.hidden = !on; if (on) shown++;
+    });
+    $$('.wfilter__btn', wfilter).forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (empty) empty.hidden = shown > 0;
+  });
+}
+
+/* ── Writings: the gamified, gated long-read ────────────────────
+   The essay unlocks a chapter at a time — the next only appears once
+   you've read the current one and press Continue. A sticky bar tracks
+   progress; the revenue chart animates on arrival; the last chapter
+   opens the "what's your take" note, which posts to Netlify Forms.
+
+   Enhancement only, and deliberately fail-safe: the class that HIDES
+   un-read chapters ('is-gated') is added here, in JS. So without JS —
+   or if anything above ever throws before this runs — nothing is
+   gated and the whole piece reads straight through, fully indexable. */
+const reader = $('[data-reader]');
+if (reader) {
+  const chs = $$('.ch:not([data-take])', reader);
+  const take = $('.ch[data-take]', reader);
+  const fill = $('[data-fill]', reader);
+  const countEl = $('[data-count]', reader);
+  const total = chs.length || 1;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const paint = () => {
+    const on = chs.filter((c) => c.classList.contains('ch--on')).length;
+    if (fill) fill.style.width = (on / total * 100) + '%';
+    if (countEl) countEl.textContent = String(on).padStart(2, '0');
+  };
+  const reveal = (el) => {
+    if (!el) return;
+    el.classList.add('ch--on');
+    // a chapter's revenue chart grows once it's on screen; the short timer gives
+    // the just-shown bars a frame at height 0 so the transition to full plays.
+    const chart = $('.rev', el);
+    if (chart) setTimeout(() => chart.classList.add('rev--in'), 60);
+    paint();
+  };
+
+  reader.classList.add('is-gated');
+  reveal(chs[0]);
+
+  reader.addEventListener('click', (e) => {
+    const btn = e.target.closest('.ch__go');
+    if (!btn) return;
+    const cur = btn.closest('.ch');
+    const next = btn.hasAttribute('data-finish') ? take : cur.nextElementSibling;
+    if (!next) return;
+    cur.classList.add('ch--done');
+    reveal(next);
+    next.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    const h = $('.ch__h, .take__h', next);
+    if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+  });
+
+  const tform = $('.take__form', reader);
+  if (tform) {
+    const st = $('[data-take-status]', reader);
+    tform.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!tform.reportValidity()) return;
+      const send = $('.take__send', tform);
+      if (send) send.disabled = true;
+      if (st) { st.dataset.state = ''; st.textContent = 'Sending…'; }
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(tform)).toString(),
+        });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        tform.classList.add('is-sent');
+        if (st) { st.dataset.state = 'ok'; st.textContent = 'Got it — thank you. That genuinely makes my day.'; }
+      } catch (err) {
+        if (send) send.disabled = false;
+        if (st) { st.dataset.state = 'error'; st.textContent = 'That didn’t send. Mail me at smahsanabdal@gmail.com?'; }
+      }
+    });
+  }
+}
+
 /* ── Year ───────────────────────────────────────────────────── */
 const yr = $('#year');
 if (yr) yr.textContent = String(new Date().getFullYear());

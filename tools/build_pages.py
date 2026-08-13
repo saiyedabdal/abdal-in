@@ -42,6 +42,17 @@ PAGES = {
         desc="A letter now and then — on retail, founders'-office life, "
              "systems, and the odd poem. No noise.",
         css="upsc.css", topbar=None),
+    "writings.html": dict(
+        title="Writings — Saiyed Abdal",
+        desc="Essays on operating, money and building — with the odd detour "
+             "into verse. Long reads, made to be taken in pieces.",
+        css="upsc.css", topbar=None),
+    "writings/two-kinds-of-jobs.html": dict(
+        title="There Are Only Two Kinds of Jobs. I've Carried Both. — Saiyed Abdal",
+        desc="Profit centres, cost centres, and the fifteen years it took to learn "
+             "that closeness to the money isn't a seat you're given — it's a number "
+             "you go and find.",
+        css="upsc.css", topbar=None),
     "upsc.html": dict(
         title="The UPSC Years — Saiyed Abdal",
         desc="A computer science graduate who studied history, polity, economics and "
@@ -105,7 +116,9 @@ def main():
               if cfg["topbar"] else "")
         page = HEAD.format(title=cfg["title"], desc=cfg["desc"], name=name,
                            css=cfg["css"], topbar=tb, body=body)
-        open(os.path.join(ROOT, name), "w", encoding="utf-8").write(page)
+        out = os.path.join(ROOT, name)
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        open(out, "w", encoding="utf-8").write(page)
         print(f"  wrote {name}")
 
 
