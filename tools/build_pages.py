@@ -34,8 +34,8 @@ PAGES = {
         desc="Books.",
         css="upsc.css", topbar=None),
     "quotes.html": dict(
-        title="Quotes — Saiyed Abdal",
-        desc="Quotes.",
+        title="Values — Saiyed Abdal",
+        desc="The lines Saiyed Abdal keeps coming back to — borrowed, and a few of his own.",
         css="upsc.css", topbar=None),
     "dispatch.html": dict(
         title="Dispatch — Saiyed Abdal",

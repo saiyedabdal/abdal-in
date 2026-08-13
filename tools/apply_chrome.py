@@ -26,7 +26,7 @@ NAV = [
     ("The Studio",       "/studio.html",           ("studio.html",)),
     ("Poetry",           "/poetry.html",           ("poetry.html",)),
     ("Books",            "/books.html",            ("books.html",)),
-    ("Quotes",           "/quotes.html",           ("quotes.html",)),
+    ("Values",           "/quotes.html",           ("quotes.html",)),
     "Archives",
     ("UPSC",             "/upsc.html",             ("upsc.html", "upsc/")),
     ("Resources",        "/resources.html",        ("resources.html",)),
