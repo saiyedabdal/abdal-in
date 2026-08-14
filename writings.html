@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css?v=96649040">
-<link rel="stylesheet" href="/assets/css/upsc.css?v=5249f6d3">
+<link rel="stylesheet" href="/assets/css/upsc.css?v=7097695b">
 </head>
 <body>
 
@@ -95,13 +95,15 @@
   <p class="um__kicker">Thoughts &amp; writings</p>
   <h1 class="um__title">Writings</h1>
   <p class="um__lede">Essays on operating, money and building &mdash; with the odd detour into verse.
-     Long reads, made to be taken in pieces. Pick a theme, or start at the top.</p>
+     Long reads, made to be taken in pieces.</p>
 </section>
 
 <section class="us us--dark">
   <div class="us__in">
 
-    <div class="wfilter" aria-label="Filter writings by theme">
+    <!-- Writings hidden for now: remove the three `hidden` attributes below
+         (this filter, the <li>, and un-hide it) to bring Blog 01 back. -->
+    <div class="wfilter" hidden aria-label="Filter writings by theme">
       <button class="wfilter__btn is-on" type="button" data-cat="all" aria-pressed="true">All</button>
       <button class="wfilter__btn" type="button" data-cat="founders-office" aria-pressed="false">Founder&rsquo;s Office</button>
       <button class="wfilter__btn" type="button" data-cat="operations" aria-pressed="false">Operations</button>
@@ -111,7 +113,7 @@
     </div>
 
     <ul class="wlist">
-      <li data-cat="founders-office">
+      <li data-cat="founders-office" hidden>
         <a class="wrow" href="/writings/two-kinds-of-jobs.html">
           <span class="wmain">
             <span class="wtitle">There Are Only Two Kinds of Jobs. I&rsquo;ve Carried Both.</span>
@@ -131,7 +133,7 @@
       </li>
     </ul>
 
-    <p class="wempty" hidden>Nothing under that theme yet &mdash; more on the way.</p>
+    <p class="wempty">New essays are on the way &mdash; check back soon.</p>
 
   </div>
 </section>
