@@ -51,3 +51,10 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
     Cache-Control = "no-store"
+
+# Short link for interview bookings
+[[redirects]]
+  from = "/interview"
+  to = "/bookings/?type=interview"
+  status = 302
+  force = true
