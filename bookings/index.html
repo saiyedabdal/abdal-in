@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book time · Saiyed Abdal</title>
+<meta name="description" content="Request a meeting or an interview with Saiyed Abdal.">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="canonical" href="https://abdal.in/bookings">
+<meta property="og:title" content="Book time with Saiyed Abdal">
+<meta property="og:description" content="Request a meeting or an interview. 15 or 30 minutes on Microsoft Teams.">
+<meta property="og:image" content="https://abdal.in/assets/img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B0B0B'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-style='italic' font-size='52' fill='%23fff' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0B0B0B;--card:#141414;--line:#262626;--ink:#F4F4F2;--muted:#9A9A96;--chip:#1E1E1E}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:36px 20px 56px}
+  .back{display:inline-block;font-size:13px;color:var(--muted);text-decoration:none;margin-bottom:26px}
+  .back:hover{color:var(--ink)}
+  header{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+  .avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:var(--card)}
+  h1{font-family:Oswald,sans-serif;font-weight:600;font-size:28px;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
+  .sub{color:var(--muted);font-size:14px;margin-top:4px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:16px}
+  label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .selectbox{position:relative;max-width:420px}
+  select{appearance:none;-webkit-appearance:none;width:100%;font:inherit;font-size:15px;font-weight:500;color:var(--ink);
+         background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:13px 44px 13px 14px;cursor:pointer;transition:border-color .15s}
+  select:hover,select:focus{border-color:#4a4a4a;outline:none}
+  .selectbox::after{content:"";position:absolute;right:17px;top:50%;width:8px;height:8px;border-right:2px solid var(--muted);
+         border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:#cfcfcb}
+  .note{font-size:13px;color:var(--muted);margin-top:14px}
+  .cal{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:660px}
+  .cal > div{width:100%;min-height:660px;overflow:auto}
+  .hidden{display:none}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:22px}
+  @media (max-width:600px){.wrap{padding:22px 12px 40px}.panel{padding:18px}h1{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← abdal.in</a>
+  <header>
+    <img class="avatar" src="/assets/img/avatar.jpg" alt="Saiyed Abdal">
+    <div>
+      <h1>Book time with Saiyed Abdal</h1>
+      <div class="sub">AVP – Founder's Office, Frido</div>
+    </div>
+  </header>
+
+  <section class="panel">
+    <label for="purpose">What's this about?</label>
+    <div class="selectbox">
+      <select id="purpose">
+        <option value="meeting" selected>General meeting</option>
+        <option value="interview">Interview</option>
+      </select>
+    </div>
+    <div class="meta">
+      <span class="chip">15 or 30 min</span>
+      <span class="chip">Microsoft Teams</span>
+      <span class="chip" id="hoursChip">Mon–Fri · 12–8 PM IST</span>
+    </div>
+    <p class="note">Every booking is a request. You'll get the Teams link once it's confirmed.</p>
+  </section>
+
+  <section class="cal">
+    <div id="cal-meeting"></div>
+    <div id="cal-interview" class="hidden"></div>
+  </section>
+
+  <footer>Times are shown in your local time zone.</footer>
+</div>
+
+<script>
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  const loaded = {};
+  function load(type) {
+    if (loaded[type]) return;
+    Cal("init", type, { origin: "https://app.cal.com" });
+    Cal.ns[type]("inline", {
+      elementOrSelector: "#cal-" + type,
+      calLink: "saiyedabdal/" + type,
+      config: { layout: "month_view", theme: "dark", duration: 30 }
+    });
+    Cal.ns[type]("ui", { theme: "dark", layout: "month_view", hideEventTypeDetails: false,
+      cssVarsPerTheme: { dark: { "cal-brand": "#F4F4F2" } } });
+    loaded[type] = true;
+  }
+
+  const sel = document.getElementById("purpose");
+  const chip = document.getElementById("hoursChip");
+  function show(type) {
+    document.getElementById("cal-meeting").classList.toggle("hidden", type !== "meeting");
+    document.getElementById("cal-interview").classList.toggle("hidden", type !== "interview");
+    chip.textContent = type === "interview" ? "Mon–Fri · 5–8 PM IST" : "Mon–Fri · 12–8 PM IST";
+    load(type);
+  }
+
+  // Preselect with abdal.in/bookings?type=interview
+  if (new URLSearchParams(location.search).get("type") === "interview") sel.value = "interview";
+  sel.addEventListener("change", e => show(e.target.value));
+  show(sel.value);
+</script>
+</body>
+</html>
