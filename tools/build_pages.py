@@ -16,6 +16,11 @@ PAGES = {
         desc="AVP in Frido's Founder's Office — a multi-specialist building new business "
              "lines from zero: inside sales, retail, Frido Care and agentic AI.",
         css="upsc.css", topbar=None),
+    "now.html": dict(
+        title="Now — Saiyed Abdal",
+        desc="What Saiyed Abdal is building right now — Frido Care, an in-house agentic AI "
+             "layer, Retail OS — plus short field notes from the build.",
+        css="upsc.css", topbar=None),
     "beyond-work.html": dict(
         title="Beyond Work — Saiyed Abdal",
         desc="UNDP Asia-Pacific and the ADB, the Smart India Hackathon, a public speaking "

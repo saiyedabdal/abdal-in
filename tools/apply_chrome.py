@@ -22,6 +22,7 @@ NAV = [
     ("Saiyed Abdal",     "/",                      ("index.html",)),
     ("My Story",         "/beyond-work.html",      ("beyond-work.html",)),
     ("Day Job",          "/entrepreneurship.html", ("entrepreneurship.html",), "Entrepreneurship"),
+    ("Now",              "/now",                   ("now.html",), "What I'm building"),
     "Anthology",
     ("The Studio",       "/studio.html",           ("studio.html",)),
     ("Writings",         "/writings.html",         ("writings.html", "writings/")),
@@ -96,8 +97,8 @@ TWITTER = "@saiyedspeaks"
 # that one is the Google snippet. A share card needs a line that says
 # something, so it gets its own.
 OG_DESC = {
-    "index.html": "AVP, Founder\u2019s Office at Frido. Poet, Sufi, "
-                  "Toastmaster & car enthusiast.",
+    "index.html": "AVP, Founder\u2019s Office at Frido. Multi-specialist building new "
+                  "business lines from zero. Poet, Sufi, Toastmaster & car enthusiast.",
 }
 
 
@@ -264,7 +265,7 @@ def apply(path):
     s = og(s, rel)
     active = rel if rel in ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                             "poetry.html", "books.html", "quotes.html", "upsc.html",
-                            "resources.html", "dispatch.html", "writings.html") else \
+                            "resources.html", "dispatch.html", "writings.html", "now.html") else \
         ("upsc/" if rel.startswith("upsc/") else
          "writings/" if rel.startswith("writings/") else "")
     # announcement bar: replace it where present, insert it where it is not
@@ -287,7 +288,7 @@ def main():
     files = ([os.path.join(ROOT, f) for f in
               ("index.html", "entrepreneurship.html", "beyond-work.html", "studio.html",
                "poetry.html", "books.html", "quotes.html", "upsc.html", "resources.html",
-               "dispatch.html", "writings.html")
+               "dispatch.html", "writings.html", "now.html")
               if os.path.exists(os.path.join(ROOT, f))]
              + glob.glob(os.path.join(ROOT, "upsc", "**", "*.html"), recursive=True)
              + glob.glob(os.path.join(ROOT, "writings", "**", "*.html"), recursive=True))

@@ -4,6 +4,7 @@
   "type": "module",
   "description": "abdal.in — static site, plus the private workspace behind /private",
   "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
     "@netlify/blobs": "^8.1.0"
   }
 }

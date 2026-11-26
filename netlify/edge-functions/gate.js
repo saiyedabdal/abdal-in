@@ -194,4 +194,5 @@ function misconfigured(which = "PRIVATE_PASSWORD") {
 
 // Runs only on the private workspace and its data API. The whole rest of the
 // site is public and never touches this function.
-export const config = { path: ["/private", "/private/*", "/api/*"] };
+// /api/ask is public (the Ask Abdal chat); only the private API is gated.
+export const config = { path: ["/private", "/private/*", "/api/calendar", "/api/calendar/*"] };

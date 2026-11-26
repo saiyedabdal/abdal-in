@@ -1,0 +1,24 @@
+{
+  "_readme": "Field notes for /now. Newest first. Add an entry, then run: python3 tools/build_notes.py && python3 tools/build_pages.py && python3 tools/apply_chrome.py && python3 tools/build_knowledge.py",
+  "now_updated": "2026-11-26",
+  "now": [
+    {"t": "Frido Care", "d": "Assessments, physios and the right product, together. The app, partnerships, and new protocols: Ergo Workspace Assessment, Posture 360 and Personalised Footwear, with clinical and consumer trials behind them."},
+    {"t": "Our own agentic AI layer", "d": "Agents across voice and chat, with our own control layer and guardrails. Going live across support, store visits, Frido Care, customer insights and marketing."},
+    {"t": "Frido Care Academy", "d": "Training content for physiotherapists, now growing into a YouTube channel."},
+    {"t": "Retail OS", "d": "Product-managing Frido's in-house retail system and the wider shift of our tech in-house."},
+    {"t": "Token efficiency", "d": "A second brain in Obsidian so Claude reads small linked notes instead of re-reading everything, and open-weight models for the day-to-day tasks."},
+    {"t": "Jurrat Aamoz", "d": "My self-published collection of Hindi ghazals is out on Amazon.", "u": "https://www.amazon.in/dp/B0GRNGYH8X"}
+  ],
+  "notes": [
+    {"date": "2026-11-25", "text": "Rev channel update. 1) P&L scenarios with live comparisons across different bets and indexes are now built by one of my Claude agents. 2) Decisions on discounts and offers got easier because unit economics is built into that agent. 3) Started using Claude as middleware to consume APIs and prompt voice bots: an intelligent layer that works on plain-language instructions. 4) Experimenting with open-weight models for day-to-day tasks, for token efficiency. My M4 needs more unified memory for that. 5) Implemented Obsidian as a second brain: Claude reads small linked nodes instead of re-reading everything."},
+    {"date": "2026-11-25", "text": "A \"second brain\" for my Claude. It's beautiful, isn't it? Time to move towards token efficiency."},
+    {"date": "2026-11-25", "text": "Claude prompting ChatGPT is my favourite visual."},
+    {"date": "2026-11-22", "text": "Why isn't there a co-browser for mobile phones yet? There are hundreds of use cases, and it would put Siri and the other assistants on notice unless they innovate."},
+    {"date": "2026-11-22", "text": "My favourite sentence for the day: \"Bolo toh automate kar doon.\""},
+    {"date": "2026-11-21", "text": "I work on projects that take a hundred iterations before I know what to actually call them."},
+    {"date": "2026-11-20", "text": "Opus is the smart ops guy. Fable is a good planner and manager."},
+    {"date": "2026-11-19", "text": "If your Claude doesn't give good outputs, maybe it's because AI feeds on both the intelligence and the stupidity of its users."},
+    {"date": "2026-11-19", "text": "Data reading and analysis has never been more fun, thanks to Claude's co-browser."},
+    {"date": "2026-11-18", "text": "What's stopping D2C brands from consuming Sarvam and Bolna APIs directly through an orchestration platform built on Claude? One central logical brain, with voice via Sarvam or Bolna and chat via Limechat, Bitespeed or Freshdesk. Tech has never been easier."}
+  ]
+}

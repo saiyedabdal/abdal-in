@@ -683,6 +683,13 @@ if (galDetails && galDetails.tagName === 'DETAILS') {
   if (location.hash === '#gallery') openGal(false);
 }
 
+/* ── Ask Abdal (AI chat) — loaded on every public page ───────── */
+if (!location.pathname.startsWith('/private')) {
+  const s = document.createElement('script');
+  s.src = '/assets/js/ask.js'; s.defer = true;
+  document.body.appendChild(s);
+}
+
 /* ── Year ───────────────────────────────────────────────────── */
 const yr = $('#year');
 if (yr) yr.textContent = String(new Date().getFullYear());
